@@ -1,0 +1,70 @@
+{
+  "total_items": 2000,
+  "total_movies": 1000,
+  "total_series": 1000,
+  "genre_distribution": {
+    "Drama": 923,
+    "Comedy": 595,
+    "Animation": 326,
+    "Crime": 307,
+    "Action": 283,
+    "Thriller": 274,
+    "Action & Adventure": 258,
+    "Sci-Fi & Fantasy": 246,
+    "Mystery": 215,
+    "Family": 203,
+    "Adventure": 199,
+    "Horror": 165,
+    "Science Fiction": 130,
+    "Romance": 126,
+    "Fantasy": 123,
+    "Talk": 66,
+    "Reality": 53,
+    "Kids": 47,
+    "History": 46,
+    "War": 39,
+    "Western": 39,
+    "Soap": 38,
+    "Documentary": 34,
+    "Music": 28,
+    "TV Movie": 28,
+    "News": 22,
+    "War & Politics": 21
+  },
+  "mood_distribution": {
+    "nostalgic": 1155,
+    "inspired": 1036,
+    "sad": 1030,
+    "bored": 920,
+    "happy": 887,
+    "stressed": 640,
+    "curious": 577,
+    "excited": 562,
+    "scared": 546,
+    "relaxed": 467
+  },
+  "rating_stats": {
+    "min": 1.0,
+    "max": 10.0,
+    "mean": 6.9256659836065495,
+    "count": 1952
+  },
+  "language_distribution": {
+    "en": 1365,
+    "ja": 143,
+    "fr": 63,
+    "es": 57,
+    "de": 53,
+    "zh": 51,
+    "ko": 48,
+    "it": 32,
+    "tr": 26,
+    "da": 16
+  },
+  "year_range": {
+    "earliest": "1912",
+    "latest": "2026"
+  },
+  "content_with_moods": 1877,
+  "content_with_ratings": 827
+}

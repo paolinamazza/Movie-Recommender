@@ -1,0 +1,97 @@
+{
+  "solo_watch": {
+    "description": "Best for individual viewing",
+    "allowed_ratings": [
+      "G",
+      "PG",
+      "PG-13",
+      "R",
+      "NC-17",
+      "TV-Y",
+      "TV-Y7",
+      "TV-G",
+      "TV-PG",
+      "TV-14",
+      "TV-MA"
+    ],
+    "preferred_genres": [
+      "Drama",
+      "Thriller",
+      "Documentary",
+      "Mystery",
+      "Horror"
+    ],
+    "min_rating": 6.0
+  },
+  "family_watch": {
+    "description": "Safe for all ages",
+    "allowed_ratings": [
+      "G",
+      "PG",
+      "PG-13",
+      "TV-Y",
+      "TV-Y7",
+      "TV-G",
+      "TV-PG"
+    ],
+    "preferred_genres": [
+      "Family",
+      "Animation",
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "min_rating": 6.5
+  },
+  "date_night": {
+    "description": "Romantic or engaging content for couples",
+    "allowed_ratings": [
+      "PG-13",
+      "R",
+      "TV-14",
+      "TV-MA"
+    ],
+    "preferred_genres": [
+      "Romance",
+      "Comedy",
+      "Drama",
+      "Thriller"
+    ],
+    "min_rating": 7.0
+  },
+  "background_watch": {
+    "description": "Low attention required, suitable for multitasking",
+    "allowed_ratings": [
+      "G",
+      "PG",
+      "PG-13",
+      "TV-G",
+      "TV-PG",
+      "TV-14"
+    ],
+    "preferred_genres": [
+      "Comedy",
+      "Documentary",
+      "Reality"
+    ],
+    "min_rating": 5.5
+  },
+  "binge_worthy": {
+    "description": "Series with high episode count and engagement",
+    "allowed_ratings": [
+      "PG-13",
+      "R",
+      "TV-14",
+      "TV-MA"
+    ],
+    "preferred_genres": [
+      "Drama",
+      "Thriller",
+      "Science Fiction",
+      "Fantasy",
+      "Crime"
+    ],
+    "min_rating": 7.5,
+    "min_seasons": 2
+  }
+}

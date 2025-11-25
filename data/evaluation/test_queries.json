@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "query": "I want a funny comedy movie",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "happy",
+      "genre": "comedy",
+      "type": "movie"
+    },
+    "description": "Simple single-constraint query with mood and genre"
+  },
+  {
+    "id": 2,
+    "query": "Looking for a scary horror movie for tonight",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "scared",
+      "genre": "horror",
+      "type": "movie",
+      "context": "solo_watch"
+    },
+    "description": "Simple query with mood, genre, and implicit context"
+  },
+  {
+    "id": 3,
+    "query": "Find me a family-friendly movie under 2 hours",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "context": "family_watch",
+      "type": "movie",
+      "max_hours": 2.0
+    },
+    "description": "Medium difficulty with context and runtime constraints"
+  },
+  {
+    "id": 4,
+    "query": "I want an inspiring biographical series I can binge watch this weekend",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "mood": "inspired",
+      "genre": "biography",
+      "type": "series",
+      "context": "binge_worthy",
+      "session_type": "multiple"
+    },
+    "description": "Medium difficulty with mood, genre, type, and binge context"
+  },
+  {
+    "id": 5,
+    "query": "Suggest a highly rated drama for a date night, preferably under 2.5 hours",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "genre": "drama",
+      "context": "date_night",
+      "min_rating": 7.0,
+      "max_hours": 2.5
+    },
+    "description": "Medium difficulty with multiple constraints including rating"
+  },
+  {
+    "id": 6,
+    "query": "I want a happy family movie under 2 hours that we haven't watched before. We recently saw Toy Story, Frozen, and Moana.",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "happy",
+      "context": "family_watch",
+      "type": "movie",
+      "max_hours": 2.0,
+      "viewing_history": ["Toy Story", "Frozen", "Moana"]
+    },
+    "description": "Complex multi-constraint query with viewing history exclusion"
+  },
+  {
+    "id": 7,
+    "query": "Find me something like Inception - mind-bending and thought-provoking",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "similar_to": "Inception",
+      "mood": "curious",
+      "themes": ["mind-bending", "thought-provoking"]
+    },
+    "description": "Similarity-based query requiring similar_content_finder tool"
+  },
+  {
+    "id": 8,
+    "query": "I need a relaxing series I can watch in the background while working, nothing too intense, episodes around 30-45 minutes",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "relaxed",
+      "context": "background_watch",
+      "type": "series",
+      "runtime_minutes_range": [30, 45],
+      "intensity": "low"
+    },
+    "description": "Complex query with specific runtime per episode and intensity preference"
+  },
+  {
+    "id": 9,
+    "query": "My wife wants a romantic comedy, I want an action movie, and our kids want animation. What can we all watch together?",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "group_preferences": [
+        {"genre": "romance", "mood": "happy"},
+        {"genre": "action", "mood": "excited"},
+        {"genre": "animation"}
+      ],
+      "context": "family_watch"
+    },
+    "description": "Very complex group reconciliation query requiring group_preference_reconciler"
+  },
+  {
+    "id": 10,
+    "query": "I'm feeling nostalgic and want a coming-of-age drama from the 80s or 90s, highly rated, that I can watch tonight in one sitting",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "nostalgic",
+      "genre": "drama",
+      "themes": ["coming of age"],
+      "year_range": [1980, 1999],
+      "min_rating": 7.5,
+      "context": "solo_watch",
+      "session_type": "single",
+      "max_hours": 3.0
+    },
+    "description": "Complex query with temporal constraints, mood, rating, and viewing context"
+  }
+]

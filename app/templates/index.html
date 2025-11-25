@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch AI - RAG Systems Presentation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+        /* === PRESENTATION LAYOUT === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ffd700;
+            --bronze: #cd7f32;
+            --silver: #c0c0c0;
+            --gold: #ffd700;
+            --bg-dark: #0a0a0f;
+            --bg-section: rgba(20, 20, 30, 0.8);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated background */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 100%);
+        }
+
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -10%;
+            right: -10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--accent-blue);
+            bottom: -10%;
+            left: -10%;
+            animation-delay: 7s;
+        }
+
+        .orb-3 {
+            width: 350px;
+            height: 350px;
+            background: var(--accent-purple);
+            top: 50%;
+            left: 50%;
+            animation-delay: 14s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-30px, 30px) scale(0.9);
+            }
+        }
+
+        /* === SLIDE NAVIGATION === */
+        .slide-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .slide-nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .slide-nav-dot:hover {
+            background: rgba(255, 215, 0, 0.6);
+            transform: scale(1.3);
+        }
+
+        .slide-nav-dot.active {
+            background: var(--primary);
+            transform: scale(1.5);
+        }
+
+        .slide-nav-dot::after {
+            content: attr(data-title);
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .slide-nav-dot:hover::after {
+            opacity: 1;
+        }
+
+        /* === SECTIONS/SLIDES === */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* === SLIDE 1: HERO/TITLE === */
+        .hero {
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* === SLIDE 2: WHAT IS RAG === */
+        .slide-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .slide-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rag-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .rag-box {
+            flex: 1;
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-section);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .rag-box:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .rag-box-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .rag-box-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .rag-box-desc {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .arrow {
+            font-size: 2.5rem;
+            color: var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* === SLIDE 8: EVALUATION === */
+        .eval-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) !important;
+            /* Force 3 columns */
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 900px) {
+            .eval-metrics {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .eval-metrics {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* === SLIDE 3: THE CHALLENGE === */
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .challenge-card {
+            background: var(--bg-section);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .challenge-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-card-desc {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* === SLIDE 4: RAG COMPARISON === */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .rag-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .rag-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, transparent, currentColor, transparent);
+            opacity: 0.5;
+        }
+
+        .rag-card.naive {
+            color: var(--bronze);
+            box-shadow: 0 10px 30px -10px rgba(205, 127, 50, 0.1);
+        }
+
+        .rag-card.advanced {
+            color: var(--silver);
+            box-shadow: 0 10px 30px -10px rgba(192, 192, 192, 0.1);
+        }
+
+        .rag-card.agentic {
+            color: var(--gold);
+            box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.1);
+        }
+
+        .rag-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: currentColor;
+            box-shadow: 0 30px 60px -15px currentColor;
+            /* Glow effect using currentColor */
+        }
+
+        /* Specific glow colors for hover since currentColor applies to text */
+        .rag-card.naive:hover {
+            box-shadow: 0 20px 50px -10px rgba(205, 127, 50, 0.3);
+        }
+
+        .rag-card.advanced:hover {
+            box-shadow: 0 20px 50px -10px rgba(192, 192, 192, 0.3);
+        }
+
+        .rag-card.agentic:hover {
+            box-shadow: 0 20px 50px -10px rgba(255, 215, 0, 0.3);
+        }
+
+        .rag-card-icon {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 15px currentColor);
+        }
+
+        .rag-card-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .rag-badge {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid currentColor;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .rag-features {
+            list-style: none;
+            text-align: left;
+            margin: 0 0 2rem 0;
+            flex-grow: 1;
+        }
+
+        .rag-features li {
+            padding: 0.8rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.05rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rag-features li:last-child {
+            border-bottom: none;
+        }
+
+        .rag-features li i {
+            color: currentColor;
+            /* Inherits from card color */
+        }
+
+        .rag-stats {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            margin: 0 -2rem -3rem -2rem;
+            /* Extend to edges */
+            padding: 1.5rem 2rem 2rem 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* === SLIDE 5-7: DEEP DIVES === */
+        .architecture-diagram {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .arch-flow {
+            display: flex;
+            align-items: stretch;
+            /* Stretch to same height */
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            /* Allow wrapping on small screens */
+        }
+
+        .arch-step {
+            flex: 1;
+            min-width: 180px;
+            /* Prevent crushing */
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .arch-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .arch-step-num {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-radius: 50%;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .arch-step-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .arch-step-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            opacity: 0.5;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pros,
+        .cons {
+            padding: 1.5rem;
+            border-radius: 12px;
+            height: 100%;
+        }
+
+        .pros {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--accent-green);
+            border-top: none;
+            /* Override previous style */
+        }
+
+        .cons {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            border-top: none;
+            /* Override previous style */
+        }
+
+        .pros h4 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .cons h4 {
+            color: #ef4444;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .pros ul,
+        .cons ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pros li,
+        .cons li {
+            padding: 0.4rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .pros li i {
+            color: var(--accent-green);
+        }
+
+        .cons li i {
+            color: #ef4444;
+        }
+
+        /* === MOVIE CARDS (Redesigned) === */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .movie-card-container {
+            perspective: 1000px;
+            height: 380px;
+            /* Fixed height for consistency */
+            cursor: pointer;
+        }
+
+        .movie-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .movie-card-front,
+        .movie-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--bg-section);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Front Styling */
+        .movie-card-front {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-poster {
+            flex: 1;
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            /* Default dark gradient */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Dynamic gradients based on genre (applied via JS, but defaults here) */
+        .poster-gradient-action {
+            background: linear-gradient(135deg, #3b0000, #1a0505);
+        }
+
+        .poster-gradient-comedy {
+            background: linear-gradient(135deg, #3b2a00, #1a1200);
+        }
+
+        .poster-gradient-drama {
+            background: linear-gradient(135deg, #001a3b, #00081a);
+        }
+
+        .poster-icon {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.1);
+            transform: rotate(-15deg);
+        }
+
+        .movie-rating {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(4px);
+            padding: 0.4rem 0.8rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .movie-info {
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .movie-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #fff;
+        }
+
+        .movie-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .movie-genres {
+            display: flex;
+            flex-wrap: wrap;
+            /* Fix truncation */
+            gap: 0.4rem;
+        }
+
+        .genre-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        /* Back Styling */
+        .movie-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            /* Allow scrolling if summary is long */
+        }
+
+        .movie-summary-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .movie-summary-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        /* === SLIDE 8: EVALUATION === */
+        .eval-metrics {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .metric-card {
+            background: var(--bg-section);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+
+        .metric-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .metric-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .metric-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* === SLIDE 9: RESULTS === */
+        .results-chart {
+            background: var(--bg-section);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .chart-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .chart-label {
+            width: 150px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .chart-bar-container {
+            flex: 1;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-bar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            font-weight: 700;
+            color: var(--bg-dark);
+            transition: width 1.5s ease;
+            animation: growBar 1.5s ease;
+        }
+
+        @keyframes growBar {
+            from {
+                width: 0;
+            }
+        }
+
+        .chart-bar.bronze {
+            background: linear-gradient(90deg, var(--bronze), #e8a873);
+        }
+
+        .chart-bar.silver {
+            background: linear-gradient(90deg, var(--silver), #e0e0e0);
+        }
+
+        .chart-bar.gold {
+            background: linear-gradient(90deg, var(--gold), #ffed4e);
+        }
+
+        /* === SLIDE 10: LIVE DEMO === */
+        .demo-section {
+            background: var(--bg-section);
+            padding: 3rem;
+            border-radius: 16px;
+            margin-top: 2rem;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1.2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-btn {
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--primary), #ffed4e);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--bg-dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .search-btn.loading {
+            background: linear-gradient(135deg, #666, #888);
+            cursor: not-allowed;
+        }
+
+        .rag-selector {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-label:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 215, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            accent-color: var(--primary);
+            margin: 0;
+        }
+
+        .checkbox-label.checked {
+            background: rgba(255, 215, 0, 0.15);
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+        }
+
+        .checkbox-label.checked.naive {
+            border-color: var(--bronze);
+            background: rgba(205, 127, 50, 0.15);
+            box-shadow: 0 4px 12px rgba(205, 127, 50, 0.2);
+        }
+
+        .checkbox-label.checked.advanced {
+            border-color: var(--silver);
+            background: rgba(192, 192, 192, 0.15);
+            box-shadow: 0 4px 12px rgba(192, 192, 192, 0.2);
+        }
+
+        .checkbox-label.checked.agentic {
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+        }
+
+        #results {
+            margin-top: 3rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        /* === SLIDE 11: KEY TAKEAWAYS === */
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .takeaway-card {
+            background: var(--bg-section);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .takeaway-num {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .takeaway-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 1200px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .slide-title {
+                font-size: 2.5rem;
+            }
+
+            .rag-diagram {
+                flex-direction: column;
+            }
+
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .eval-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .arch-flow {
+                flex-direction: column;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .slide-nav {
+                display: none;
+            }
+        }
+
+        /* === ENHANCEMENTS === */
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Search Button Pulse Animation */
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+            }
+        }
+
+        .search-btn:not(:disabled) {
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* Glassmorphic Toast */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(12px);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* === COLLAPSIBLE SECTIONS === */
+        .collapsible-container {
+            margin-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+        }
+
+        .collapsible-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        .collapsible-header:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .collapsible-title {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .collapsible-icon {
+            transition: transform 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .collapsible-header.active .collapsible-icon {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+            opacity: 0;
+        }
+
+        .collapsible-content.open {
+            max-height: 2000px;
+            /* Large enough to fit content */
+            opacity: 1;
+            transition: max-height 0.4s cubic-bezier(1, 0, 1, 0), opacity 0.4s ease;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <!-- Introduction -->
+        <div class="slide-nav-dot active" data-title="Intro: Title" data-target="slide1"></div>
+        <div class="slide-nav-dot" data-title="Intro: Problem Statement" data-target="slide3"></div>
+
+        <!-- Related Works -->
+        <div class="slide-nav-dot" data-title="Related: Background" data-target="slide2"></div>
+        <div class="slide-nav-dot" data-title="Data: Knowledge Base" data-target="slide3b"></div>
+
+        <!-- Methodologies -->
+        <div class="slide-nav-dot" data-title="Method: Architectures" data-target="slide4"></div>
+        <div class="slide-nav-dot" data-title="Method: Baseline" data-target="slide5"></div>
+        <div class="slide-nav-dot" data-title="Method: Advanced" data-target="slide6"></div>
+        <div class="slide-nav-dot" data-title="Method: Agentic" data-target="slide7"></div>
+
+        <!-- Empirical Assessment -->
+        <div class="slide-nav-dot" data-title="Empirical: Setup" data-target="slide8"></div>
+        <div class="slide-nav-dot" data-title="Empirical: Results" data-target="slide9"></div>
+        <div class="slide-nav-dot" data-title="Empirical: Qualitative" data-target="slide10"></div>
+
+        <!-- Conclusion -->
+        <div class="slide-nav-dot" data-title="Conclusion" data-target="slide11"></div>
+    </div>
+
+    <!-- SLIDE 1: TITLE (INTRODUCTION) -->
+    <section id="slide1" class="hero">
+        <div class="container">
+
+            <h1 class="hero-title">CineMatch AI</h1>
+            <p class="hero-subtitle">Comparative Analysis of RAG Architectures for Recommendation Systems</p>
+
+            <!-- Authors -->
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 3rem;">
+                <div style="text-align: center;">
+                    <div
+                        style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);">
+                        <i class="fas fa-user" style="font-size: 2rem; color: white;"></i>
+                    </div>
+                    <div
+                        style="font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+                        Paolina Beatrice Mazza</div>
+                </div>
+
+                <div style="text-align: center;">
+                    <div
+                        style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), var(--info)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; box-shadow: 0 8px 16px rgba(236, 72, 153, 0.3);">
+                        <i class="fas fa-user" style="font-size: 2rem; color: white;"></i>
+                    </div>
+                    <div
+                        style="font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.25rem;">
+                        Chiara Canali</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: PROBLEM STATEMENT (INTRODUCTION) -->
+    <section id="slide3">
+        <div class="container">
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">Problem Statement</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.5rem;">Challenges in Multi-Objective Content
+                Recommendation</p>
+
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <div class="challenge-card-icon">🎯</div>
+                    <h3 class="challenge-card-title">Multi-Constraint Queries</h3>
+                    <p class="challenge-card-desc">Users express complex requirements combining mood, temporal
+                        constraints, and viewing history (e.g., "Happy family movie under 2h, not watched").</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-card-icon">⚡</div>
+                    <h3 class="challenge-card-title">Latency vs. Quality</h3>
+                    <p class="challenge-card-desc">The inherent trade-off between retrieval speed and the semantic
+                        relevance of recommendations in real-time systems.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-card-icon">🔍</div>
+                    <h3 class="challenge-card-title">Semantic Gap</h3>
+                    <p class="challenge-card-desc">Bridging the gap between user intent (e.g., "cozy") and metadata
+                        attributes requires deep semantic understanding.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-card-icon">💰</div>
+                    <h3 class="challenge-card-title">Computational Cost</h3>
+                    <p class="challenge-card-desc">Optimizing token usage and API costs while maintaining high-quality
+                        reasoning capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: BACKGROUND & RELATED WORK -->
+    <section id="slide2">
+        <div class="container">
+
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">RAG Evolution & Multi-Constraint Retrieval</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.2rem;">From Static Pipelines to Autonomous Agents</p>
+
+            <!-- Introduction -->
+            <div
+                style="background: rgba(139, 92, 246, 0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1.2rem; border-left: 3px solid var(--primary);">
+                <p style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                    <strong style="color: var(--text-primary);">RAG</strong> addresses LLM hallucinations and outdated
+                    knowledge.
+                    <strong>Gao et al. (2023)</strong>: Three evolutionary paradigms.
+                    <strong>Our contribution:</strong> First comparative study on multi-constraint recommendation (3-5
+                    simultaneous requirements).
+                </p>
+            </div>
+
+            <!-- Two-Column Layout: Evolution + Key Techniques -->
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1.5rem;">
+                <!-- Left: RAG Paradigm Evolution -->
+                <div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary);">
+                        <i class="fas fa-chart-line"></i> Three Generations of RAG
+                    </h3>
+
+                    <!-- Naive RAG -->
+                    <div
+                        style="background: rgba(59, 130, 246, 0.05); padding: 1rem; border-radius: 6px; margin-bottom: 0.75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <div
+                                style="width: 32px; height: 32px; background: rgba(59, 130, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
+                                <i class="fas fa-search" style="color: var(--info); font-size: 0.9rem;"></i>
+                            </div>
+                            <div>
+                                <strong style="font-size: 0.95rem; color: var(--text-primary);">Naive RAG</strong>
+                                <span
+                                    style="font-size: 0.75rem; color: var(--text-secondary); margin-left: 0.5rem;">(First
+                                    Generation)</span>
+                            </div>
+                        </div>
+                        <p style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                            <strong>Pipeline:</strong> Query → Embedding → Top-K Vector Search → LLM Generation.
+                            <strong>Strength:</strong> Fast (~500ms), low cost. <strong>Limitation:</strong>
+                            Single-vector compression loses nuance;
+                            struggles with complex, multi-faceted queries requiring constraint satisfaction.
+                        </p>
+                    </div>
+
+                    <!-- Advanced RAG -->
+                    <div
+                        style="background: rgba(236, 72, 153, 0.05); padding: 1rem; border-radius: 6px; margin-bottom: 0.75rem;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <div
+                                style="width: 32px; height: 32px; background: rgba(236, 72, 153, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
+                                <i class="fas fa-layer-group" style="color: var(--accent); font-size: 0.9rem;"></i>
+                            </div>
+                            <div>
+                                <strong style="font-size: 0.95rem; color: var(--text-primary);">Advanced RAG</strong>
+                                <span
+                                    style="font-size: 0.75rem; color: var(--text-secondary); margin-left: 0.5rem;">(Second
+                                    Generation)</span>
+                            </div>
+                        </div>
+                        <p style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                            <strong>Innovations:</strong> <em>HyDE</em> (Gao et al., 2022) generates hypothetical ideal
+                            documents to bridge the semantic gap;
+                            <em>cross-encoder reranking</em> provides 15-30% precision gains via full query-document
+                            attention.
+                            <strong>Limitation:</strong> Still <em>passive</em>—cannot decompose multi-step queries or
+                            enforce hard constraints.
+                        </p>
+                    </div>
+
+                    <!-- Agentic RAG -->
+                    <div style="background: rgba(139, 92, 246, 0.05); padding: 1rem; border-radius: 6px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <div
+                                style="width: 32px; height: 32px; background: rgba(139, 92, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
+                                <i class="fas fa-brain" style="color: var(--primary); font-size: 0.9rem;"></i>
+                            </div>
+                            <div>
+                                <strong style="font-size: 0.95rem; color: var(--text-primary);">Agentic RAG</strong>
+                                <span
+                                    style="font-size: 0.75rem; color: var(--text-secondary); margin-left: 0.5rem;">(Third
+                                    Generation)</span>
+                            </div>
+                        </div>
+                        <p style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                            <strong>Paradigm shift:</strong> <em>ReAct framework</em> (Yao et al., 2022) enables
+                            autonomous agents to <em>reason</em> (plan next action),
+                            <em>act</em> (invoke specialized tools), and <em>reflect</em> (self-correct). Handles
+                            multi-constraint queries via tool chaining (e.g., mood → runtime → history filters).
+                            <strong>Trade-off:</strong> 5-10x latency, but 80%+ constraint satisfaction on complex
+                            queries.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Key Techniques & Gap -->
+                <div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary);">
+                        <i class="fas fa-cogs"></i> Core Techniques
+                    </h3>
+
+                    <!-- HyDE -->
+                    <div
+                        style="background: rgba(59, 130, 246, 0.05); padding: 0.9rem; border-radius: 6px; margin-bottom: 0.75rem;">
+                        <strong
+                            style="font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 0.4rem;">
+                            HyDE (Query Expansion)
+                        </strong>
+                        <p style="margin: 0; font-size: 0.8rem; line-height: 1.4; color: var(--text-secondary);">
+                            Generates hypothetical "ideal answer" to user query, then embeds this expanded context.
+                            Bridges gap between terse queries and detailed documents. Used in our <strong>Advanced
+                                RAG</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Cross-Encoder -->
+                    <div
+                        style="background: rgba(236, 72, 153, 0.05); padding: 0.9rem; border-radius: 6px; margin-bottom: 0.75rem;">
+                        <strong
+                            style="font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 0.4rem;">
+                            Cross-Encoder Reranking
+                        </strong>
+                        <p style="margin: 0; font-size: 0.8rem; line-height: 1.4; color: var(--text-secondary);">
+                            Joint encoding of [query, document] pairs enables full token-level attention.
+                            Reranks top-20 candidates for precision. Too slow for first-stage retrieval over large
+                            corpora.
+                        </p>
+                    </div>
+
+                    <!-- ReAct Agents -->
+                    <div
+                        style="background: rgba(139, 92, 246, 0.05); padding: 0.9rem; border-radius: 6px; margin-bottom: 0.75rem;">
+                        <strong
+                            style="font-size: 0.9rem; color: var(--text-primary); display: block; margin-bottom: 0.4rem;">
+                            ReAct Agents (LangChain)
+                        </strong>
+                        <p style="margin: 0; font-size: 0.8rem; line-height: 1.4; color: var(--text-secondary);">
+                            Iterative loop: <em>Thought</em> (reason about goal) → <em>Action</em> (call tool) →
+                            <em>Observation</em> (process result).
+                            Enables decomposition of complex multi-step queries. Powers our <strong>Agentic
+                                RAG</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Research Gap -->
+                    <div
+                        style="background: rgba(251, 191, 36, 0.1); padding: 0.9rem; border-radius: 6px; border-left: 3px solid var(--warning);">
+                        <strong
+                            style="font-size: 0.85rem; color: var(--warning); display: block; margin-bottom: 0.4rem;">
+                            <i class="fas fa-exclamation-triangle"></i> Research Gap
+                        </strong>
+                        <p style="margin: 0; font-size: 0.8rem; line-height: 1.4; color: var(--text-secondary);">
+                            Existing work optimizes <em>single</em> paradigms. No comparative study evaluates all three
+                            RAG generations on
+                            <strong>multi-constraint recommendation</strong> tasks with latency/cost trade-offs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3B: DATASET & KNOWLEDGE BASE -->
+    <section id="slide3b">
+        <div class="container">
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">Dataset & Knowledge Base Construction</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.5rem;">From TMDB API to Vector Embeddings</p>
+
+            <!-- Data Pipeline Flow -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <!-- Step 1: Data Collection -->
+                <div
+                    style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05)); padding: 1.25rem; border-radius: 8px; border-left: 3px solid var(--info);">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <div
+                            style="width: 36px; height: 36px; background: rgba(59, 130, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
+                            <i class="fas fa-download" style="color: var(--info); font-size: 1rem;"></i>
+                        </div>
+                        <strong style="font-size: 1rem; color: var(--text-primary);">1. Data Collection</strong>
+                    </div>
+                    <p
+                        style="margin: 0 0 0.75rem 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                        <strong>Source:</strong> TMDB API v3<br>
+                        <strong>Items:</strong> 2,000 (1K movies + 1K series)<br>
+                        <strong>Date:</strong> Nov 2025
+                    </p>
+                    <div
+                        style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(59, 130, 246, 0.1); padding: 0.5rem; border-radius: 4px;">
+                        <code style="color: var(--info);">GET /movie/popular</code><br>
+                        <code style="color: var(--info);">GET /tv/popular</code>
+                    </div>
+                </div>
+
+                <!-- Step 2: Preprocessing -->
+                <div
+                    style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(236, 72, 153, 0.05)); padding: 1.25rem; border-radius: 8px; border-left: 3px solid var(--accent);">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <div
+                            style="width: 36px; height: 36px; background: rgba(236, 72, 153, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
+                            <i class="fas fa-cogs" style="color: var(--accent); font-size: 1rem;"></i>
+                        </div>
+                        <strong style="font-size: 1rem; color: var(--text-primary);">2. Preprocessing</strong>
+                    </div>
+                    <p
+                        style="margin: 0 0 0.75rem 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                        <strong>Mood Mapping:</strong> 10 emotions<br>
+                        <strong>Context Scoring:</strong> 5 scenarios<br>
+                        <strong>Coverage:</strong> 93.8% mood assignment
+                    </p>
+                    <div style="display: flex; gap: 0.3rem; flex-wrap: wrap;">
+                        <span
+                            style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(236, 72, 153, 0.2); border-radius: 12px; color: var(--text-primary);">happy</span>
+                        <span
+                            style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(236, 72, 153, 0.2); border-radius: 12px; color: var(--text-primary);">scared</span>
+                        <span
+                            style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(236, 72, 153, 0.2); border-radius: 12px; color: var(--text-primary);">excited</span>
+                        <span
+                            style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(236, 72, 153, 0.2); border-radius: 12px; color: var(--text-primary);">relaxed</span>
+                    </div>
+                </div>
+
+                <!-- Step 3: Embedding -->
+                <div
+                    style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05)); padding: 1.25rem; border-radius: 8px; border-left: 3px solid var(--primary);">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <div
+                            style="width: 36px; height: 36px; background: rgba(139, 92, 246, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 0.75rem;">
+                            <i class="fas fa-vector-square" style="color: var(--primary); font-size: 1rem;"></i>
+                        </div>
+                        <strong style="font-size: 1rem; color: var(--text-primary);">3. Vector Storage</strong>
+                    </div>
+                    <p
+                        style="margin: 0 0 0.75rem 0; font-size: 0.85rem; line-height: 1.5; color: var(--text-secondary);">
+                        <strong>Model:</strong> text-embedding-3-small<br>
+                        <strong>Dimensions:</strong> 1536<br>
+                        <strong>Database:</strong> ChromaDB
+                    </p>
+                    <div
+                        style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(139, 92, 246, 0.1); padding: 0.5rem; border-radius: 4px;">
+                        Cosine similarity search<br>
+                        Sub-50ms retrieval @ 2K items
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dataset Statistics -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                <!-- Stat 1 -->
+                <div
+                    style="text-align: center; padding: 1rem; background: rgba(59, 130, 246, 0.05); border-radius: 8px;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--info); margin-bottom: 0.25rem;">2,000
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Total Items</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">1K movies + 1K
+                        series</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div
+                    style="text-align: center; padding: 1rem; background: rgba(236, 72, 153, 0.05); border-radius: 8px;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--accent); margin-bottom: 0.25rem;">10
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Mood Categories</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">Multi-label
+                        classification</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div
+                    style="text-align: center; padding: 1rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--primary); margin-bottom: 0.25rem;">6.93
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Avg Rating</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">High-quality
+                        content</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div
+                    style="text-align: center; padding: 1rem; background: rgba(34, 197, 94, 0.05); border-radius: 8px;">
+                    <div style="font-size: 2rem; font-weight: bold; color: var(--success); margin-bottom: 0.25rem;">54
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">Languages</div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;">68% English
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metadata Fields -->
+            <div
+                style="margin-top: 1.5rem; padding: 1rem; background: rgba(139, 92, 246, 0.05); border-radius: 8px; border-left: 3px solid var(--primary);">
+                <h3 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--primary);">
+                    <i class="fas fa-database"></i> Enriched Metadata Fields
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; font-size: 0.85rem;">
+                    <div>
+                        <strong style="color: var(--text-primary);">Core:</strong>
+                        <span style="color: var(--text-secondary);">Title, Overview, Year, Rating</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">Classification:</strong>
+                        <span style="color: var(--text-secondary);">Genres, Keywords, Moods</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">Runtime:</strong>
+                        <span style="color: var(--text-secondary);">Minutes, Seasons, Episodes</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">People:</strong>
+                        <span style="color: var(--text-secondary);">Cast (Top 5), Crew</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">Context:</strong>
+                        <span style="color: var(--text-secondary);">Solo, Family, Date, Background</span>
+                    </div>
+                    <div>
+                        <strong style="color: var(--text-primary);">Media:</strong>
+                        <span style="color: var(--text-secondary);">Posters, Backdrops</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: PROPOSED ARCHITECTURES (METHODOLOGIES) -->
+    <section id="slide4">
+        <div class="container">
+
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">Proposed Architectures</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.5rem;">Comparative analysis of three distinct RAG
+                implementations</p>
+
+            <div class="comparison-grid">
+                <!-- Naive RAG -->
+                <div class="rag-card naive">
+                    <div class="rag-card-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="rag-card-title">Baseline</h3>
+                    <span class="rag-badge">Naive RAG</span>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Direct vector
+                        search using semantic embeddings (Cosine Similarity)</p>
+                    <ul class="rag-features">
+                        <li><i class="fas fa-check"></i> Low Latency (~500ms)</li>
+                        <li><i class="fas fa-check"></i> Minimal Computational Cost</li>
+                        <li><i class="fas fa-check"></i> Standard Dense Retrieval</li>
+                        <li><i class="fas fa-check"></i> Single-turn Generation</li>
+                    </ul>
+                    <div class="rag-stats">
+                        <div class="stat">
+                            <span class="stat-value">~2.3s</span>
+                            <span class="stat-label">Latency</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">$0.005</span>
+                            <span class="stat-label">Cost/Query</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced RAG -->
+                <div class="rag-card advanced">
+                    <div class="rag-card-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 class="rag-card-title">Advanced</h3>
+                    <span class="rag-badge">HyDE + Rerank</span>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Enhanced retrieval
+                        with Query Expansion and Cross-Encoder Reranking</p>
+                    <ul class="rag-features">
+                        <li><i class="fas fa-check"></i> Hypothetical Document Embeddings</li>
+                        <li><i class="fas fa-check"></i> Cross-Encoder Precision</li>
+                        <li><i class="fas fa-check"></i> Improved Semantic Matching</li>
+                        <li><i class="fas fa-check"></i> Two-stage Retrieval</li>
+                    </ul>
+                    <div class="rag-stats">
+                        <div class="stat">
+                            <span class="stat-value">~4.2s</span>
+                            <span class="stat-label">Latency</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">$0.012</span>
+                            <span class="stat-label">Cost/Query</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agentic RAG -->
+                <div class="rag-card agentic">
+                    <div class="rag-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3 class="rag-card-title">Agentic</h3>
+                    <span class="rag-badge">ReAct Framework</span>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Autonomous agent
+                        using ReAct framework with specialized tools and reflection</p>
+                    <ul class="rag-features">
+                        <li><i class="fas fa-check"></i> Dynamic Planning</li>
+                        <li><i class="fas fa-check"></i> 7 Specialized Tools</li>
+                        <li><i class="fas fa-check"></i> Self-Correction Loops</li>
+                        <li><i class="fas fa-check"></i> Multi-Constraint Handling</li>
+                    </ul>
+                    <div class="rag-stats">
+                        <div class="stat">
+                            <span class="stat-value">~9.8s</span>
+                            <span class="stat-label">Latency</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">$0.025</span>
+                            <span class="stat-label">Cost/Query</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: BASELINE ARCHITECTURE -->
+    <section id="slide5">
+        <div class="container">
+            <h2 class="slide-title">Baseline Architecture</h2>
+            <p class="slide-subtitle">Naive RAG: Direct Semantic Retrieval</p>
+
+            <div class="architecture-diagram">
+                <div class="arch-flow">
+                    <div class="arch-step">
+                        <div class="arch-step-num">1</div>
+                        <h4 class="arch-step-title">Query Embedding</h4>
+                        <p class="arch-step-desc">Convert user query to 1536-dim vector using OpenAI
+                            text-embedding-3-small</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">2</div>
+                        <h4 class="arch-step-title">Vector Search</h4>
+                        <p class="arch-step-desc">Find top-K most similar items using cosine similarity in ChromaDB</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">3</div>
+                        <h4 class="arch-step-title">LLM Synthesis</h4>
+                        <p class="arch-step-desc">GPT-4o generates natural language recommendations with explanations
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Strengths</h4>
+                        <ul>
+                            <li><i class="fas fa-plus"></i> Extremely fast (~500ms)</li>
+                            <li><i class="fas fa-plus"></i> Low API costs ($0.005/query)</li>
+                            <li><i class="fas fa-plus"></i> Simple to implement and debug</li>
+                            <li><i class="fas fa-plus"></i> Works well for straightforward queries</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Limitations</h4>
+                        <ul>
+                            <li><i class="fas fa-minus"></i> Struggles with complex constraints</li>
+                            <li><i class="fas fa-minus"></i> No query understanding or refinement</li>
+                            <li><i class="fas fa-minus"></i> Can't handle multi-step reasoning</li>
+                            <li><i class="fas fa-minus"></i> Limited semantic understanding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 6: ADVANCED ARCHITECTURE -->
+    <section id="slide6">
+        <div class="container">
+            <h2 class="slide-title">Advanced Architecture</h2>
+            <p class="slide-subtitle">HyDE (Hypothetical Document Embeddings) & Cross-Encoder Reranking</p>
+
+            <div class="architecture-diagram">
+                <div class="arch-flow">
+                    <div class="arch-step">
+                        <div class="arch-step-num">1</div>
+                        <h4 class="arch-step-title">HyDE</h4>
+                        <p class="arch-step-desc">Generate hypothetical ideal document, then embed it for better
+                            semantic matching</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">2</div>
+                        <h4 class="arch-step-title">Vector Search</h4>
+                        <p class="arch-step-desc">Retrieve top-20 candidates using expanded query embedding</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">3</div>
+                        <h4 class="arch-step-title">Reranking</h4>
+                        <p class="arch-step-desc">Cross-encoder scores query-document pairs, returns top-5</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step">
+                        <div class="arch-step-num">4</div>
+                        <h4 class="arch-step-title">LLM Synthesis</h4>
+                        <p class="arch-step-desc">Generate final recommendations from reranked results</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4><i class="fas fa-check-circle"></i> Strengths</h4>
+                        <ul>
+                            <li><i class="fas fa-plus"></i> Higher precision retrieval</li>
+                            <li><i class="fas fa-plus"></i> Better semantic understanding via HyDE</li>
+                            <li><i class="fas fa-plus"></i> Reranking improves relevance</li>
+                            <li><i class="fas fa-plus"></i> Still relatively fast (~1.2s)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons">
+                        <h4><i class="fas fa-times-circle"></i> Limitations</h4>
+                        <ul>
+                            <li><i class="fas fa-minus"></i> 2.4x cost increase vs Naive</li>
+                            <li><i class="fas fa-minus"></i> Still can't handle multi-constraints</li>
+                            <li><i class="fas fa-minus"></i> No reasoning or tool use</li>
+                            <li><i class="fas fa-minus"></i> Fixed pipeline, not adaptive</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 7: AGENTIC ARCHITECTURE -->
+    <section id="slide7">
+        <div class="container">
+            <h2 class="slide-title" style="font-size: 3rem; margin-bottom: 1.5rem;">Agentic Architecture</h2>
+            <p class="slide-subtitle" style="margin-bottom: 2rem;">ReAct Framework: Planning, Tool Execution, and
+                Reflection</p>
+
+            <div class="architecture-diagram" style="padding: 2rem;">
+                <!-- Row 1: Planning and Tool Selection -->
+                <div class="arch-flow" style="margin-bottom: 1.5rem;">
+                    <div class="arch-step" style="padding: 1.5rem;">
+                        <div class="arch-step-num">1</div>
+                        <h4 class="arch-step-title">Planning</h4>
+                        <p class="arch-step-desc">Analyze query, create strategy</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step" style="padding: 1.5rem;">
+                        <div class="arch-step-num">2</div>
+                        <h4 class="arch-step-title">Tool Selection</h4>
+                        <p class="arch-step-desc">Choose from 7 specialized tools</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step" style="padding: 1.5rem;">
+                        <div class="arch-step-num">3</div>
+                        <h4 class="arch-step-title">Execution</h4>
+                        <p class="arch-step-desc">Use tools, pass results</p>
+                    </div>
+
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <div class="arch-step" style="padding: 1.5rem;">
+                        <div class="arch-step-num">4</div>
+                        <h4 class="arch-step-title">Reflection</h4>
+                        <p class="arch-step-desc">Evaluate quality, improve</p>
+                    </div>
+                </div>
+
+                <!-- Tools and Pros/Cons in one row -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <!-- Tools list -->
+                    <div
+                        style="background: rgba(255,215,0,0.1); padding: 1.2rem; border-radius: 12px; border-left: 4px solid var(--gold);">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--gold);">
+                            <i class="fas fa-toolbox"></i> 7 Specialized Tools
+                        </h4>
+                        <div
+                            style="display: grid; grid-template-columns: 1fr; gap: 0.5rem; color: var(--text-secondary); font-size: 0.85rem;">
+                            <div><i class="fas fa-smile" style="color: var(--gold);"></i> Mood Finder</div>
+                            <div><i class="fas fa-filter" style="color: var(--gold);"></i> Context Filter</div>
+                            <div><i class="fas fa-clock" style="color: var(--gold);"></i> Runtime Matcher</div>
+                            <div><i class="fas fa-history" style="color: var(--gold);"></i> History Checker</div>
+                            <div><i class="fas fa-search-plus" style="color: var(--gold);"></i> Similarity Search</div>
+                            <div><i class="fas fa-sliders-h" style="color: var(--gold);"></i> Constraint Relaxer</div>
+                            <div><i class="fas fa-users" style="color: var(--gold);"></i> Group Reconciler</div>
+                        </div>
+                    </div>
+
+                    <!-- Pros and Cons combined -->
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div
+                            style="padding: 1.2rem; background: rgba(16,185,129,0.1); border-radius: 12px; border-left: 4px solid var(--accent-green);">
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--accent-green);"><i
+                                    class="fas fa-check-circle"></i> Strengths</h4>
+                            <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                                <li style="padding: 0.3rem 0;"><i class="fas fa-plus"
+                                        style="color: var(--accent-green);"></i> Complex multi-constraint queries</li>
+                                <li style="padding: 0.3rem 0;"><i class="fas fa-plus"
+                                        style="color: var(--accent-green);"></i> Autonomous reasoning</li>
+                                <li style="padding: 0.3rem 0;"><i class="fas fa-plus"
+                                        style="color: var(--accent-green);"></i> Self-correcting via reflection</li>
+                            </ul>
+                        </div>
+
+                        <div
+                            style="padding: 1.2rem; background: rgba(239,68,68,0.1); border-radius: 12px; border-left: 4px solid #ef4444;">
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #ef4444;"><i
+                                    class="fas fa-times-circle"></i> Limitations</h4>
+                            <ul style="list-style: none; padding: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                                <li style="padding: 0.3rem 0;"><i class="fas fa-minus" style="color: #ef4444;"></i> 5x
+                                    cost vs Naive RAG</li>
+                                <li style="padding: 0.3rem 0;"><i class="fas fa-minus" style="color: #ef4444;"></i>
+                                    Slower latency (~2.5s)</li>
+                                <li style="padding: 0.3rem 0;"><i class="fas fa-minus" style="color: #ef4444;"></i> More
+                                    complex to debug</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 8: EXPERIMENTAL SETUP (EMPIRICAL ASSESSMENT) -->
+    <section id="slide8">
+        <div class="container">
+
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">Experimental Setup</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.5rem;">Evaluation Metrics & Dataset Configuration</p>
+
+            <div class="eval-metrics">
+                <!-- CSR -->
+                <div class="metric-card" style="border-top-color: var(--accent-blue);">
+                    <div class="metric-icon" style="color: var(--accent-blue);"><i class="fas fa-tasks"></i></div>
+                    <h4 class="metric-name">CSR (Constraint Satisfaction Rate)</h4>
+                    <p class="metric-desc"
+                        style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0;">
+                        Satisfied Constraints / Total Constraints</p>
+                    <p class="metric-desc">Primary metric. Measures percentage of user requirements (mood, time, rating)
+                        successfully met.</p>
+                </div>
+
+                <!-- P@5 -->
+                <div class="metric-card" style="border-top-color: var(--accent-purple);">
+                    <div class="metric-icon" style="color: var(--accent-purple);"><i class="fas fa-list-ol"></i></div>
+                    <h4 class="metric-name">P@5 (Precision at 5)</h4>
+                    <p class="metric-desc"
+                        style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0;">
+                        Relevant Items in Top 5 / 5</p>
+                    <p class="metric-desc">Percentage of the top 5 recommendations that meet the user's core criteria.
+                    </p>
+                </div>
+
+                <!-- MMA -->
+                <div class="metric-card" style="border-top-color: var(--accent-green);">
+                    <div class="metric-icon" style="color: var(--accent-green);"><i class="fas fa-heart"></i></div>
+                    <h4 class="metric-name">MMA (Mood Match Accuracy)</h4>
+                    <p class="metric-desc"
+                        style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0;">
+                        Mood Matches / Total Items</p>
+                    <p class="metric-desc">Accuracy of emotional tone matching (e.g., "Sad" query returns sad movies).
+                    </p>
+                </div>
+
+                <!-- RFQ -->
+                <div class="metric-card" style="border-top-color: var(--primary);">
+                    <div class="metric-icon" style="color: var(--primary);"><i class="fas fa-clock"></i></div>
+                    <h4 class="metric-name">RFQ (Runtime Fit Quality)</h4>
+                    <p class="metric-desc"
+                        style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0;">
+                        1 - (|Item Time - Limit| / Limit)</p>
+                    <p class="metric-desc">How well content fits within the user's available time window.</p>
+                </div>
+
+                <!-- Latency -->
+                <div class="metric-card" style="border-top-color: #ef4444;">
+                    <div class="metric-icon" style="color: #ef4444;"><i class="fas fa-stopwatch"></i></div>
+                    <h4 class="metric-name">Latency</h4>
+                    <p class="metric-desc"
+                        style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0;">
+                        Time(Query) -> Time(Response)</p>
+                    <p class="metric-desc">End-to-end wall clock time from request to final recommendation.</p>
+                </div>
+
+                <!-- Cost -->
+                <div class="metric-card" style="border-top-color: var(--gold);">
+                    <div class="metric-icon" style="color: var(--gold);"><i class="fas fa-coins"></i></div>
+                    <h4 class="metric-name">Cost</h4>
+                    <p class="metric-desc"
+                        style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0;">
+                        (Input + Output Tokens) * Price</p>
+                    <p class="metric-desc">Total API cost per query including embeddings and LLM generation.</p>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 3rem; padding: 2rem; background: rgba(255,215,0,0.05); border-radius: 12px; border: 1px solid rgba(255,215,0,0.2); display: flex; align-items: center; gap: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--primary);"><i class="fas fa-vial"></i></div>
+                <div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Test Suite Configuration</h3>
+                    <p style="color: var(--text-secondary);">Evaluated on <strong>20 standardized queries</strong>
+                        stratified by complexity:</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.8rem;">
+                        <span
+                            style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.1); border-radius: 20px; font-size: 0.9rem;">6
+                            Simple (1-2 constraints)</span>
+                        <span
+                            style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.1); border-radius: 20px; font-size: 0.9rem;">8
+                            Medium (3-4 constraints)</span>
+                        <span
+                            style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.1); border-radius: 20px; font-size: 0.9rem;">6
+                            Complex (5+ constraints)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 9: QUANTITATIVE RESULTS -->
+    <section id="slide9">
+        <div class="container">
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">Quantitative Results</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.5rem;">Performance Comparison across Complexity Levels</p>
+
+            <div class="results-chart">
+                <!-- Complexity Breakdown -->
+                <h3
+                    style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                    CSR by Query Complexity</h3>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem;">
+                    <!-- Simple Queries -->
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 1rem; color: var(--text-secondary);">Simple Queries</h4>
+                        <div
+                            style="height: 200px; display: flex; align-items: flex-end; justify-content: center; gap: 10px;">
+                            <div style="width: 30px; height: 70%; background: var(--bronze); border-radius: 4px 4px 0 0; position: relative;"
+                                title="Naive: 70%"></div>
+                            <div style="width: 30px; height: 80%; background: var(--silver); border-radius: 4px 4px 0 0; position: relative;"
+                                title="Advanced: 80%"></div>
+                            <div style="width: 30px; height: 90%; background: var(--gold); border-radius: 4px 4px 0 0; position: relative;"
+                                title="Agentic: 90%"></div>
+                        </div>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Naive is competitive (70%)</p>
+                    </div>
+
+                    <!-- Medium Queries -->
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 1rem; color: var(--text-secondary);">Medium Queries</h4>
+                        <div
+                            style="height: 200px; display: flex; align-items: flex-end; justify-content: center; gap: 10px;">
+                            <div style="width: 30px; height: 50%; background: var(--bronze); border-radius: 4px 4px 0 0;"
+                                title="Naive: 50%"></div>
+                            <div style="width: 30px; height: 70%; background: var(--silver); border-radius: 4px 4px 0 0;"
+                                title="Advanced: 70%"></div>
+                            <div style="width: 30px; height: 90%; background: var(--gold); border-radius: 4px 4px 0 0;"
+                                title="Agentic: 90%"></div>
+                        </div>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Advanced improves (+20%)</p>
+                    </div>
+
+                    <!-- Complex Queries -->
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 1rem; color: var(--text-secondary);">Complex Queries</h4>
+                        <div
+                            style="height: 200px; display: flex; align-items: flex-end; justify-content: center; gap: 10px;">
+                            <div style="width: 30px; height: 30%; background: var(--bronze); border-radius: 4px 4px 0 0;"
+                                title="Naive: 30%"></div>
+                            <div style="width: 30px; height: 55%; background: var(--silver); border-radius: 4px 4px 0 0;"
+                                title="Advanced: 55%"></div>
+                            <div style="width: 30px; height: 88%; background: var(--gold); border-radius: 4px 4px 0 0;"
+                                title="Agentic: 88%"></div>
+                        </div>
+                        <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--gold); font-weight: bold;">Agentic
+                            dominates (88%)</p>
+                    </div>
+                </div>
+
+                <!-- Overall Metrics Table -->
+                <h3
+                    style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                    Overall System Performance</h3>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid rgba(255,255,255,0.1);">
+                                <th style="padding: 1rem; color: var(--text-secondary);">System</th>
+                                <th style="padding: 1rem; color: var(--primary);">CSR (Avg)</th>
+                                <th style="padding: 1rem;">P@5</th>
+                                <th style="padding: 1rem;">MMA</th>
+                                <th style="padding: 1rem;">RFQ</th>
+                                <th style="padding: 1rem;">Latency</th>
+                                <th style="padding: 1rem;">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 1rem; font-weight: 600; color: var(--bronze);">Naive RAG</td>
+                                <td style="padding: 1rem;">45%</td>
+                                <td style="padding: 1rem;">0.50</td>
+                                <td style="padding: 1rem;">0.60</td>
+                                <td style="padding: 1rem;">0.55</td>
+                                <td style="padding: 1rem;">2.3s</td>
+                                <td style="padding: 1rem;">$0.005</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 1rem; font-weight: 600; color: var(--silver);">Advanced RAG</td>
+                                <td style="padding: 1rem;">65%</td>
+                                <td style="padding: 1rem;">0.70</td>
+                                <td style="padding: 1rem;">0.75</td>
+                                <td style="padding: 1rem;">0.70</td>
+                                <td style="padding: 1rem;">4.2s</td>
+                                <td style="padding: 1rem;">$0.012</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem; font-weight: 600; color: var(--gold);">Agentic RAG</td>
+                                <td style="padding: 1rem; font-weight: bold; color: var(--gold);">88%</td>
+                                <td style="padding: 1rem;">0.90</td>
+                                <td style="padding: 1rem;">0.85</td>
+                                <td style="padding: 1rem;">0.90</td>
+                                <td style="padding: 1rem;">9.8s</td>
+                                <td style="padding: 1rem;">$0.025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 10: QUALITATIVE ANALYSIS (LIVE DEMO) -->
+    <section id="slide10">
+        <div class="container">
+            <h2 class="slide-title">Qualitative Analysis</h2>
+            <p class="slide-subtitle">Live Demonstration of System Capabilities</p>
+
+            <div class="demo-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder="e.g., 'Happy family movie under 2 hours' or 'Intense thriller like Inception'"
+                        value="">
+                    <button id="searchBtn" class="search-btn">
+                        <span class="btn-text">Find Movies</span>
+                        <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i>
+                            Searching...</span>
+                    </button>
+                </div>
+
+                <div class="rag-selector">
+                    <label class="checkbox-label naive checked" id="labelNaive">
+                        <input type="checkbox" id="systemNaive" checked>
+                        <span><i class="fas fa-medal" style="color: var(--bronze);"></i> Naive RAG</span>
+                    </label>
+                    <label class="checkbox-label advanced checked" id="labelAdvanced">
+                        <input type="checkbox" id="systemAdvanced" checked>
+                        <span><i class="fas fa-medal" style="color: var(--silver);"></i> Advanced RAG</span>
+                    </label>
+                    <label class="checkbox-label agentic checked" id="labelAgentic">
+                        <input type="checkbox" id="systemAgentic" checked>
+                        <span><i class="fas fa-medal" style="color: var(--gold);"></i> Agentic RAG</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <section id="results" style="display: none; min-height: auto; padding: 2rem 0;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Your Recommendations</h3>
+                    <div
+                        style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; color: var(--text-secondary);">
+                        <i class="fas fa-search"></i>
+                        <span id="resultsQuery"></span>
+                    </div>
+                </div>
+
+                <div id="resultsGrid" class="results-grid"></div>
+            </section>
+        </div>
+    </section>
+
+    <!-- SLIDE 11: CONCLUSION & FUTURE WORK -->
+    <section id="slide11">
+        <div class="container">
+            <h2 class="slide-title" style="margin-bottom: 0.5rem;">Conclusion & Future Work</h2>
+            <p class="slide-subtitle" style="margin-bottom: 1.5rem;">Summary of Findings and Future Research Directions
+            </p>
+
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <div class="takeaway-num">1</div>
+                    <p class="takeaway-text">
+                        <strong>No one-size-fits-all:</strong> Different applications require different RAG
+                        architectures.
+                        Choose based on your constraints (latency, cost, query complexity).
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-num">2</div>
+                    <p class="takeaway-text">
+                        <strong>Agentic systems shine with complexity:</strong> For multi-constraint, contextual
+                        queries,
+                        autonomous agents with tools dramatically outperform simpler approaches.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-num">3</div>
+                    <p class="takeaway-text">
+                        <strong>HyDE + Reranking is powerful:</strong> Advanced RAG achieves 85% of Agentic quality
+                        at half the cost and latency—excellent middle ground.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-num">4</div>
+                    <p class="takeaway-text">
+                        <strong>Evaluation is critical:</strong> Comprehensive metrics (relevance, latency, cost)
+                        and diverse test queries are essential for fair comparison.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-num">5</div>
+                    <p class="takeaway-text">
+                        <strong>Planning & Reflection matter:</strong> Agentic RAG's ability to plan steps and
+                        self-reflect significantly improves result quality on complex queries.
+                    </p>
+                </div>
+
+                <div class="takeaway-card">
+                    <div class="takeaway-num">6</div>
+                    <p class="takeaway-text">
+                        <strong>Future of RAG is agentic:</strong> As LLM costs decrease and latency improves,
+                        autonomous agent-based systems will become the standard for knowledge retrieval.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 4rem; text-align: center; padding: 3rem; background: rgba(255,215,0,0.1); border-radius: 16px; border: 2px solid var(--primary);">
+                <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Thank You!</h3>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                    Questions? Try the live demo above or explore the code on GitHub
+                </p>
+                <div style="display: flex; gap: 2rem; justify-content: center; align-items: center; font-size: 1.1rem;">
+                    <div><i class="fas fa-film" style="color: var(--primary);"></i> CineMatch AI</div>
+                    <div><i class="fas fa-database" style="color: var(--primary);"></i> 2000+ Movies</div>
+                    <div><i class="fas fa-robot" style="color: var(--primary);"></i> 3 RAG Systems</div>
+                    <div><i class="fas fa-bolt" style="color: var(--primary);"></i> Real-time Demo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast"
+        style="position: fixed; bottom: 2rem; right: 2rem; background: rgba(0,0,0,0.9); color: white; padding: 1rem 1.5rem; border-radius: 8px; display: none; z-index: 10000; border-left: 4px solid var(--primary);">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage" style="margin-left: 0.5rem;"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+        // Slide navigation with improved scrolling
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle checkbox visual states
+            const checkboxes = [
+                { checkbox: document.getElementById('systemNaive'), label: document.getElementById('labelNaive') },
+                { checkbox: document.getElementById('systemAdvanced'), label: document.getElementById('labelAdvanced') },
+                { checkbox: document.getElementById('systemAgentic'), label: document.getElementById('labelAgentic') }
+            ];
+
+            checkboxes.forEach(({ checkbox, label }) => {
+                if (checkbox && label) {
+                    checkbox.addEventListener('change', () => {
+                        if (checkbox.checked) {
+                            label.classList.add('checked');
+                        } else {
+                            label.classList.remove('checked');
+                        }
+                    });
+
+                    // Also toggle on label click
+                    label.addEventListener('click', (e) => {
+                        // Let the checkbox handle it naturally, but ensure visual update
+                        setTimeout(() => {
+                            if (checkbox.checked) {
+                                label.classList.add('checked');
+                            } else {
+                                label.classList.remove('checked');
+                            }
+                        }, 0);
+                    });
+                }
+            });
+
+            const navDots = document.querySelectorAll('.slide-nav-dot');
+
+            navDots.forEach((dot) => {
+                dot.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const targetId = dot.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // Smooth scroll to target
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Update active state immediately
+                        navDots.forEach(d => d.classList.remove('active'));
+                        dot.classList.add('active');
+                    }
+                });
+            });
+
+            // Update active dot on scroll
+            const sections = document.querySelectorAll('section');
+
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        let current = '';
+                        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+                        sections.forEach(section => {
+                            const sectionTop = section.offsetTop;
+                            const sectionHeight = section.clientHeight;
+                            if (scrollPos >= sectionTop - 300) {
+                                current = section.getAttribute('id');
+                            }
+                        });
+
+                        navDots.forEach((dot) => {
+                            dot.classList.remove('active');
+                            if (dot.getAttribute('data-target') === current) {
+                                dot.classList.add('active');
+                            }
+                        });
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Animate chart bars on scroll
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.chart-bar').forEach(bar => {
+                            bar.style.animation = 'none';
+                            setTimeout(() => {
+                                bar.style.animation = 'growBar 1.5s ease';
+                            }, 10);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.results-chart').forEach(chart => {
+                observer.observe(chart);
+            });
+        });
+    </script>
+</body>
+
+</html>

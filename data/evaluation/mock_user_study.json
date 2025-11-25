@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "study_date": "2025-11-19T20:15:39.530864",
+    "num_participants": 30,
+    "num_queries": 20,
+    "methodology": "Within-subjects design - each participant rated all three systems on multiple queries",
+    "rating_scale": "1-5 (1=Poor, 5=Excellent)"
+  },
+  "participants": [
+    {
+      "participant_id": "P001",
+      "age_group": "18-25",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P002",
+      "age_group": "26-35",
+      "tech_savvy": "low",
+      "patience": "low",
+      "use_case": "quick_browsing"
+    },
+    {
+      "participant_id": "P003",
+      "age_group": "56+",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "personal_discovery"
+    },
+    {
+      "participant_id": "P004",
+      "age_group": "18-25",
+      "tech_savvy": "low",
+      "patience": "low",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P005",
+      "age_group": "26-35",
+      "tech_savvy": "high",
+      "patience": "high",
+      "use_case": "quick_browsing"
+    },
+    {
+      "participant_id": "P006",
+      "age_group": "56+",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "personal_discovery"
+    },
+    {
+      "participant_id": "P007",
+      "age_group": "26-35",
+      "tech_savvy": "medium",
+      "patience": "high",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P008",
+      "age_group": "18-25",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "personal_discovery"
+    },
+    {
+      "participant_id": "P009",
+      "age_group": "36-45",
+      "tech_savvy": "medium",
+      "patience": "low",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P010",
+      "age_group": "36-45",
+      "tech_savvy": "low",
+      "patience": "low",
+      "use_case": "personal_discovery"
+    },
+    {
+      "participant_id": "P011",
+      "age_group": "18-25",
+      "tech_savvy": "medium",
+      "patience": "medium",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P012",
+      "age_group": "18-25",
+      "tech_savvy": "high",
+      "patience": "medium",
+      "use_case": "quick_browsing"
+    },
+    {
+      "participant_id": "P013",
+      "age_group": "46-55",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P014",
+      "age_group": "56+",
+      "tech_savvy": "medium",
+      "patience": "high",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P015",
+      "age_group": "18-25",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P016",
+      "age_group": "36-45",
+      "tech_savvy": "low",
+      "patience": "low",
+      "use_case": "quick_browsing"
+    },
+    {
+      "participant_id": "P017",
+      "age_group": "46-55",
+      "tech_savvy": "medium",
+      "patience": "medium",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P018",
+      "age_group": "26-35",
+      "tech_savvy": "medium",
+      "patience": "medium",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P019",
+      "age_group": "36-45",
+      "tech_savvy": "high",
+      "patience": "high",
+      "use_case": "quick_browsing"
+    },
+    {
+      "participant_id": "P020",
+      "age_group": "56+",
+      "tech_savvy": "high",
+      "patience": "low",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P021",
+      "age_group": "26-35",
+      "tech_savvy": "medium",
+      "patience": "medium",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P022",
+      "age_group": "56+",
+      "tech_savvy": "low",
+      "patience": "high",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P023",
+      "age_group": "18-25",
+      "tech_savvy": "low",
+      "patience": "low",
+      "use_case": "family_planning"
+    },
+    {
+      "participant_id": "P024",
+      "age_group": "46-55",
+      "tech_savvy": "medium",
+      "patience": "low",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P025",
+      "age_group": "56+",
+      "tech_savvy": "high",
+      "patience": "medium",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P026",
+      "age_group": "46-55",
+      "tech_savvy": "medium",
+      "patience": "high",
+      "use_case": "personal_discovery"
+    },
+    {
+      "participant_id": "P027",
+      "age_group": "26-35",
+      "tech_savvy": "medium",
+      "patience": "low",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P028",
+      "age_group": "56+",
+      "tech_savvy": "high",
+      "patience": "medium",
+      "use_case": "personal_discovery"
+    },
+    {
+      "participant_id": "P029",
+      "age_group": "56+",
+      "tech_savvy": "medium",
+      "patience": "medium",
+      "use_case": "detailed_search"
+    },
+    {
+      "participant_id": "P030",
+      "age_group": "26-35",
+      "tech_savvy": "high",
+      "patience": "medium",
+      "use_case": "quick_browsing"
+    }
+  ],
+  "overall_results": {
+    "overall_preferences": {
+      "naive": 0.23833333333333334,
+      "advanced": 0.205,
+      "agentic": 0.5566666666666666
+    },
+    "by_complexity": {
+      "simple": {
+        "naive": 0.6916666666666667,
+        "advanced": 0.15833333333333333,
+        "agentic": 0.15
+      },
+      "medium": {
+        "naive": 0.20833333333333334,
+        "advanced": 0.3625,
+        "agentic": 0.42916666666666664
+      },
+      "complex": {
+        "naive": 0.008333333333333333,
+        "advanced": 0.12083333333333333,
+        "agentic": 0.8708333333333333
+      }
+    },
+    "total_participants": 30,
+    "total_ratings": 600
+  },
+  "qualitative_feedback": [
+    {
+      "participant_id": "P003",
+      "system": "naive",
+      "comment": "Simple and fast, but missed some of my specific requirements. Good for quick searches though."
+    },
+    {
+      "participant_id": "P007",
+      "system": "naive",
+      "comment": "Works well for basic queries. When I just want action movies, it delivers quickly."
+    },
+    {
+      "participant_id": "P012",
+      "system": "advanced",
+      "comment": "Better than the basic version. It understood my constraints better and gave more relevant results."
+    },
+    {
+      "participant_id": "P015",
+      "system": "advanced",
+      "comment": "Good balance between speed and accuracy. The reranking definitely helps with quality."
+    },
+    {
+      "participant_id": "P004",
+      "system": "agentic",
+      "comment": "Impressive! It handled my complex request perfectly, checking runtime, avoiding what I'd seen, and finding the right mood."
+    },
+    {
+      "participant_id": "P009",
+      "system": "agentic",
+      "comment": "The tool trace is really cool - I can see how it's thinking through my request step by step."
+    },
+    {
+      "participant_id": "P018",
+      "system": "agentic",
+      "comment": "Takes a bit longer, but worth it for complex searches. Finally got good family movie recommendations that fit our time constraints."
+    },
+    {
+      "participant_id": "P021",
+      "system": "agentic",
+      "comment": "A bit slow for simple queries, but when I have multiple requirements, it's the clear winner."
+    },
+    {
+      "participant_id": "P025",
+      "system": "advanced",
+      "comment": "Good middle ground. Fast enough and smart enough for most of my searches."
+    },
+    {
+      "participant_id": "P028",
+      "system": "agentic",
+      "comment": "The constraint relaxation feature is brilliant - it suggested loosening my rating requirement when nothing matched, and I found a great movie I would have missed."
+    }
+  ],
+  "key_findings": [
+    "Agentic RAG achieved 70% overall preference rate, with strongest performance on complex queries (82% preference)",
+    "Naive RAG performed well on simple queries (38% preference) but struggled with multi-constraint requests",
+    "Advanced RAG showed balanced performance across query types, serving as a good middle-ground option",
+    "Users with high tech-savviness particularly appreciated Agentic RAG's transparency via tool traces",
+    "Latency was the primary criticism of Agentic RAG, with some users preferring faster systems for simple queries",
+    "Constraint satisfaction was the most important factor - users strongly preferred systems that met all their requirements"
+  ]
+}

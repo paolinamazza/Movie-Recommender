@@ -1,0 +1,175 @@
+{
+  "happy": {
+    "genres": [
+      "Comedy",
+      "Family",
+      "Animation",
+      "Musical",
+      "Romance"
+    ],
+    "keywords": [
+      "friendship",
+      "love",
+      "celebration",
+      "wedding",
+      "success",
+      "reunion"
+    ],
+    "emotional_profile": "Light-hearted, uplifting, feel-good content",
+    "energy_level": "high"
+  },
+  "sad": {
+    "genres": [
+      "Drama",
+      "Romance",
+      "War"
+    ],
+    "keywords": [
+      "death",
+      "loss",
+      "tragedy",
+      "separation",
+      "terminal illness",
+      "funeral"
+    ],
+    "emotional_profile": "Heavy, emotional, tear-jerking content",
+    "energy_level": "low"
+  },
+  "excited": {
+    "genres": [
+      "Action",
+      "Adventure",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "keywords": [
+      "chase",
+      "explosion",
+      "superhero",
+      "spy",
+      "heist",
+      "race"
+    ],
+    "emotional_profile": "High-energy, adrenaline-pumping content",
+    "energy_level": "very_high"
+  },
+  "relaxed": {
+    "genres": [
+      "Documentary",
+      "Family",
+      "Animation"
+    ],
+    "keywords": [
+      "nature",
+      "cooking",
+      "travel",
+      "meditation",
+      "slice of life"
+    ],
+    "emotional_profile": "Calm, soothing, non-stressful content",
+    "energy_level": "low"
+  },
+  "scared": {
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Mystery"
+    ],
+    "keywords": [
+      "monster",
+      "ghost",
+      "haunted",
+      "killer",
+      "supernatural",
+      "zombie"
+    ],
+    "emotional_profile": "Suspenseful, frightening, anxiety-inducing content",
+    "energy_level": "high"
+  },
+  "curious": {
+    "genres": [
+      "Mystery",
+      "Documentary",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "keywords": [
+      "investigation",
+      "detective",
+      "mystery",
+      "conspiracy",
+      "puzzle"
+    ],
+    "emotional_profile": "Intellectually engaging, thought-provoking content",
+    "energy_level": "medium"
+  },
+  "inspired": {
+    "genres": [
+      "Biography",
+      "Documentary",
+      "Drama",
+      "History"
+    ],
+    "keywords": [
+      "based on true story",
+      "biography",
+      "achievement",
+      "overcoming",
+      "hero"
+    ],
+    "emotional_profile": "Motivational, aspirational, uplifting content",
+    "energy_level": "medium"
+  },
+  "stressed": {
+    "genres": [
+      "Thriller",
+      "Horror",
+      "Crime",
+      "War"
+    ],
+    "keywords": [
+      "tension",
+      "conflict",
+      "chase",
+      "survival",
+      "danger"
+    ],
+    "emotional_profile": "Intense, nerve-wracking, high-stakes content",
+    "energy_level": "very_high"
+  },
+  "nostalgic": {
+    "genres": [
+      "Drama",
+      "Romance",
+      "Family",
+      "History"
+    ],
+    "keywords": [
+      "childhood",
+      "memory",
+      "past",
+      "vintage",
+      "retro",
+      "coming of age"
+    ],
+    "emotional_profile": "Reminiscent, sentimental, reflective content",
+    "energy_level": "low"
+  },
+  "bored": {
+    "genres": [
+      "Action",
+      "Comedy",
+      "Adventure",
+      "Fantasy"
+    ],
+    "keywords": [
+      "entertaining",
+      "fun",
+      "adventure",
+      "escape",
+      "fantasy world"
+    ],
+    "emotional_profile": "Engaging, entertaining, escapist content",
+    "energy_level": "high"
+  }
+}

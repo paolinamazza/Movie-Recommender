@@ -1,0 +1,121 @@
+[
+  {
+    "id": 11,
+    "query": "Something scary to watch with friends tonight",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "scared",
+      "context": "group_watch"
+    },
+    "description": "Simple social horror query"
+  },
+  {
+    "id": 12,
+    "query": "I'm in the mood for a good cry, any recommendations?",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "sad",
+      "emotional": "tear-jerking"
+    },
+    "description": "Simple emotional mood query"
+  },
+  {
+    "id": 13,
+    "query": "Can you recommend a feel-good movie that's not too long? I have about 90 minutes",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "mood": "happy",
+      "type": "movie",
+      "max_hours": 1.5
+    },
+    "description": "Medium query with mood and specific time constraint"
+  },
+  {
+    "id": 14,
+    "query": "Looking for a well-made thriller series, something I can really get into over the next few evenings",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "genre": "thriller",
+      "type": "series",
+      "min_rating": 7.0,
+      "context": "binge_worthy"
+    },
+    "description": "Medium query with quality expectation and binge intent"
+  },
+  {
+    "id": 15,
+    "query": "What's a good action movie my teenage son and I can watch together? Nothing too violent or inappropriate",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "genre": "action",
+      "type": "movie",
+      "context": "family_watch",
+      "content_rating": ["PG-13", "PG"]
+    },
+    "description": "Medium query with family-appropriate content constraint"
+  },
+  {
+    "id": 16,
+    "query": "I loved Stranger Things and The Umbrella Academy. What else would I like that's similar?",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "similar_to": ["Stranger Things", "The Umbrella Academy"],
+      "type": "series"
+    },
+    "description": "Medium similarity query with multiple reference points"
+  },
+  {
+    "id": 17,
+    "query": "Need something light and funny to watch after a stressful day at work. Not looking for anything heavy or complicated, just want to zone out for an hour or two",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "happy",
+      "mood_secondary": "relaxed",
+      "context": "background_watch",
+      "max_hours": 2.0,
+      "complexity": "low"
+    },
+    "description": "Complex query with emotional state, context, and complexity preference"
+  },
+  {
+    "id": 18,
+    "query": "My girlfriend and I just finished Breaking Bad and Better Call Saul. We want another high-quality drama series with great writing, doesn't matter how long it is",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "genre": "drama",
+      "type": "series",
+      "min_rating": 8.5,
+      "similar_to": ["Breaking Bad", "Better Call Saul"],
+      "quality_focus": "writing"
+    },
+    "description": "Complex query with high quality bar and viewing history"
+  },
+  {
+    "id": 19,
+    "query": "Looking for a movie with a strong female lead, action or adventure genre, highly rated. We've already seen Wonder Woman, Mad Max Fury Road, and Atomic Blonde",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "genre": ["action", "adventure"],
+      "type": "movie",
+      "themes": ["strong female lead"],
+      "min_rating": 7.5,
+      "viewing_history": ["Wonder Woman", "Mad Max: Fury Road", "Atomic Blonde"]
+    },
+    "description": "Complex thematic query with viewing history exclusion"
+  },
+  {
+    "id": 20,
+    "query": "It's movie night and we can't decide. I want something with suspense and mystery, my partner wants romance, and we both want it to be well-made and not too long. Maybe 2 hours max?",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "group_preferences": [
+        {"genre": "mystery", "mood": "curious"},
+        {"genre": "romance", "mood": "happy"}
+      ],
+      "min_rating": 7.0,
+      "max_hours": 2.0,
+      "type": "movie"
+    },
+    "description": "Very complex group reconciliation with quality and time constraints"
+  }
+]

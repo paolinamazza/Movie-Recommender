@@ -1,0 +1,108 @@
+{
+  "timestamp": "2025-11-19T22:00:31.947270",
+  "total_queries": 20,
+  "systems": {
+    "naive": {
+      "success_rate": 1.0,
+      "average_time": 7.25334085226059,
+      "metrics": {
+        "csr": {
+          "mean": 0.6323333333333333,
+          "std": 0.19591409682137048,
+          "min": 0.3333333333333333,
+          "max": 1.0,
+          "count": 20
+        },
+        "precision_at_5": {
+          "mean": 0.67,
+          "std": 0.3303028912982749,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 20
+        },
+        "mood_match_accuracy": {
+          "mean": 0.52,
+          "std": 0.47916594202843765,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 20
+        },
+        "runtime_fit_quality": {
+          "mean": 0.3750555555555556,
+          "std": 0.4631415103852982,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 20
+        }
+      }
+    },
+    "advanced": {
+      "success_rate": 1.0,
+      "average_time": 232.29486924409866,
+      "metrics": {
+        "csr": {
+          "mean": 0.6697291666666667,
+          "std": 0.21219030844156803,
+          "min": 0.3333333333333333,
+          "max": 1.0,
+          "count": 20
+        },
+        "precision_at_5": {
+          "mean": 0.79,
+          "std": 0.33749074061372414,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 20
+        },
+        "mood_match_accuracy": {
+          "mean": 0.55,
+          "std": 0.49749371855331,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 20
+        },
+        "runtime_fit_quality": {
+          "mean": 0.3745,
+          "std": 0.4649325219857178,
+          "min": 0.0,
+          "max": 1.0,
+          "count": 20
+        }
+      }
+    },
+    "agentic": {
+      "success_rate": 1.0,
+      "average_time": 9.118624711036682,
+      "metrics": {
+        "csr": {
+          "mean": 0.07208333333333333,
+          "std": 0.15790017504036458,
+          "min": 0.0,
+          "max": 0.6666666666666666,
+          "count": 20
+        },
+        "precision_at_5": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 20
+        },
+        "mood_match_accuracy": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "count": 20
+        },
+        "runtime_fit_quality": {
+          "mean": 0.18,
+          "std": 0.36,
+          "min": 0.0,
+          "max": 0.9,
+          "count": 20
+        }
+      }
+    }
+  }
+}

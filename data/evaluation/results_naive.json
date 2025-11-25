@@ -1,0 +1,5287 @@
+[
+  {
+    "query_id": 1,
+    "query": "I want a funny comedy movie",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "happy",
+      "genre": "comedy",
+      "type": "movie"
+    },
+    "recommendations": [
+      {
+        "id": "1114967",
+        "type": "movie",
+        "title": "Good Fortune",
+        "year": "2025",
+        "tmdb_rating": 7.167,
+        "genres": [
+          "Comedy",
+          "Fantasy"
+        ],
+        "moods": [
+          "bored",
+          "happy"
+        ],
+        "vote_count": 198,
+        "runtime_minutes": 98,
+        "total_hours": 1.6333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "angel",
+          "contemporary fantasy",
+          "assertive"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Keanu Reeves",
+          "Aziz Ansari",
+          "Seth Rogen",
+          "Keke Palmer",
+          "Sandra Oh"
+        ],
+        "crew": [
+          "Aziz Ansari"
+        ]
+      },
+      {
+        "id": "12153",
+        "type": "movie",
+        "title": "White Chicks",
+        "year": "2004",
+        "tmdb_rating": 6.937,
+        "genres": [
+          "Comedy",
+          "Crime"
+        ],
+        "moods": [
+          "happy",
+          "stressed",
+          "bored"
+        ],
+        "vote_count": 4316,
+        "runtime_minutes": 109,
+        "total_hours": 1.8166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "undercover",
+          "kidnapping",
+          "fbi",
+          "auction",
+          "nightclub",
+          "sleepover",
+          "cross dressing",
+          "car accident",
+          "shopping",
+          "news reporter",
+          "impersonation",
+          "high society",
+          "fashion show",
+          "buddy cop",
+          "basketball player",
+          "socialite party",
+          "dance-off",
+          "hamptons",
+          "jealous wife",
+          "dumb blonde",
+          "brothers",
+          "amused",
+          "runway",
+          "fbi operation",
+          "drug bust"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8500000000000001,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Shawn Wayans",
+          "Marlon Wayans",
+          "Frankie Faison",
+          "Terry Crews",
+          "Faune Chambers Watkins"
+        ],
+        "crew": [
+          "Keenen Ivory Wayans"
+        ]
+      },
+      {
+        "id": "4247",
+        "type": "movie",
+        "title": "Scary Movie",
+        "year": "2000",
+        "tmdb_rating": 6.4,
+        "genres": [
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "bored"
+        ],
+        "vote_count": 7391,
+        "runtime_minutes": 88,
+        "total_hours": 1.4666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "high school",
+          "psychopath",
+          "garage",
+          "satire",
+          "parody",
+          "crude humor",
+          "spoof",
+          "horror spoof",
+          "drugs",
+          "aftercreditsstinger",
+          "horror parody",
+          "enthusiastic"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.65,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Anna Faris",
+          "Jon Abrahams",
+          "Marlon Wayans",
+          "Shawn Wayans",
+          "Regina Hall"
+        ],
+        "crew": [
+          "Keenen Ivory Wayans"
+        ]
+      },
+      {
+        "id": "355008",
+        "type": "movie",
+        "title": "Special Correspondents",
+        "year": "2016",
+        "tmdb_rating": 5.759,
+        "genres": [
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "bored"
+        ],
+        "vote_count": 537,
+        "runtime_minutes": 100,
+        "total_hours": 1.6666666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "reporter",
+          "con game"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.5,
+          "family_watch": 0.65,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Ricky Gervais",
+          "Eric Bana",
+          "Vera Farmiga",
+          "Kelly Macdonald",
+          "Benjamin Bratt"
+        ],
+        "crew": [
+          "Ricky Gervais"
+        ]
+      },
+      {
+        "id": "514466",
+        "type": "movie",
+        "title": "Supercool",
+        "year": "2021",
+        "tmdb_rating": 5.8,
+        "genres": [
+          "Comedy",
+          "Action"
+        ],
+        "moods": [
+          "bored",
+          "happy",
+          "excited"
+        ],
+        "vote_count": 45,
+        "runtime_minutes": 91,
+        "total_hours": 1.5166666666666666,
+        "language": "fi",
+        "content_rating": "",
+        "keywords": [
+          "wish fulfillment"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.5,
+          "family_watch": 0.65,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Jake Short",
+          "Miles J. Harvey",
+          "Damon Wayans Jr.",
+          "Madison Davenport",
+          "Iliza Shlesinger"
+        ],
+        "crew": [
+          "Teppo Airaksinen"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Good Fortune (2025) - With a high rating of 7.167/10, this comedy fantasy is likely to deliver a humorous and enjoyable experience, featuring well-known actors like Keanu Reeves and Seth Rogen, perfect for a light-hearted watch.\n2. White Chicks (2004) - This movie has a strong comedy element with a rating of 6.937/10 and is well-loved for its comedic performances by the Wayans brothers, making it a classic choice for a funny movie night.\n3. Scary Movie (2000) - Known for its parody humor, this film offers a funny and quick 88-minute escape with a blend of humor and a spoof on horror films, ideal if you're in the mood for something light and laugh-inducing.\n4. Special Correspondents (2016) - Featuring Ricky Gervais, this comedy delivers witty humor and a happy mood, making it a good fit if you're in the mood for a clever and amusing film.\n5. Supercool (2021) - This action-comedy provides a fun and exciting 91-minute ride, perfect for when you want to laugh and enjoy an adventurous story.\n\nREASONING:\nThe selections prioritize pure comedy films with a happy mood, ensuring the user receives a funny experience. I considered ratings to ensure quality and enjoyment, prioritizing higher-rated films. The movies chosen have varying lengths to provide flexibility, and I focused on those that are primarily comedy to meet the user's preference for a funny movie.",
+    "method": "naive_rag",
+    "elapsed_time": 7.664301872253418,
+    "success": true,
+    "metrics": {
+      "csr": 1.0,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 2,
+    "query": "Looking for a scary horror movie for tonight",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "scared",
+      "genre": "horror",
+      "type": "movie",
+      "context": "solo_watch"
+    },
+    "recommendations": [
+      {
+        "id": "1034541",
+        "type": "movie",
+        "title": "Terrifier 3",
+        "year": "2024",
+        "tmdb_rating": 6.815,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious",
+          "sad"
+        ],
+        "vote_count": 1800,
+        "runtime_minutes": 125,
+        "total_hours": 2.0833333333333335,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "monster",
+          "post-traumatic stress disorder (ptsd)",
+          "angel",
+          "shower",
+          "child murder",
+          "santa claus",
+          "college",
+          "clown",
+          "bartender",
+          "gore",
+          "dormitory",
+          "sequel",
+          "serial killer",
+          "teenage girl",
+          "slasher",
+          "chainsaw",
+          "massacre",
+          "mental illness",
+          "disfigured face",
+          "mental asylum",
+          "cousin relationship",
+          "mall santa",
+          "killer clown",
+          "terrorist bombing",
+          "christmas horror",
+          "evil clown",
+          "christmas spirit",
+          "christmas",
+          "murder of parents",
+          "orphan siblings",
+          "supernatural power",
+          "death of a child",
+          "supernatural horror",
+          "bar",
+          "bloody",
+          "independent film",
+          "blood",
+          "low budget",
+          "megaslasher",
+          "witty"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Lauren LaVera",
+          "David Howard Thornton",
+          "Samantha Scaffidi",
+          "Elliott Fullam",
+          "Margaret Anne Florence"
+        ],
+        "crew": [
+          "Damien Leone"
+        ]
+      },
+      {
+        "id": "1202863",
+        "type": "movie",
+        "title": "From Darkness",
+        "year": "2024",
+        "tmdb_rating": 6.393,
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "curious",
+          "excited"
+        ],
+        "vote_count": 14,
+        "runtime_minutes": 95,
+        "total_hours": 1.5833333333333333,
+        "language": "sv",
+        "content_rating": "",
+        "keywords": [
+          "rescue",
+          "post-traumatic stress disorder (ptsd)",
+          "sacrifice",
+          "darkness",
+          "survival horror",
+          "missing child",
+          "search party",
+          "folklore",
+          "abandoned mine",
+          "rescue dog",
+          "mysterious events",
+          "swedish folklore",
+          "depressed",
+          "mysterious caves"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Rakel Benér",
+          "Oscar Skagerberg",
+          "Peter Mörlin",
+          "Thomas Hedengran",
+          "Amanda Kilpeläinen Arvidsson"
+        ],
+        "crew": [
+          "Philip W. da Silva"
+        ]
+      },
+      {
+        "id": "1373445",
+        "type": "movie",
+        "title": "V/H/S/Halloween",
+        "year": "2025",
+        "tmdb_rating": 6.287,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious"
+        ],
+        "vote_count": 143,
+        "runtime_minutes": 115,
+        "total_hours": 1.9166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "witch",
+          "candy",
+          "holiday",
+          "halloween",
+          "gore",
+          "anthology",
+          "sequel",
+          "vhs",
+          "torture",
+          "found footage",
+          "trick or treating",
+          "soda",
+          "horror anthology",
+          "supernatural horror",
+          "horror",
+          "holiday horror"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Samantha Cochran",
+          "Natalia Montgomery Fernandez",
+          "Elena Musser",
+          "Adam Carr",
+          "Charlotte Mae Curtis"
+        ],
+        "crew": [
+          "Bryan M. Ferguson",
+          "Casper Kelly",
+          "Micheline Pitt-Norman"
+        ]
+      },
+      {
+        "id": "10665",
+        "type": "movie",
+        "title": "The Strangers",
+        "year": "2008",
+        "tmdb_rating": 6.128,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious"
+        ],
+        "vote_count": 2564,
+        "runtime_minutes": 86,
+        "total_hours": 1.4333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "mask",
+          "murder",
+          "serial killer",
+          "slasher",
+          "home invasion",
+          "psychological horror",
+          "absurd"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Liv Tyler",
+          "Scott Speedman",
+          "Gemma Ward",
+          "Kip Weeks",
+          "Laura Margolis"
+        ],
+        "crew": [
+          "Bryan Bertino"
+        ]
+      },
+      {
+        "id": "743022",
+        "type": "movie",
+        "title": "Fear PHarm",
+        "year": "2020",
+        "tmdb_rating": 5.263,
+        "genres": [
+          "Horror"
+        ],
+        "moods": [
+          "scared",
+          "stressed"
+        ],
+        "vote_count": 40,
+        "runtime_minutes": 79,
+        "total_hours": 1.3166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.65,
+          "family_watch": 0.5,
+          "date_night": 0.5,
+          "background_watch": 0.5,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "John Littlefield",
+          "Tiana Tuttle",
+          "Houston Stevenson",
+          "Aimee Stolte",
+          "Chris Leary"
+        ],
+        "crew": [
+          "Dante Yore"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Terrifier 3 (2024) - This movie has one of the highest ratings on the list and offers a mix of horror and thriller elements, promising a truly scary experience with a runtime perfect for an engaging horror night.\n2. From Darkness (2024) - With a solid rating and a blend of horror, mystery, and thriller, this film is likely to keep you on the edge of your seat with its chilling atmosphere.\n3. V/H/S/Halloween (2025) - This movie combines horror and thriller genres, providing a longer runtime for a more immersive experience, and is highly rated for its fright factor.\n4. The Strangers (2008) - Known for its unsettling premise and tension, this horror-thriller is a classic choice for a night of scares, with a decent rating and an effective mood-setting.\n5. Fear PHarm (2020) - For a quicker scare, this movie has a shorter runtime and encapsulates the horror genre, making it a good choice if you're looking for something more concise.\n\nREASONING:\nThe user is looking for a scary horror movie for tonight, so I prioritized films with higher ratings and stronger horror elements. The selections include a mix of recent releases and classics to cater to different preferences, all while maintaining a focus on the horror and thriller genres to ensure a truly frightening experience. The choices balance runtime for longer engagement or shorter, intense scares depending on the user's preference.",
+    "method": "naive_rag",
+    "elapsed_time": 6.186619997024536,
+    "success": true,
+    "metrics": {
+      "csr": 1.0,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 3,
+    "query": "Find me a family-friendly movie under 2 hours",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "context": "family_watch",
+      "type": "movie",
+      "max_hours": 2.0
+    },
+    "recommendations": [
+      {
+        "id": "809",
+        "type": "movie",
+        "title": "Shrek 2",
+        "year": "2004",
+        "tmdb_rating": 7.304,
+        "genres": [
+          "Animation",
+          "Family",
+          "Comedy",
+          "Fantasy",
+          "Adventure",
+          "Romance"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "relaxed",
+          "nostalgic",
+          "sad",
+          "excited"
+        ],
+        "vote_count": 13017,
+        "runtime_minutes": 92,
+        "total_hours": 1.5333333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "prison",
+          "princess",
+          "magic",
+          "kingdom",
+          "fairy tale",
+          "liberation",
+          "transformation",
+          "honeymoon",
+          "prince",
+          "villain",
+          "parents-in-law",
+          "enchantment",
+          "sequel",
+          "anthropomorphism",
+          "dragon",
+          "ogre",
+          "fairy godmother",
+          "cartoon donkey",
+          "quirky comedy"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Mike Myers",
+          "Eddie Murphy",
+          "Cameron Diaz",
+          "Julie Andrews",
+          "Antonio Banderas"
+        ],
+        "crew": [
+          "Andrew Adamson",
+          "Kelly Asbury",
+          "Conrad Vernon"
+        ]
+      },
+      {
+        "id": "863",
+        "type": "movie",
+        "title": "Toy Story 2",
+        "year": "1999",
+        "tmdb_rating": 7.6,
+        "genres": [
+          "Animation",
+          "Comedy",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "nostalgic",
+          "bored"
+        ],
+        "vote_count": 14466,
+        "runtime_minutes": 92,
+        "total_hours": 1.5333333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "friendship",
+          "airplane",
+          "museum",
+          "prosecution",
+          "identity crisis",
+          "villain",
+          "flea market",
+          "collector",
+          "sequel",
+          "buddy",
+          "rescue team",
+          "prospector",
+          "garage sale",
+          "duringcreditsstinger",
+          "toy comes to life",
+          "personification",
+          "inanimate objects come to life",
+          "comforting"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Tom Hanks",
+          "Tim Allen",
+          "Joan Cusack",
+          "Kelsey Grammer",
+          "Don Rickles"
+        ],
+        "crew": [
+          "John Lasseter"
+        ]
+      },
+      {
+        "id": "1248226",
+        "type": "movie",
+        "title": "Playdate",
+        "year": "2025",
+        "tmdb_rating": 6.376,
+        "genres": [
+          "Action",
+          "Comedy",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "excited",
+          "relaxed",
+          "nostalgic"
+        ],
+        "vote_count": 194,
+        "runtime_minutes": 95,
+        "total_hours": 1.5833333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "stay-at-home dad",
+          "accountant",
+          "action comedy",
+          "clinical",
+          "cliché",
+          "disapproving"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Kevin James",
+          "Alan Ritchson",
+          "Sarah Chalke",
+          "Isla Fisher",
+          "Alan Tudyk"
+        ],
+        "crew": [
+          "Luke Greenfield"
+        ]
+      },
+      {
+        "id": "49013",
+        "type": "movie",
+        "title": "Cars 2",
+        "year": "2011",
+        "tmdb_rating": 6.164,
+        "genres": [
+          "Animation",
+          "Family",
+          "Adventure",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "excited",
+          "relaxed",
+          "bored",
+          "nostalgic"
+        ],
+        "vote_count": 8218,
+        "runtime_minutes": 106,
+        "total_hours": 1.7666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "car race",
+          "sports",
+          "spy",
+          "villain",
+          "sequel",
+          "anthropomorphism",
+          "best friend",
+          "british spy",
+          "duringcreditsstinger",
+          "grand prix",
+          "loving",
+          "cars"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Larry the Cable Guy",
+          "Owen Wilson",
+          "Michael Caine",
+          "Emily Mortimer",
+          "Eddie Izzard"
+        ],
+        "crew": [
+          "John Lasseter"
+        ]
+      },
+      {
+        "id": "639720",
+        "type": "movie",
+        "title": "IF",
+        "year": "2024",
+        "tmdb_rating": 7.018,
+        "genres": [
+          "Comedy",
+          "Fantasy",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "relaxed",
+          "nostalgic"
+        ],
+        "vote_count": 1461,
+        "runtime_minutes": 104,
+        "total_hours": 1.7333333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "friendship",
+          "imaginary friend",
+          "aftercreditsstinger",
+          "imaginary",
+          "live action and animation",
+          "imagination"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Cailey Fleming",
+          "Ryan Reynolds",
+          "John Krasinski",
+          "Fiona Shaw",
+          "Steve Carell"
+        ],
+        "crew": [
+          "John Krasinski"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Shrek 2 (2004) - With a runtime of 92 minutes, this animated family comedy is perfect for a family-friendly movie night. Its high rating and mix of humor and adventure make it enjoyable for viewers of all ages.\n2. Toy Story 2 (1999) - This beloved sequel runs for 92 minutes and offers a nostalgic journey filled with humor and heartwarming moments, ideal for family viewing.\n3. Playdate (2025) - At 95 minutes, this action-comedy film is suitable for families seeking a light-hearted experience. Its blend of humor and family dynamics makes it a fun choice.\n4. Cars 2 (2011) - Although slightly longer at 106 minutes, this animated adventure combines comedy and excitement, keeping both kids and adults entertained with its engaging storyline.\n5. IF (2024) - With a runtime of 104 minutes, this fantasy comedy is a solid family-friendly option, offering a mix of humor and whimsy to captivate a younger audience.\n\nREASONING:\nThe selections focus on family-friendly movies with runtimes under or close to 2 hours, ensuring that they fit within the user's specified length preference. The chosen films include popular and well-rated animated and live-action options, offering a mix of comedy, adventure, and nostalgia suitable for all ages. This approach ensures an enjoyable viewing experience for families looking for light-hearted and engaging content.",
+    "method": "naive_rag",
+    "elapsed_time": 6.385802984237671,
+    "success": true,
+    "metrics": {
+      "csr": 1.0,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 1.0
+    }
+  },
+  {
+    "query_id": 4,
+    "query": "I want an inspiring biographical series I can binge watch this weekend",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "mood": "inspired",
+      "genre": "biography",
+      "type": "series",
+      "context": "binge_worthy",
+      "session_type": "multiple"
+    },
+    "recommendations": [
+      {
+        "id": "54650",
+        "type": "series",
+        "title": "Power",
+        "year": "2014",
+        "tmdb_rating": 7.66,
+        "genres": [
+          "Crime",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 1256,
+        "runtime_minutes": 60,
+        "total_hours": 63.0,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Omari Hardwick",
+          "Joseph Sikora",
+          "Naturi Naughton",
+          "Larenz Tate",
+          "Shane Johnson"
+        ],
+        "crew": [
+          "Courtney Kemp Agboh",
+          "Vladimir Cvetko"
+        ],
+        "seasons": 6,
+        "episodes": 63
+      },
+      {
+        "id": "78191",
+        "type": "series",
+        "title": "You",
+        "year": "2018",
+        "tmdb_rating": 8.026,
+        "genres": [
+          "Crime"
+        ],
+        "moods": [
+          "stressed"
+        ],
+        "vote_count": 3708,
+        "runtime_minutes": 45,
+        "total_hours": 37.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Penn Badgley",
+          "Charlotte Ritchie",
+          "Griffin Matthews",
+          "Anna Camp",
+          "Madeline Brewer"
+        ],
+        "crew": [
+          "Greg Berlanti",
+          "Sera Gamble"
+        ],
+        "seasons": 5,
+        "episodes": 50
+      },
+      {
+        "id": "91239",
+        "type": "series",
+        "title": "Bridgerton",
+        "year": "2020",
+        "tmdb_rating": 8.076,
+        "genres": [
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 3037,
+        "runtime_minutes": 45,
+        "total_hours": 24.0,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Luke Thompson",
+          "Luke Newton",
+          "Ruth Gemmell",
+          "Adjoa Andoh",
+          "Hannah Dodd"
+        ],
+        "crew": [
+          "Chris Van Dusen"
+        ],
+        "seasons": 4,
+        "episodes": 32
+      },
+      {
+        "id": "226637",
+        "type": "series",
+        "title": "High Potential",
+        "year": "2024",
+        "tmdb_rating": 8.044,
+        "genres": [
+          "Drama",
+          "Crime",
+          "Mystery"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 354,
+        "runtime_minutes": 45,
+        "total_hours": 17.25,
+        "language": "en",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Kaitlin Olson",
+          "Daniel Sunjata",
+          "Judy Reyes",
+          "Javicia Leslie",
+          "Deniz Akdeniz"
+        ],
+        "crew": [
+          "Drew Goddard"
+        ],
+        "seasons": 2,
+        "episodes": 23
+      },
+      {
+        "id": "69740",
+        "type": "series",
+        "title": "Ozark",
+        "year": "2017",
+        "tmdb_rating": 8.213,
+        "genres": [
+          "Crime",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 2573,
+        "runtime_minutes": 45,
+        "total_hours": 33.0,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Jason Bateman",
+          "Laura Linney",
+          "Sofia Hublitz",
+          "Skylar Gaertner",
+          "Julia Garner"
+        ],
+        "crew": [
+          "Mark Williams",
+          "Bill Dubuque"
+        ],
+        "seasons": 4,
+        "episodes": 44
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Succession (2018) - With a high rating and themes of drama and inspiration, this series dives into the power struggles within a wealthy family, offering an engaging and thought-provoking narrative that can be motivating.\n2. The Bold Type (2017) - This series is inspired by the life of Joanna Coles, the former editor-in-chief of Cosmopolitan, and provides an insightful look into the world of women's magazines, making it an inspiring choice for your weekend binge.\n3. Bridgerton (2020) - Set in the competitive world of Regency London's high society, this series combines drama and inspiration, providing a captivating and binge-worthy experience.\n4. High Potential (2024) - Although relatively new, this series has a strong rating and offers an inspiring and curious mood through its mysterious and dramatic storyline.\n5. Ozark (2017) - This crime drama, with its compelling and intense storytelling, offers an inspiring look at the lengths one family will go to survive and thrive under pressure.\n\nREASONING:\nTo match the user's request for an inspiring biographical series suitable for binge-watching, the recommendations focus on highly-rated series that provide inspirational themes and engaging narratives. \"Succession\" and \"The Bold Type\" offer real-world inspirations, while \"Bridgerton\" and \"Ozark\" provide captivating stories with elements of inspiration. \"High Potential,\" despite being newer, stands out with its intriguing and inspiring content. These selections balance the user's desire for a binge-worthy, inspirational experience with the available content's strengths in ratings and genre suitability.",
+    "method": "naive_rag",
+    "elapsed_time": 7.897730827331543,
+    "success": true,
+    "metrics": {
+      "csr": 0.56,
+      "precision_at_5": 0.8,
+      "mood_match_accuracy": 0.8,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 5,
+    "query": "Suggest a highly rated drama for a date night, preferably under 2.5 hours",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "genre": "drama",
+      "context": "date_night",
+      "min_rating": 7.0,
+      "max_hours": 2.5
+    },
+    "recommendations": [
+      {
+        "id": "271039",
+        "type": "movie",
+        "title": "Something, Anything",
+        "year": "2015",
+        "tmdb_rating": 6.7,
+        "genres": [
+          "Romance",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "nostalgic",
+          "happy",
+          "inspired"
+        ],
+        "vote_count": 12,
+        "runtime_minutes": 88,
+        "total_hours": 1.4666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "spiritual quest"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.8,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Ashley Shelton",
+          "Bryce Johnson",
+          "Linds Edwards",
+          "Amy Leigh Hubbard",
+          "Lauren Lazarus"
+        ],
+        "crew": [
+          "Paul Harrill"
+        ]
+      },
+      {
+        "id": "1380983",
+        "type": "movie",
+        "title": "Renovation Romance",
+        "year": "2024",
+        "tmdb_rating": 6.167,
+        "genres": [
+          "TV Movie",
+          "Romance",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "sad",
+          "nostalgic",
+          "bored"
+        ],
+        "vote_count": 3,
+        "runtime_minutes": 88,
+        "total_hours": 1.4666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.65,
+          "date_night": 0.8,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Jessica Lowndes",
+          "Daniel Lissing",
+          "Adam Hurtig",
+          "Farrah Aviva",
+          "Samantha Kendrick"
+        ],
+        "crew": [
+          "Robin Dunne"
+        ]
+      },
+      {
+        "id": "1337395",
+        "type": "movie",
+        "title": "Kiskisan",
+        "year": "2024",
+        "tmdb_rating": 6.1,
+        "genres": [
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "nostalgic",
+          "happy"
+        ],
+        "vote_count": 7,
+        "runtime_minutes": 60,
+        "total_hours": 1.0,
+        "language": "tl",
+        "content_rating": "",
+        "keywords": [
+          "softcore",
+          "lgbt",
+          "lesbian",
+          "girls' love (gl)",
+          "sexy",
+          "adoring"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Apple Dy",
+          "Skye Gonzaga",
+          "Juan Calma",
+          "Robb Guinto",
+          "Tabs Sumulong"
+        ],
+        "crew": [
+          "Bobby Bonifacio"
+        ]
+      },
+      {
+        "id": "957119",
+        "type": "movie",
+        "title": "Sidelined: The QB and Me",
+        "year": "2025",
+        "tmdb_rating": 6.1,
+        "genres": [
+          "Comedy",
+          "Romance"
+        ],
+        "moods": [
+          "happy",
+          "sad",
+          "nostalgic",
+          "bored"
+        ],
+        "vote_count": 103,
+        "runtime_minutes": 99,
+        "total_hours": 1.65,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "high school",
+          "based on novel or book",
+          "american football player",
+          "based on web novel"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.65,
+          "date_night": 0.8,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Siena Agudong",
+          "Noah Beck",
+          "Drew Ray Tanner",
+          "James Van Der Beek",
+          "Deborah Cox"
+        ],
+        "crew": [
+          "Justin Wu"
+        ]
+      },
+      {
+        "id": "68398",
+        "type": "series",
+        "title": "Dr. Romantic",
+        "year": "2016",
+        "tmdb_rating": 8.3,
+        "genres": [
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 113,
+        "runtime_minutes": 60,
+        "total_hours": 52.0,
+        "language": "ko",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Han Suk-kyu",
+          "Ahn Hyo-seop",
+          "Lee Sung-kyoung",
+          "Kim Min-jae",
+          "Kim Ju-hun"
+        ],
+        "crew": [
+          "Kang Eun-kyung",
+          "Yoo In-sik"
+        ],
+        "seasons": 3,
+        "episodes": 52
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Something, Anything (2015) - This movie, at 88 minutes, perfectly fits the time constraint and combines romance with drama, making it an ideal choice for a date night, offering a touching and reflective experience.\n2. Renovation Romance (2024) - With a runtime of 88 minutes, this TV movie balances romance and comedy, providing a lighthearted yet emotional viewing experience that's perfect for a cozy date night.\n3. Kiskisan (2024) - At just 60 minutes, this drama offers a poignant and compact narrative, ensuring an engaging and emotional experience without a significant time commitment.\n4. Sidelined: The QB and Me (2025) - Although primarily a comedy, this movie includes romantic elements, is under the user's time limit, and can add a fun and relaxed vibe to a date night.\n5. Dr. Romantic (2016) - While it's a series, the high rating and strong drama elements make it a noteworthy mention if the couple is open to starting a new series together with episodes that can be picked and watched selectively.\n\nREASONING:\nThe selection focuses on films that align with the user's preference for drama, ensuring they are under 2.5 hours to fit the date night time constraint. The recommendations include a mix of romance and drama to create an emotional and engaging atmosphere ideal for a date night. With the high ratings and appropriate mood settings, these selections aim to provide a satisfying and intimate viewing experience.",
+    "method": "naive_rag",
+    "elapsed_time": 7.74204421043396,
+    "success": true,
+    "metrics": {
+      "csr": 0.7,
+      "precision_at_5": 0.6,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.9199999999999999
+    }
+  },
+  {
+    "query_id": 6,
+    "query": "I want a happy family movie under 2 hours that we haven't watched before. We recently saw Toy Story, Frozen, and Moana.",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "happy",
+      "context": "family_watch",
+      "type": "movie",
+      "max_hours": 2.0,
+      "viewing_history": [
+        "Toy Story",
+        "Frozen",
+        "Moana"
+      ]
+    },
+    "recommendations": [
+      {
+        "id": "1241982",
+        "type": "movie",
+        "title": "Moana 2",
+        "year": "2024",
+        "tmdb_rating": 7.026,
+        "genres": [
+          "Family",
+          "Comedy",
+          "Adventure",
+          "Animation",
+          "Fantasy"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "relaxed",
+          "nostalgic",
+          "excited"
+        ],
+        "vote_count": 2784,
+        "runtime_minutes": 100,
+        "total_hours": 1.6666666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "sea",
+          "ocean",
+          "villain",
+          "musical",
+          "sequel",
+          "coming of age",
+          "duringcreditsstinger",
+          "hopeful"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Auliʻi Cravalho",
+          "Dwayne Johnson",
+          "Hualālai Chung",
+          "Rose Matafeo",
+          "David Fane"
+        ],
+        "crew": [
+          "David G. Derrick Jr.",
+          "Jason Hand",
+          "Dana Ledoux Miller"
+        ]
+      },
+      {
+        "id": "862",
+        "type": "movie",
+        "title": "Toy Story",
+        "year": "1995",
+        "tmdb_rating": 7.97,
+        "genres": [
+          "Family",
+          "Comedy",
+          "Animation",
+          "Adventure"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored",
+          "excited",
+          "nostalgic"
+        ],
+        "vote_count": 19291,
+        "runtime_minutes": 81,
+        "total_hours": 1.35,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "rescue",
+          "friendship",
+          "mission",
+          "jealousy",
+          "villain",
+          "bullying",
+          "elementary school",
+          "rivalry",
+          "anthropomorphism",
+          "friends",
+          "computer animation",
+          "buddy",
+          "walkie talkie",
+          "toy car",
+          "boy next door",
+          "new toy",
+          "neighborhood",
+          "toy comes to life",
+          "resourcefulness",
+          "toy",
+          "pixar"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Tom Hanks",
+          "Tim Allen",
+          "Don Rickles",
+          "Jim Varney",
+          "Wallace Shawn"
+        ],
+        "crew": [
+          "John Lasseter"
+        ]
+      },
+      {
+        "id": "1108427",
+        "type": "movie",
+        "title": "Moana",
+        "year": "2026",
+        "tmdb_rating": 0.0,
+        "genres": [
+          "Family",
+          "Fantasy",
+          "Comedy",
+          "Adventure"
+        ],
+        "moods": [
+          "bored",
+          "happy",
+          "excited",
+          "relaxed",
+          "nostalgic"
+        ],
+        "vote_count": 0,
+        "runtime_minutes": 0,
+        "total_hours": 0.0,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "friendship",
+          "leaving one's family",
+          "musical",
+          "remake",
+          "curse",
+          "demigod",
+          "polynesia",
+          "animal sidekick",
+          "live action remake"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.5,
+          "family_watch": 0.8,
+          "date_night": 0.65,
+          "background_watch": 0.65,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Catherine Laga‘aia",
+          "Dwayne Johnson",
+          "Rena Owen",
+          "John Tui",
+          "Frankie Adams"
+        ],
+        "crew": [
+          "Thomas Kail"
+        ]
+      },
+      {
+        "id": "552524",
+        "type": "movie",
+        "title": "Lilo & Stitch",
+        "year": "2025",
+        "tmdb_rating": 7.251,
+        "genres": [
+          "Family",
+          "Science Fiction",
+          "Comedy",
+          "Adventure"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "excited",
+          "relaxed",
+          "curious",
+          "nostalgic",
+          "sad"
+        ],
+        "vote_count": 1828,
+        "runtime_minutes": 108,
+        "total_hours": 1.8,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "hawaii",
+          "bullying",
+          "dysfunctional family",
+          "alien",
+          "loss of job",
+          "shape shifting alien",
+          "family",
+          "nostalgic",
+          "evil alien",
+          "orphan siblings",
+          "extraterrestrial animal",
+          "live action remake",
+          "alien spaceship",
+          "animal human friendship",
+          "advanced technology",
+          "hilarious",
+          "whimsical"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Maia Kealoha",
+          "Sydney Agudong",
+          "Chris Sanders",
+          "Zach Galifianakis",
+          "Billy Magnussen"
+        ],
+        "crew": [
+          "Dean Fleischer Camp"
+        ]
+      },
+      {
+        "id": "354912",
+        "type": "movie",
+        "title": "Coco",
+        "year": "2017",
+        "tmdb_rating": 8.2,
+        "genres": [
+          "Family",
+          "Animation",
+          "Music",
+          "Adventure"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "excited",
+          "nostalgic",
+          "bored",
+          "sad"
+        ],
+        "vote_count": 20422,
+        "runtime_minutes": 105,
+        "total_hours": 1.75,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "skeleton",
+          "mexico",
+          "guitar",
+          "afterlife",
+          "musician",
+          "holiday",
+          "villain",
+          "singer",
+          "murderer",
+          "life after death",
+          "kids",
+          "day of the dead",
+          "music",
+          "boy"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.7,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Anthony Gonzalez",
+          "Gael García Bernal",
+          "Benjamin Bratt",
+          "Alanna Ubach",
+          "Renée Victor"
+        ],
+        "crew": [
+          "Lee Unkrich"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Moana 2 (2024) - This sequel to a movie you've already enjoyed is under 2 hours and offers a mix of family, comedy, and adventure, making it a fresh and happy choice for your family movie night.\n2. Toy Story 2 (1999) - At 92 minutes, this family-friendly and highly-rated sequel continues the adventures of Woody and Buzz, combining nostalgia with a happy, familiar vibe.\n3. Encanto (2021) - With a runtime of 102 minutes, this colorful and magical film is perfect for a family viewing, offering a happy and relaxed mood similar to Moana and Frozen.\n4. Lilo & Stitch (2025) - Although slightly longer at 108 minutes, this fun and heartfelt movie offers a delightful mix of comedy and adventure, making it a great family choice with a happy mood.\n5. Coco (2017) - At 105 minutes, this beautifully animated film combines adventure and a heartwarming story, offering a happy and nostalgic experience for family audiences.\n\nREASONING:\nI selected movies that align with your preference for happy family films under 2 hours, excluding those you've already seen. Each recommended movie offers a mix of adventure, comedy, and family-friendly content, similar to the films you've enjoyed, ensuring a delightful viewing experience. The focus was on maintaining a balance between runtime, genre, and mood, while considering your family's recent viewing history.",
+    "method": "naive_rag",
+    "elapsed_time": 8.49347710609436,
+    "success": true,
+    "metrics": {
+      "csr": 0.8,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.96
+    }
+  },
+  {
+    "query_id": 7,
+    "query": "Find me something like Inception - mind-bending and thought-provoking",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "similar_to": "Inception",
+      "mood": "curious",
+      "themes": [
+        "mind-bending",
+        "thought-provoking"
+      ]
+    },
+    "recommendations": [
+      {
+        "id": "11324",
+        "type": "movie",
+        "title": "Shutter Island",
+        "year": "2010",
+        "tmdb_rating": 8.201,
+        "genres": [
+          "Drama",
+          "Thriller",
+          "Mystery"
+        ],
+        "moods": [
+          "curious",
+          "scared",
+          "sad",
+          "excited",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 25050,
+        "runtime_minutes": 138,
+        "total_hours": 2.3,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "island",
+          "based on novel or book",
+          "hurricane",
+          "investigation",
+          "u.s. marshal",
+          "conspiracy theory",
+          "psychiatric hospital",
+          "psychological thriller",
+          "whodunit",
+          "neo-noir",
+          "1950s",
+          "dreary",
+          "baffled",
+          "suspense mystery"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Leonardo DiCaprio",
+          "Mark Ruffalo",
+          "Ben Kingsley",
+          "Max von Sydow",
+          "Michelle Williams"
+        ],
+        "crew": [
+          "Martin Scorsese"
+        ]
+      },
+      {
+        "id": "1491",
+        "type": "movie",
+        "title": "The Illusionist",
+        "year": "2006",
+        "tmdb_rating": 7.295,
+        "genres": [
+          "Fantasy",
+          "Drama",
+          "Thriller",
+          "Romance"
+        ],
+        "moods": [
+          "nostalgic",
+          "sad",
+          "happy",
+          "excited",
+          "scared",
+          "curious",
+          "inspired",
+          "stressed",
+          "bored"
+        ],
+        "vote_count": 5132,
+        "runtime_minutes": 110,
+        "total_hours": 1.8333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "princess",
+          "magic",
+          "rivalry",
+          "love",
+          "vienna, austria",
+          "super power",
+          "crown prince",
+          "duchess",
+          "mysterious",
+          "childhood sweetheart",
+          "romantic"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.8500000000000001,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Edward Norton",
+          "Paul Giamatti",
+          "Jessica Biel",
+          "Rufus Sewell",
+          "Eddie Marsan"
+        ],
+        "crew": [
+          "Neil Burger"
+        ]
+      },
+      {
+        "id": "75656",
+        "type": "movie",
+        "title": "Now You See Me",
+        "year": "2013",
+        "tmdb_rating": 7.332,
+        "genres": [
+          "Thriller",
+          "Crime"
+        ],
+        "moods": [
+          "curious",
+          "stressed",
+          "excited",
+          "scared",
+          "bored"
+        ],
+        "vote_count": 16183,
+        "runtime_minutes": 116,
+        "total_hours": 1.9333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "new york city",
+          "paris, france",
+          "escape",
+          "magic",
+          "bank",
+          "fbi",
+          "vault",
+          "new orleans, louisiana",
+          "investigation",
+          "heist",
+          "money",
+          "conspiracy",
+          "las vegas",
+          "magician",
+          "tense",
+          "awestruck",
+          "excited",
+          "elaborate deception"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Jesse Eisenberg",
+          "Woody Harrelson",
+          "Isla Fisher",
+          "Dave Franco",
+          "Mark Ruffalo"
+        ],
+        "crew": [
+          "Louis Leterrier"
+        ]
+      },
+      {
+        "id": "1084199",
+        "type": "movie",
+        "title": "Companion",
+        "year": "2025",
+        "tmdb_rating": 7.042,
+        "genres": [
+          "Horror",
+          "Science Fiction",
+          "Thriller"
+        ],
+        "moods": [
+          "excited",
+          "scared",
+          "curious",
+          "stressed",
+          "bored"
+        ],
+        "vote_count": 1848,
+        "runtime_minutes": 97,
+        "total_hours": 1.6166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "android",
+          "artificial intelligence (a.i.)",
+          "cabin",
+          "robot",
+          "boyfriend girlfriend relationship",
+          "duringcreditsstinger",
+          "meditative",
+          "thoughtful",
+          "philosophical",
+          "robot girl",
+          "unassuming",
+          "reflective",
+          "weekend getaway",
+          "complex",
+          "wonder",
+          "human android relationship",
+          "toxic relationship",
+          "loving",
+          "introspective",
+          "abusive relationship",
+          "inspirational",
+          "malfunctioning android",
+          "sentient machine",
+          "provocative",
+          "dramatic",
+          "sci-fi horror",
+          "admiring",
+          "bold",
+          "compassionate",
+          "dignified",
+          "earnest",
+          "empathetic",
+          "hopeful",
+          "objective",
+          "optimistic",
+          "scathing",
+          "sincere",
+          "sympathetic",
+          "tragic",
+          "human vs machines",
+          "cybernetics",
+          "android horror"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Sophie Thatcher",
+          "Jack Quaid",
+          "Lukas Gage",
+          "Megan Suri",
+          "Harvey Guillén"
+        ],
+        "crew": [
+          "Drew Hancock"
+        ]
+      },
+      {
+        "id": "158852",
+        "type": "movie",
+        "title": "Tomorrowland",
+        "year": "2015",
+        "tmdb_rating": 6.3,
+        "genres": [
+          "Adventure",
+          "Family",
+          "Mystery",
+          "Science Fiction"
+        ],
+        "moods": [
+          "excited",
+          "curious",
+          "happy",
+          "relaxed",
+          "scared",
+          "nostalgic",
+          "bored"
+        ],
+        "vote_count": 7196,
+        "runtime_minutes": 130,
+        "total_hours": 2.1666666666666665,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "inventor",
+          "apocalypse",
+          "destiny",
+          "dreamer",
+          "futuristic car",
+          "futuristic city",
+          "uplifting",
+          "disneyana",
+          "superversive"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.8,
+          "date_night": 0.5,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Britt Robertson",
+          "George Clooney",
+          "Raffey Cassidy",
+          "Hugh Laurie",
+          "Tim McGraw"
+        ],
+        "crew": [
+          "Brad Bird"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Shutter Island (2010) - This movie shares the mind-bending and thought-provoking qualities of Inception, featuring Leonardo DiCaprio in a complex narrative filled with twists and psychological depth.\n2. The Illusionist (2006) - With its mysterious and intricate plot, this film offers a similar experience of curiosity and intrigue, blending fantasy and drama with a thrilling narrative.\n3. Now You See Me (2013) - This movie offers a thrilling and clever storyline involving heists and deception, providing an exciting and curious viewing experience akin to Inception.\n4. Companion (2025) - As a horror and science fiction thriller, this film has an intriguing and suspenseful plot that may appeal to fans of mind-bending narratives.\n5. Tomorrowland (2015) - This science fiction film combines mystery and adventure, offering a sense of wonder and curiosity that echoes the imaginative spirit of Inception.\n\nREASONING:\nThe recommendations focus on films that deliver complex, intriguing narratives with mind-bending elements, similar to Inception. Shutter Island and The Illusionist are top picks for their intricate plots and psychological depth. Now You See Me and Companion add thrilling and suspenseful experiences, while Tomorrowland offers a more adventurous and imaginative take, all aligning with the user's interest in thought-provoking content.",
+    "method": "naive_rag",
+    "elapsed_time": 5.2515869140625,
+    "success": true,
+    "metrics": {
+      "csr": 0.3333333333333333,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 8,
+    "query": "I need a relaxing series I can watch in the background while working, nothing too intense, episodes around 30-45 minutes",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "relaxed",
+      "context": "background_watch",
+      "type": "series",
+      "runtime_minutes_range": [
+        30,
+        45
+      ],
+      "intensity": "low"
+    },
+    "recommendations": [
+      {
+        "id": "126506",
+        "type": "series",
+        "title": "Smiling Friends",
+        "year": "2020",
+        "tmdb_rating": 8.435,
+        "genres": [
+          "Animation",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored"
+        ],
+        "vote_count": 298,
+        "runtime_minutes": 45,
+        "total_hours": 18.75,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Michael Cusack",
+          "Zach Hadel",
+          "Marc Moceri"
+        ],
+        "crew": [
+          "Michael Cusack",
+          "Zach Hadel"
+        ],
+        "seasons": 3,
+        "episodes": 25
+      },
+      {
+        "id": "31132",
+        "type": "series",
+        "title": "Regular Show",
+        "year": "2010",
+        "tmdb_rating": 8.626,
+        "genres": [
+          "Animation",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored"
+        ],
+        "vote_count": 2147,
+        "runtime_minutes": 11,
+        "total_hours": 44.916666666666664,
+        "language": "en",
+        "content_rating": "TV-PG",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 1.0,
+          "binge_worthy": 0.8999999999999999
+        },
+        "cast": [
+          "J.G. Quintel",
+          "William Salyers",
+          "Mark Hamill",
+          "Sam Marin",
+          "Minty Lewis"
+        ],
+        "crew": [
+          "J.G. Quintel"
+        ],
+        "seasons": 8,
+        "episodes": 245
+      },
+      {
+        "id": "2316",
+        "type": "series",
+        "title": "The Office",
+        "year": "2005",
+        "tmdb_rating": 8.587,
+        "genres": [
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "bored"
+        ],
+        "vote_count": 4783,
+        "runtime_minutes": 45,
+        "total_hours": 139.5,
+        "language": "en",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.8500000000000001,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Rainn Wilson",
+          "John Krasinski",
+          "Jenna Fischer",
+          "Ed Helms"
+        ],
+        "crew": [
+          "Greg Daniels"
+        ],
+        "seasons": 9,
+        "episodes": 186
+      },
+      {
+        "id": "85948",
+        "type": "series",
+        "title": "Star Trek: Lower Decks",
+        "year": "2020",
+        "tmdb_rating": 7.607,
+        "genres": [
+          "Sci-Fi & Fantasy",
+          "Animation",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored"
+        ],
+        "vote_count": 392,
+        "runtime_minutes": 27,
+        "total_hours": 22.5,
+        "language": "en",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Tawny Newsome",
+          "Jack Quaid",
+          "Noël Wells",
+          "Eugene Cordero",
+          "Dawnn Lewis"
+        ],
+        "crew": [
+          "Mike McMahan"
+        ],
+        "seasons": 5,
+        "episodes": 50
+      },
+      {
+        "id": "1422",
+        "type": "series",
+        "title": "The Middle",
+        "year": "2009",
+        "tmdb_rating": 7.573,
+        "genres": [
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "bored"
+        ],
+        "vote_count": 703,
+        "runtime_minutes": 22,
+        "total_hours": 78.83333333333333,
+        "language": "en",
+        "content_rating": "TV-PG",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 1.0,
+          "binge_worthy": 0.8999999999999999
+        },
+        "cast": [
+          "Patricia Heaton",
+          "Neil Flynn",
+          "Charlie McDermott",
+          "Eden Sher",
+          "Atticus Shaffer"
+        ],
+        "crew": [
+          "Eileen Heisler",
+          "DeAnn Heline"
+        ],
+        "seasons": 9,
+        "episodes": 215
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Smiling Friends (2020) - With its happy and relaxed mood, this animated comedy series offers light-hearted content perfect for background viewing while working. Its short episodes keep it engaging without demanding full attention.\n2. Regular Show (2010) - Known for its whimsical and humorous storytelling, this series provides a relaxed viewing experience with episodes that are easy to follow, making it ideal for multitasking.\n3. The Office (2005) - A classic comedy with a happy tone, its mockumentary style and episodic nature allow for casual viewing. It's well-suited for background noise with plenty of humor.\n4. Star Trek: Lower Decks (2020) - This animated comedy combines sci-fi elements with humor, offering a relaxed and cheerful vibe. Each episode is easy to digest while working.\n5. The Middle (2009) - A family comedy that is both happy and laid-back, it provides a charming depiction of everyday life that's simple to follow in the background.\n\nREASONING:\nThe selections focus on series with a happy and relaxed mood, aligning with the user's need for non-intensive content. The chosen shows are primarily comedies, suitable for creating a light-hearted atmosphere while working. Episodes are short, generally falling within the 30-45 minute range, ensuring they fit into the user's preferred duration. The content is easy to engage with intermittently, allowing for productive multitasking.",
+    "method": "naive_rag",
+    "elapsed_time": 6.44060206413269,
+    "success": true,
+    "metrics": {
+      "csr": 0.52,
+      "precision_at_5": 0.6,
+      "mood_match_accuracy": 0.6,
+      "runtime_fit_quality": 0.7
+    }
+  },
+  {
+    "query_id": 9,
+    "query": "My wife wants a romantic comedy, I want an action movie, and our kids want animation. What can we all watch together?",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "group_preferences": [
+        {
+          "genre": "romance",
+          "mood": "happy"
+        },
+        {
+          "genre": "action",
+          "mood": "excited"
+        },
+        {
+          "genre": "animation"
+        }
+      ],
+      "context": "family_watch"
+    },
+    "recommendations": [
+      {
+        "id": "9806",
+        "type": "movie",
+        "title": "The Incredibles",
+        "year": "2004",
+        "tmdb_rating": 7.719,
+        "genres": [
+          "Action",
+          "Adventure",
+          "Animation",
+          "Family"
+        ],
+        "moods": [
+          "excited",
+          "happy",
+          "relaxed",
+          "bored",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 18408,
+        "runtime_minutes": 115,
+        "total_hours": 1.9166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "hero",
+          "secret identity",
+          "superhero",
+          "villain",
+          "family relationships",
+          "super power",
+          "supervillain",
+          "1950s",
+          "1960s",
+          "superhero family",
+          "excited"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.7,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Craig T. Nelson",
+          "Holly Hunter",
+          "Sarah Vowell",
+          "Spencer Fox",
+          "Jason Lee"
+        ],
+        "crew": [
+          "Brad Bird"
+        ]
+      },
+      {
+        "id": "976573",
+        "type": "movie",
+        "title": "Elemental",
+        "year": "2023",
+        "tmdb_rating": 7.6,
+        "genres": [
+          "Family",
+          "Fantasy",
+          "Comedy",
+          "Romance",
+          "Animation"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "nostalgic",
+          "bored",
+          "sad"
+        ],
+        "vote_count": 5027,
+        "runtime_minutes": 102,
+        "total_hours": 1.7,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "fire",
+          "earth",
+          "computer animation",
+          "duringcreditsstinger",
+          "elements",
+          "water",
+          "city",
+          "lighthearted",
+          "sentimental",
+          "romantic",
+          "whimsical",
+          "hopeful"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Leah Lewis",
+          "Mamoudou Athie",
+          "Ronnie del Carmen",
+          "Shila Ommi",
+          "Wendi McLendon-Covey"
+        ],
+        "crew": [
+          "Peter Sohn"
+        ]
+      },
+      {
+        "id": "1029575",
+        "type": "movie",
+        "title": "The Family Plan",
+        "year": "2023",
+        "tmdb_rating": 7.24,
+        "genres": [
+          "Action",
+          "Comedy",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "excited",
+          "relaxed",
+          "nostalgic"
+        ],
+        "vote_count": 1653,
+        "runtime_minutes": 118,
+        "total_hours": 1.9666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "road trip",
+          "on the run",
+          "gamer",
+          "car salesman",
+          "las vegas",
+          "duringcreditsstinger",
+          "hidden identity",
+          "family trip",
+          "ex army",
+          "family bonding",
+          "buffalo, new york",
+          "secrets",
+          "optimistic",
+          "teenagers",
+          "former assassin",
+          "physical therapist",
+          "covert assassin"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Mark Wahlberg",
+          "Michelle Monaghan",
+          "Maggie Q",
+          "Zoe Colletti",
+          "Van Crosby"
+        ],
+        "crew": [
+          "Simon Cellan Jones"
+        ]
+      },
+      {
+        "id": "1117857",
+        "type": "movie",
+        "title": "In Your Dreams",
+        "year": "2025",
+        "tmdb_rating": 7.206,
+        "genres": [
+          "Animation",
+          "Family",
+          "Comedy",
+          "Adventure",
+          "Fantasy"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "relaxed",
+          "excited",
+          "nostalgic"
+        ],
+        "vote_count": 68,
+        "runtime_minutes": 87,
+        "total_hours": 1.45,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "magic",
+          "wish",
+          "family",
+          "dream"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Jolie Hoang-Rappaport",
+          "Elias Janssen",
+          "Simu Liu",
+          "Craig Robinson",
+          "Cristin Milioti"
+        ],
+        "crew": [
+          "Alex Woo"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. The Incredibles (2004) - This film expertly blends action, adventure, and animation, making it a perfect choice for your entire family's varied tastes. Its engaging storyline and humor will entertain both kids and adults alike.\n\n2. Incredibles 2 (2018) - As a sequel to The Incredibles, this movie continues the action-packed adventures of the superhero family, providing a great mix of action for you and animated fun for the kids, while still maintaining comedic elements.\n\n3. Elemental (2023) - Offering a combination of animation, comedy, and romance, this film caters to your wife's preference for romantic comedy and your children's love for animated films, all while delivering a heartwarming story.\n\n4. The Family Plan (2023) - With elements of action, comedy, and family, this movie offers something for everyone. It balances thrilling sequences with humor, ensuring a fun family movie night.\n\n5. In Your Dreams (2025) - This animated adventure is filled with comedy and fantasy, creating a delightful viewing experience for the kids. Its charm and humor make it enjoyable for adults too, providing a relaxed family viewing experience.\n\nREASONING:\nThe selected recommendations are chosen to satisfy the diverse preferences of your family. Movies like \"The Incredibles\" and its sequel provide action and animation, aligning with your interests and those of your children. \"Elemental\" offers a romantic comedy angle within an animated framework, catering to both your wife's and children's tastes. \"The Family Plan\" includes action and comedy, appealing to a broad audience in your family, while \"In Your Dreams\" brings family-friendly humor and adventure to the table. The focus was on finding films that blend genres to ensure everyone's preferences are met in a single viewing experience.",
+    "method": "naive_rag",
+    "elapsed_time": 9.517361164093018,
+    "success": true,
+    "metrics": {
+      "csr": 0.5,
+      "precision_at_5": 0.8,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 10,
+    "query": "I'm feeling nostalgic and want a coming-of-age drama from the 80s or 90s, highly rated, that I can watch tonight in one sitting",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "nostalgic",
+      "genre": "drama",
+      "themes": [
+        "coming of age"
+      ],
+      "year_range": [
+        1980,
+        1999
+      ],
+      "min_rating": 7.5,
+      "context": "solo_watch",
+      "session_type": "single",
+      "max_hours": 3.0
+    },
+    "recommendations": [
+      {
+        "id": "105",
+        "type": "movie",
+        "title": "Back to the Future",
+        "year": "1985",
+        "tmdb_rating": 8.323,
+        "genres": [
+          "Adventure",
+          "Comedy",
+          "Science Fiction"
+        ],
+        "moods": [
+          "excited",
+          "happy",
+          "bored",
+          "curious",
+          "nostalgic",
+          "relaxed"
+        ],
+        "vote_count": 21068,
+        "runtime_minutes": 116,
+        "total_hours": 1.9333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "flying car",
+          "race against time",
+          "clock tower",
+          "car race",
+          "lightning",
+          "guitar",
+          "inventor",
+          "journey in the past",
+          "invention",
+          "time travel",
+          "bullying",
+          "mad scientist",
+          "love",
+          "fish out of water",
+          "terrorism",
+          "teenage love",
+          "destiny",
+          "hidden identity",
+          "teenage life",
+          "changing the past or future",
+          "1950s",
+          "factual",
+          "admiring",
+          "amused"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Michael J. Fox",
+          "Christopher Lloyd",
+          "Crispin Glover",
+          "Lea Thompson",
+          "Claudia Wells"
+        ],
+        "crew": [
+          "Robert Zemeckis"
+        ]
+      },
+      {
+        "id": "4500",
+        "type": "series",
+        "title": "The Wonder Years",
+        "year": "1988",
+        "tmdb_rating": 8.324,
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "nostalgic",
+          "sad",
+          "relaxed",
+          "inspired",
+          "bored"
+        ],
+        "vote_count": 1051,
+        "runtime_minutes": 24,
+        "total_hours": 46.0,
+        "language": "en",
+        "content_rating": "TV-PG",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Fred Savage",
+          "Dan Lauria",
+          "Alley Mills",
+          "Jason Hervey",
+          "Danica McKellar"
+        ],
+        "crew": [
+          "Neal Marlens",
+          "Carol Black"
+        ],
+        "seasons": 6,
+        "episodes": 115
+      },
+      {
+        "id": "11824",
+        "type": "movie",
+        "title": "Teen Wolf",
+        "year": "1985",
+        "tmdb_rating": 6.2,
+        "genres": [
+          "Comedy",
+          "Fantasy",
+          "Romance"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "nostalgic",
+          "sad"
+        ],
+        "vote_count": 1214,
+        "runtime_minutes": 92,
+        "total_hours": 1.5333333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "high school",
+          "trainer",
+          "training",
+          "coming of age",
+          "werewolf",
+          "super power",
+          "teenager"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8,
+          "date_night": 0.8,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Michael J. Fox",
+          "James Hampton",
+          "Susan Ursitti",
+          "Jerry Levine",
+          "Matt Adler"
+        ],
+        "crew": [
+          "Rod Daniel"
+        ]
+      },
+      {
+        "id": "2025",
+        "type": "series",
+        "title": "Beverly Hills, 90210",
+        "year": "1990",
+        "tmdb_rating": 7.335,
+        "genres": [
+          "Drama",
+          "Soap"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 786,
+        "runtime_minutes": 45,
+        "total_hours": 213.0,
+        "language": "en",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Jennie Garth",
+          "Ian Ziering",
+          "Luke Perry",
+          "Brian Austin Green",
+          "Vincent Young"
+        ],
+        "crew": [
+          "Aaron Spelling",
+          "Darren Star"
+        ],
+        "seasons": 10,
+        "episodes": 284
+      },
+      {
+        "id": "496",
+        "type": "series",
+        "title": "Family Ties",
+        "year": "1982",
+        "tmdb_rating": 7.231,
+        "genres": [
+          "Comedy",
+          "Drama",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "nostalgic",
+          "sad",
+          "relaxed",
+          "inspired",
+          "bored"
+        ],
+        "vote_count": 249,
+        "runtime_minutes": 45,
+        "total_hours": 126.0,
+        "language": "en",
+        "content_rating": "TV-PG",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 0.8500000000000001
+        },
+        "cast": [
+          "Meredith Baxter",
+          "Michael Gross",
+          "Michael J. Fox",
+          "Justine Bateman",
+          "Tina Yothers"
+        ],
+        "crew": [
+          "Gary David Goldberg"
+        ],
+        "seasons": 7,
+        "episodes": 168
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Back to the Future (1985) - This highly rated movie is a quintessential 80s classic that combines adventure and comedy with a nostalgic vibe, perfect for a one-sitting viewing experience tonight.\n2. The Wonder Years (1988) - Although it's a series, this show is a coming-of-age drama set in the late 60s and early 70s, offering a reflective and nostalgic look back, even if it requires selective episode viewing.\n3. Teen Wolf (1985) - This movie stars Michael J. Fox and delivers a fun, light-hearted take on coming-of-age themes with a nostalgic 80s feel, suitable for a quick watch in one sitting.\n4. Beverly Hills, 90210 (1990) - While a series, it's an iconic 90s drama that captures the essence of the era's coming-of-age stories, though it may require picking specific episodes for a shorter experience.\n5. Family Ties (1982) - Another series, but its comedic and dramatic elements led by Michael J. Fox bring a nostalgic touch to personal growth and family dynamics set in the 80s.\n\nREASONING:\nThe user expressed an interest in a coming-of-age drama from the 80s or 90s that can be watched in one sitting. Movies like \"Back to the Future\" and \"Teen Wolf\" fit this criterion perfectly due to their runtime and nostalgic appeal. While series like \"The Wonder Years\" and \"Beverly Hills, 90210\" offer a deeper dive into coming-of-age themes, they require choosing select episodes for a shorter viewing. \"Family Ties,\" although a series, offers a compelling 80s atmosphere with a focus on family and growth, led by a notable 80s icon, Michael J. Fox. These selections aim to balance the user's desire for nostalgia, quality, and a memorable one-time viewing experience.",
+    "method": "naive_rag",
+    "elapsed_time": 6.357425928115845,
+    "success": true,
+    "metrics": {
+      "csr": 0.5,
+      "precision_at_5": 0.8,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.96
+    }
+  },
+  {
+    "query_id": 11,
+    "query": "Something scary to watch with friends tonight",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "scared",
+      "context": "group_watch"
+    },
+    "recommendations": [
+      {
+        "id": "1373445",
+        "type": "movie",
+        "title": "V/H/S/Halloween",
+        "year": "2025",
+        "tmdb_rating": 6.287,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious"
+        ],
+        "vote_count": 143,
+        "runtime_minutes": 115,
+        "total_hours": 1.9166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "witch",
+          "candy",
+          "holiday",
+          "halloween",
+          "gore",
+          "anthology",
+          "sequel",
+          "vhs",
+          "torture",
+          "found footage",
+          "trick or treating",
+          "soda",
+          "horror anthology",
+          "supernatural horror",
+          "horror",
+          "holiday horror"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Samantha Cochran",
+          "Natalia Montgomery Fernandez",
+          "Elena Musser",
+          "Adam Carr",
+          "Charlotte Mae Curtis"
+        ],
+        "crew": [
+          "Bryan M. Ferguson",
+          "Casper Kelly",
+          "Micheline Pitt-Norman"
+        ]
+      },
+      {
+        "id": "10665",
+        "type": "movie",
+        "title": "The Strangers",
+        "year": "2008",
+        "tmdb_rating": 6.128,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious"
+        ],
+        "vote_count": 2564,
+        "runtime_minutes": 86,
+        "total_hours": 1.4333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "mask",
+          "murder",
+          "serial killer",
+          "slasher",
+          "home invasion",
+          "psychological horror",
+          "absurd"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Liv Tyler",
+          "Scott Speedman",
+          "Gemma Ward",
+          "Kip Weeks",
+          "Laura Margolis"
+        ],
+        "crew": [
+          "Bryan Bertino"
+        ]
+      },
+      {
+        "id": "1034541",
+        "type": "movie",
+        "title": "Terrifier 3",
+        "year": "2024",
+        "tmdb_rating": 6.815,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious",
+          "sad"
+        ],
+        "vote_count": 1800,
+        "runtime_minutes": 125,
+        "total_hours": 2.0833333333333335,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "monster",
+          "post-traumatic stress disorder (ptsd)",
+          "angel",
+          "shower",
+          "child murder",
+          "santa claus",
+          "college",
+          "clown",
+          "bartender",
+          "gore",
+          "dormitory",
+          "sequel",
+          "serial killer",
+          "teenage girl",
+          "slasher",
+          "chainsaw",
+          "massacre",
+          "mental illness",
+          "disfigured face",
+          "mental asylum",
+          "cousin relationship",
+          "mall santa",
+          "killer clown",
+          "terrorist bombing",
+          "christmas horror",
+          "evil clown",
+          "christmas spirit",
+          "christmas",
+          "murder of parents",
+          "orphan siblings",
+          "supernatural power",
+          "death of a child",
+          "supernatural horror",
+          "bar",
+          "bloody",
+          "independent film",
+          "blood",
+          "low budget",
+          "megaslasher",
+          "witty"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Lauren LaVera",
+          "David Howard Thornton",
+          "Samantha Scaffidi",
+          "Elliott Fullam",
+          "Margaret Anne Florence"
+        ],
+        "crew": [
+          "Damien Leone"
+        ]
+      },
+      {
+        "id": "351211",
+        "type": "movie",
+        "title": "Blair Witch",
+        "year": "2016",
+        "tmdb_rating": 5.225,
+        "genres": [
+          "Thriller",
+          "Horror"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious"
+        ],
+        "vote_count": 1987,
+        "runtime_minutes": 89,
+        "total_hours": 1.4833333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "tree",
+          "river",
+          "camping",
+          "tent",
+          "rain",
+          "supernatural",
+          "infection",
+          "forest",
+          "maryland",
+          "woods",
+          "flashlight",
+          "handheld camera",
+          "campfire",
+          "subjective camera",
+          "found footage",
+          "folk horror",
+          "lost in the woods"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.5,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "James Allen McCune",
+          "Callie Hernandez",
+          "Brandon Scott",
+          "Corbin Reid",
+          "Valorie Curry"
+        ],
+        "crew": [
+          "Adam Wingard"
+        ]
+      },
+      {
+        "id": "1269021",
+        "type": "movie",
+        "title": "Wake",
+        "year": "2024",
+        "tmdb_rating": 5.375,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious"
+        ],
+        "vote_count": 24,
+        "runtime_minutes": 85,
+        "total_hours": 1.4166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.8,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.5,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Fivel Stewart",
+          "Jake Holley",
+          "Sarab Kamoo",
+          "Sadie Earegood",
+          "Susan Reno"
+        ],
+        "crew": [
+          "Thom Arizmendi",
+          "Austin Parks Stewart"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. **V/H/S/Halloween (2025)** - With a solid rating and a mix of horror and thriller elements, this film offers a variety of short, intense stories that are perfect for a group setting, making it an exciting choice for a scary night with friends.\n2. **The Strangers (2008)** - This horror thriller is known for its suspenseful and terrifying atmosphere, guaranteed to keep a group of friends on edge throughout its runtime.\n3. **Terrifier 3 (2024)** - Featuring high ratings and intense horror, this film is great for friends who enjoy a mix of scares and thrills, offering a longer runtime for a more extended horror experience.\n4. **Blair Witch (2016)** - As a sequel to the iconic \"Blair Witch Project,\" this film combines horror and thriller elements to deliver a chilling experience that's perfect for a group looking to be scared.\n5. **Wake (2024)** - With its horror-thriller combination and a runtime that's not too long, this movie provides a tense and exciting experience suitable for a group looking to be both scared and entertained.\n\nREASONING:\nThe selections prioritize horror and thriller genres, as they match the user's request for something scary. Movies with higher ratings and those known for their intense atmospheres were chosen to ensure a thrilling experience. The choices also consider a mix of runtimes, allowing for flexibility depending on the group's preferences for the evening.",
+    "method": "naive_rag",
+    "elapsed_time": 7.168069124221802,
+    "success": true,
+    "metrics": {
+      "csr": 0.5,
+      "precision_at_5": 0.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 12,
+    "query": "I'm in the mood for a good cry, any recommendations?",
+    "difficulty": "simple",
+    "expected_constraints": {
+      "mood": "sad",
+      "emotional": "tear-jerking"
+    },
+    "recommendations": [
+      {
+        "id": "52688",
+        "type": "movie",
+        "title": "November Christmas",
+        "year": "2011",
+        "tmdb_rating": 7.5,
+        "genres": [
+          "TV Movie",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 38,
+        "runtime_minutes": 96,
+        "total_hours": 1.6,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "holiday",
+          "cancer",
+          "christmas"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Sam Elliott",
+          "John Corbett",
+          "Sarah Paulson",
+          "Karen Allen",
+          "Emily Alyn Lind"
+        ],
+        "crew": [
+          "Robert Harmon"
+        ]
+      },
+      {
+        "id": "976893",
+        "type": "movie",
+        "title": "Perfect Days",
+        "year": "2023",
+        "tmdb_rating": 7.773,
+        "genres": [
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "relaxed",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 1656,
+        "runtime_minutes": 124,
+        "total_hours": 2.066666666666667,
+        "language": "ja",
+        "content_rating": "",
+        "keywords": [
+          "tree",
+          "routine",
+          "slice of life",
+          "janitor",
+          "working class",
+          "tokyo, japan",
+          "character study",
+          "uncle niece relationship",
+          "audio cassette",
+          "solitude",
+          "quest for knowledge",
+          "mystical quest",
+          "human nature",
+          "playful",
+          "lighthearted",
+          "beauty of life",
+          "comforting",
+          "enchant"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Koji Yakusho",
+          "Tokio Emoto",
+          "Arisa Nakano",
+          "Aoi Yamada",
+          "Yumi Aso"
+        ],
+        "crew": [
+          "Wim Wenders"
+        ]
+      },
+      {
+        "id": "669359",
+        "type": "movie",
+        "title": "Cottontail",
+        "year": "2024",
+        "tmdb_rating": 6.8,
+        "genres": [
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 9,
+        "runtime_minutes": 94,
+        "total_hours": 1.5666666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Lily Franky",
+          "Ryo Nishikido",
+          "Tae Kimura",
+          "Rin Takanashi",
+          "Aoife Hinds"
+        ],
+        "crew": [
+          "Patrick Dickinson"
+        ]
+      },
+      {
+        "id": "1327862",
+        "type": "movie",
+        "title": "Regretting You",
+        "year": "2025",
+        "tmdb_rating": 7.2,
+        "genres": [
+          "Romance",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "nostalgic",
+          "happy",
+          "inspired"
+        ],
+        "vote_count": 68,
+        "runtime_minutes": 116,
+        "total_hours": 1.9333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "high school",
+          "based on novel or book",
+          "aunt niece relationship",
+          "north carolina",
+          "death of father",
+          "car crash",
+          "underage drinking",
+          "tragedy",
+          "family drama",
+          "death of husband",
+          "underage smoking",
+          "death of wife",
+          "complex relationship",
+          "mother daughter relationship",
+          "sister sister relationship",
+          "grandfather grandson relationship",
+          "2000s",
+          "high school romance",
+          "loss of husband",
+          "cinephile",
+          "romantic",
+          "loss and grief",
+          "marijuana use",
+          "loss of father"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Mckenna Grace",
+          "Allison Williams",
+          "Dave Franco",
+          "Mason Thames",
+          "Willa Fitzgerald"
+        ],
+        "crew": [
+          "Josh Boone"
+        ]
+      },
+      {
+        "id": "271039",
+        "type": "movie",
+        "title": "Something, Anything",
+        "year": "2015",
+        "tmdb_rating": 6.7,
+        "genres": [
+          "Romance",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "nostalgic",
+          "happy",
+          "inspired"
+        ],
+        "vote_count": 12,
+        "runtime_minutes": 88,
+        "total_hours": 1.4666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "spiritual quest"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.8,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Ashley Shelton",
+          "Bryce Johnson",
+          "Linds Edwards",
+          "Amy Leigh Hubbard",
+          "Lauren Lazarus"
+        ],
+        "crew": [
+          "Paul Harrill"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. November Christmas (2011) - This movie is highly rated and known for its emotional depth, providing a heartfelt story that is sure to move viewers and bring a tear to their eyes. Its themes of family and hope make it a perfect choice for a good cry.\n\n2. Perfect Days (2023) - With a high rating and a focus on introspective drama, this film captures the nuances of life and emotions beautifully, offering a poignant experience that aligns well with the desire to have a good cry.\n\n3. Cottontail (2024) - This drama is designed to evoke emotions with its nostalgic and inspiring mood, making it a suitable choice for viewers looking to engage in a tear-jerking narrative.\n\n4. Regretting You (2025) - A mix of romance and drama, this film explores themes of love, loss, and reconciliation, providing an emotional journey that can lead to tears.\n\n5. Something, Anything (2015) - This film's blend of romance and drama, along with its sad and nostalgic mood, makes it an excellent choice for someone looking to experience an emotional release.\n\nREASONING:\nThe selection focuses on films with strong emotional narratives and moods that align with the user's desire for a good cry. These movies are chosen based on their emotional depth, ratings, and potential to evoke tears, balancing both drama and personal stories that resonate with viewers. The overall aim was to provide content that offers compelling storytelling and touches on universal themes of love, loss, and introspection.",
+    "method": "naive_rag",
+    "elapsed_time": 9.950931072235107,
+    "success": true,
+    "metrics": {
+      "csr": 0.5,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 13,
+    "query": "Can you recommend a feel-good movie that's not too long? I have about 90 minutes",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "mood": "happy",
+      "type": "movie",
+      "max_hours": 1.5
+    },
+    "recommendations": [
+      {
+        "id": "11688",
+        "type": "movie",
+        "title": "The Emperor's New Groove",
+        "year": "2000",
+        "tmdb_rating": 7.557,
+        "genres": [
+          "Adventure",
+          "Animation",
+          "Comedy",
+          "Family",
+          "Fantasy"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "relaxed",
+          "excited",
+          "nostalgic"
+        ],
+        "vote_count": 7075,
+        "runtime_minutes": 78,
+        "total_hours": 1.3,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "central and south america",
+          "kingdom",
+          "birthday",
+          "peru",
+          "emperor",
+          "villain",
+          "palace",
+          "berater",
+          "breaking the fourth wall",
+          "incan empire",
+          "assassination attempt",
+          "15th century",
+          "hilarious"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "David Spade",
+          "John Goodman",
+          "Eartha Kitt",
+          "Patrick Warburton",
+          "Wendie Malick"
+        ],
+        "crew": [
+          "Mark Dindal"
+        ]
+      },
+      {
+        "id": "14160",
+        "type": "movie",
+        "title": "Up",
+        "year": "2009",
+        "tmdb_rating": 7.96,
+        "genres": [
+          "Animation",
+          "Comedy",
+          "Family",
+          "Adventure"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored",
+          "excited",
+          "nostalgic"
+        ],
+        "vote_count": 21084,
+        "runtime_minutes": 96,
+        "total_hours": 1.6,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "central and south america",
+          "age difference",
+          "villain",
+          "balloon",
+          "travel",
+          "dog",
+          "duringcreditsstinger",
+          "pets",
+          "exploring",
+          "senior"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Ed Asner",
+          "Christopher Plummer",
+          "Jordan Nagai",
+          "Bob Peterson",
+          "Delroy Lindo"
+        ],
+        "crew": [
+          "Pete Docter"
+        ]
+      },
+      {
+        "id": "9023",
+        "type": "movie",
+        "title": "Spirit: Stallion of the Cimarron",
+        "year": "2002",
+        "tmdb_rating": 7.685,
+        "genres": [
+          "Animation",
+          "Adventure",
+          "Family",
+          "Drama",
+          "Western",
+          "Romance"
+        ],
+        "moods": [
+          "happy",
+          "nostalgic",
+          "sad",
+          "relaxed",
+          "excited",
+          "inspired",
+          "bored"
+        ],
+        "vote_count": 4789,
+        "runtime_minutes": 83,
+        "total_hours": 1.3833333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "freedom",
+          "villain",
+          "mustang",
+          "rivalry",
+          "wildlife",
+          "animals",
+          "cavalry",
+          "indian war",
+          "eyebrow",
+          "wild horse",
+          "pets",
+          "sentimental",
+          "comforting",
+          "melodramatic"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Matt Damon",
+          "James Cromwell",
+          "Daniel Studi",
+          "Chopper Bernet",
+          "Jeff LeBeau"
+        ],
+        "crew": [
+          "Kelly Asbury",
+          "Lorna Cook"
+        ]
+      },
+      {
+        "id": "1022787",
+        "type": "movie",
+        "title": "Elio",
+        "year": "2025",
+        "tmdb_rating": 6.976,
+        "genres": [
+          "Family",
+          "Comedy",
+          "Adventure",
+          "Animation",
+          "Science Fiction"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "excited",
+          "relaxed",
+          "nostalgic",
+          "curious"
+        ],
+        "vote_count": 658,
+        "runtime_minutes": 98,
+        "total_hours": 1.6333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "villain",
+          "alien",
+          "coming of age",
+          "computer animation",
+          "eye patch",
+          "social outcast",
+          "aftercreditsstinger",
+          "beforecreditsstinger",
+          "space adventure",
+          "sattelite",
+          "pre-teen",
+          "amateur radio",
+          "mother son relationship",
+          "good versus evil",
+          "3d animation",
+          "interspecies friendship",
+          "clones",
+          "adoring",
+          "comforting",
+          "pixar"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Yonas Kibreab",
+          "Remy Edgerly",
+          "Zoe Saldaña",
+          "Brad Garrett",
+          "Brandon Moon"
+        ],
+        "crew": [
+          "Madeline Sharafian",
+          "Domee Shi",
+          "Adrian Molina"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. The Emperor's New Groove (2000) - This animated comedy is a short, light-hearted adventure perfect for a quick, feel-good watch. With a runtime of 78 minutes, it features humor and a joyful tone that fits the user's mood preference.\n\n2. Up (2009) - This beloved animated film combines comedy and adventure with a heartwarming storyline. With a runtime of 96 minutes, it provides a happy and nostalgic experience that is sure to lift spirits.\n\n3. Spirit: Stallion of the Cimarron (2002) - At 83 minutes, this animated adventure offers a beautiful tale of freedom and friendship, ideal for a feel-good movie night with its inspiring and happy mood.\n\n4. Elio (2025) - Although slightly longer at 98 minutes, this animation promises a fun and family-friendly adventure filled with humor and excitement, making it a good choice for a happy viewing experience.\n\n5. We Will Go (2025) - This comedy-drama, at 97 minutes, offers a charming and uplifting story, with a blend of humor and heartfelt moments that align well with the user's request for a feel-good film.\n\nREASONING:\nI prioritized movies with a happy mood and a runtime close to the user's 90-minute limit. Animated films were highlighted for their ability to convey joy and nostalgia effectively, making them suitable for a feel-good experience. Each recommendation is under 100 minutes to ensure they fit within the user's time constraint, ensuring a satisfying and uplifting viewing experience.",
+    "method": "naive_rag",
+    "elapsed_time": 10.592599630355835,
+    "success": true,
+    "metrics": {
+      "csr": 0.8333333333333334,
+      "precision_at_5": 0.4,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 0.961111111111111
+    }
+  },
+  {
+    "query_id": 14,
+    "query": "Looking for a well-made thriller series, something I can really get into over the next few evenings",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "genre": "thriller",
+      "type": "series",
+      "min_rating": 7.0,
+      "context": "binge_worthy"
+    },
+    "recommendations": [
+      {
+        "id": "46648",
+        "type": "series",
+        "title": "True Detective",
+        "year": "2014",
+        "tmdb_rating": 8.282,
+        "genres": [
+          "Drama",
+          "Mystery"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 3836,
+        "runtime_minutes": 45,
+        "total_hours": 22.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Jodie Foster",
+          "Kali Reis",
+          "Fiona Shaw",
+          "Finn Bennett",
+          "Isabella Star LaBlanc"
+        ],
+        "crew": [
+          "Nic Pizzolatto",
+          "Issa López"
+        ],
+        "seasons": 4,
+        "episodes": 30
+      },
+      {
+        "id": "124364",
+        "type": "series",
+        "title": "FROM",
+        "year": "2022",
+        "tmdb_rating": 8.162,
+        "genres": [
+          "Mystery",
+          "Drama",
+          "Sci-Fi & Fantasy"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 2220,
+        "runtime_minutes": 45,
+        "total_hours": 22.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Harold Perrineau",
+          "Catalina Sandino Moreno",
+          "Eion Bailey",
+          "David Alpay",
+          "Elizabeth Saunders"
+        ],
+        "crew": [
+          "John Griffin"
+        ],
+        "seasons": 4,
+        "episodes": 30
+      },
+      {
+        "id": "222766",
+        "type": "series",
+        "title": "The Day of the Jackal",
+        "year": "2024",
+        "tmdb_rating": 8.174,
+        "genres": [
+          "Drama",
+          "Action & Adventure",
+          "Mystery"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 809,
+        "runtime_minutes": 45,
+        "total_hours": 7.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 0.8500000000000001
+        },
+        "cast": [
+          "Eddie Redmayne",
+          "Lashana Lynch",
+          "Eleanor Matsuura",
+          "Chukwudi Iwuji",
+          "Úrsula Corberó"
+        ],
+        "crew": [
+          "Ronan Bennett"
+        ],
+        "seasons": 1,
+        "episodes": 10
+      },
+      {
+        "id": "70485",
+        "type": "series",
+        "title": "Mr. Mercedes",
+        "year": "2017",
+        "tmdb_rating": 7.112,
+        "genres": [
+          "Mystery",
+          "Sci-Fi & Fantasy",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 335,
+        "runtime_minutes": 45,
+        "total_hours": 22.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Brendan Gleeson",
+          "Jharrel Jerome",
+          "Holland Taylor",
+          "Breeda Wool",
+          "Justine Lupe"
+        ],
+        "crew": [
+          "David E. Kelley"
+        ],
+        "seasons": 3,
+        "episodes": 30
+      },
+      {
+        "id": "244416",
+        "type": "series",
+        "title": "Malice",
+        "year": "2025",
+        "tmdb_rating": 7.75,
+        "genres": [
+          "Drama",
+          "Mystery"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 9,
+        "runtime_minutes": 45,
+        "total_hours": 4.5,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.7,
+          "binge_worthy": 0.55
+        },
+        "cast": [
+          "Jack Whitehall",
+          "David Duchovny",
+          "Carice van Houten",
+          "Harry Gilby",
+          "Teddie Allen"
+        ],
+        "crew": [
+          "James Wood"
+        ],
+        "seasons": 1,
+        "episodes": 6
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. True Detective (2014) - This series is a critically acclaimed thriller with a strong mystery element, offering multiple seasons to keep you engaged over several evenings. Its high rating and intriguing plot make it an ideal choice for a thrilling and immersive experience.\n2. FROM (2022) - With its blend of mystery, drama, and sci-fi elements, this series provides a compelling narrative filled with suspense and curiosity. Its higher rating and multiple seasons ensure a captivating watch.\n3. The Day of the Jackal (2024) - This series combines drama, action, and mystery, providing a thrilling experience with a solid 8.174 rating. Its longer episode count allows for an extended viewing period.\n4. Mr. Mercedes (2017) - Offering a mix of mystery and drama, this series features a gripping plot across three seasons, perfect for an engaging and continuous viewing experience.\n5. Malice (2025) - Although newer, this series' intriguing mystery and drama components, combined with a decent rating and a shorter episode count, make it a suitable option for a few evenings of thrilling entertainment.\n\nREASONING:\nThe recommendations focus on series with strong thriller and mystery elements, as requested. Each selected series has a good to excellent rating, ensuring quality content. The variety in episode count and seasons provides flexibility in viewing, allowing you to immerse yourself over several evenings. The selected series also include elements of drama and curiosity, aligning well with the user's interest in a well-made thriller series.",
+    "method": "naive_rag",
+    "elapsed_time": 7.84219217300415,
+    "success": true,
+    "metrics": {
+      "csr": 0.7,
+      "precision_at_5": 0.8,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 15,
+    "query": "What's a good action movie my teenage son and I can watch together? Nothing too violent or inappropriate",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "genre": "action",
+      "type": "movie",
+      "context": "family_watch",
+      "content_rating": [
+        "PG-13",
+        "PG"
+      ]
+    },
+    "recommendations": [
+      {
+        "id": "11459",
+        "type": "movie",
+        "title": "Sky High",
+        "year": "2005",
+        "tmdb_rating": 6.252,
+        "genres": [
+          "Adventure",
+          "Comedy",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "excited",
+          "relaxed",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 2392,
+        "runtime_minutes": 99,
+        "total_hours": 1.65,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "high school",
+          "friendship",
+          "mission",
+          "superhero",
+          "loyalty",
+          "mockery",
+          "heroism",
+          "friends",
+          "super power"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Michael Angarano",
+          "Mary Elizabeth Winstead",
+          "Kurt Russell",
+          "Kelly Preston",
+          "Danielle Panabaker"
+        ],
+        "crew": [
+          "Mike Mitchell"
+        ]
+      },
+      {
+        "id": "11358",
+        "type": "movie",
+        "title": "Walking Tall",
+        "year": "2004",
+        "tmdb_rating": 6.3,
+        "genres": [
+          "Adventure",
+          "Drama",
+          "Action",
+          "Thriller"
+        ],
+        "moods": [
+          "excited",
+          "inspired",
+          "bored",
+          "sad",
+          "scared",
+          "curious",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 1586,
+        "runtime_minutes": 86,
+        "total_hours": 1.4333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "small town",
+          "martial arts",
+          "war veteran",
+          "based on true story",
+          "remake",
+          "torture",
+          "one man army",
+          "one against many",
+          "action hero"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.65,
+          "date_night": 0.8,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Dwayne Johnson",
+          "Johnny Knoxville",
+          "Neal McDonough",
+          "Kristen Wilson",
+          "Ashley Scott"
+        ],
+        "crew": [
+          "Kevin Bray"
+        ]
+      },
+      {
+        "id": "573435",
+        "type": "movie",
+        "title": "Bad Boys: Ride or Die",
+        "year": "2024",
+        "tmdb_rating": 7.346,
+        "genres": [
+          "Action",
+          "Comedy",
+          "Crime",
+          "Thriller",
+          "Adventure"
+        ],
+        "moods": [
+          "excited",
+          "bored",
+          "stressed",
+          "curious",
+          "happy",
+          "scared"
+        ],
+        "vote_count": 3113,
+        "runtime_minutes": 115,
+        "total_hours": 1.9166666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "miami, florida",
+          "sequel",
+          "on the run",
+          "police detective",
+          "buddy cop",
+          "buddy comedy",
+          "aftercreditsstinger",
+          "hilarious"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Will Smith",
+          "Martin Lawrence",
+          "Vanessa Hudgens",
+          "Alexander Ludwig",
+          "Paola Nuñez"
+        ],
+        "crew": [
+          "Adil El Arbi",
+          "Bilall Fallah"
+        ]
+      },
+      {
+        "id": "54845",
+        "type": "movie",
+        "title": "Trouble Bound",
+        "year": "1993",
+        "tmdb_rating": 5.9,
+        "genres": [
+          "Action",
+          "Comedy"
+        ],
+        "moods": [
+          "bored",
+          "happy",
+          "excited"
+        ],
+        "vote_count": 13,
+        "runtime_minutes": 90,
+        "total_hours": 1.5,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "runaway",
+          "mafia"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.5,
+          "family_watch": 0.65,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Michael Madsen",
+          "Patricia Arquette",
+          "Darren Epton",
+          "Gregory Sporleder",
+          "Paul Ben-Victor"
+        ],
+        "crew": [
+          "Jeffrey Reiner"
+        ]
+      },
+      {
+        "id": "11824",
+        "type": "movie",
+        "title": "Teen Wolf",
+        "year": "1985",
+        "tmdb_rating": 6.2,
+        "genres": [
+          "Comedy",
+          "Fantasy",
+          "Romance"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "nostalgic",
+          "sad"
+        ],
+        "vote_count": 1214,
+        "runtime_minutes": 92,
+        "total_hours": 1.5333333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "high school",
+          "trainer",
+          "training",
+          "coming of age",
+          "werewolf",
+          "super power",
+          "teenager"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8,
+          "date_night": 0.8,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Michael J. Fox",
+          "James Hampton",
+          "Susan Ursitti",
+          "Jerry Levine",
+          "Matt Adler"
+        ],
+        "crew": [
+          "Rod Daniel"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Sky High (2005) - This film blends action with family-friendly comedy and adventure, making it perfect for a teenage audience. Its superhero school setting provides excitement without excessive violence.\n2. Walking Tall (2004) - Featuring Dwayne Johnson, this movie mixes action and drama with a straightforward plot. It offers excitement with a positive, inspirational message, making it suitable for a younger audience.\n3. Bad Boys: Ride or Die (2024) - With a mix of action and comedy, this film has well-known actors like Will Smith and Martin Lawrence. The comedic elements balance the action, making it a fun watch for teens.\n4. Trouble Bound (1993) - This movie combines action and comedy, creating an engaging and light-hearted viewing experience. It offers excitement without being overly intense or violent.\n5. Teen Wolf (1985) - While not strictly an action film, it includes elements of fantasy and comedy. Its nostalgic charm and lighthearted tone make it a great choice for a father-son movie night.\n\nREASONING:\nI selected films that combine action with other genres like comedy or adventure to ensure they remain appropriate and entertaining for a teenage viewer. I prioritized movies that are not too violent or intense. Ratings and runtime were also considered to ensure a high-quality, engaging experience suitable for a father-son duo.",
+    "method": "naive_rag",
+    "elapsed_time": 6.763553142547607,
+    "success": true,
+    "metrics": {
+      "csr": 0.65,
+      "precision_at_5": 0.6,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 16,
+    "query": "I loved Stranger Things and The Umbrella Academy. What else would I like that's similar?",
+    "difficulty": "medium",
+    "expected_constraints": {
+      "similar_to": [
+        "Stranger Things",
+        "The Umbrella Academy"
+      ],
+      "type": "series"
+    },
+    "recommendations": [
+      {
+        "id": "66732",
+        "type": "series",
+        "title": "Stranger Things",
+        "year": "2016",
+        "tmdb_rating": 8.594,
+        "genres": [
+          "Sci-Fi & Fantasy",
+          "Mystery",
+          "Action & Adventure"
+        ],
+        "moods": [
+          "scared",
+          "curious"
+        ],
+        "vote_count": 19007,
+        "runtime_minutes": 45,
+        "total_hours": 31.5,
+        "language": "en",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Millie Bobby Brown",
+          "Finn Wolfhard",
+          "Noah Schnapp",
+          "Gaten Matarazzo",
+          "Caleb McLaughlin"
+        ],
+        "crew": [
+          "Ross Duffer",
+          "Matt Duffer"
+        ],
+        "seasons": 5,
+        "episodes": 42
+      },
+      {
+        "id": "94605",
+        "type": "series",
+        "title": "Arcane",
+        "year": "2021",
+        "tmdb_rating": 8.753,
+        "genres": [
+          "Animation",
+          "Sci-Fi & Fantasy",
+          "Drama",
+          "Action & Adventure"
+        ],
+        "moods": [
+          "happy",
+          "sad",
+          "relaxed",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 5471,
+        "runtime_minutes": 45,
+        "total_hours": 13.5,
+        "language": "en",
+        "content_rating": "TV-14",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.8500000000000001,
+          "date_night": 1.0,
+          "background_watch": 1.0,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Hailee Steinfeld",
+          "Ella Purnell"
+        ],
+        "crew": [
+          "Christian Linke",
+          "Alex Yee"
+        ],
+        "seasons": 2,
+        "episodes": 18
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Dark (2017) - Dark offers a gripping blend of sci-fi, fantasy, and mystery, similar to Stranger Things and The Umbrella Academy. Its complex narrative and eerie atmosphere will appeal to fans of supernatural mysteries.\n2. Wednesday (2022) - This series combines elements of sci-fi, fantasy, and mystery with a comedic twist, akin to the quirky and dark tone present in Stranger Things and The Umbrella Academy.\n3. FROM (2022) - With its mixture of mystery and sci-fi/fantasy elements, FROM provides a suspenseful and haunting experience that aligns well with the dark and enigmatic themes found in both Stranger Things and The Umbrella Academy.\n4. Gravity Falls (2012) - Though more family-oriented, Gravity Falls shares the adventurous and mysterious spirit similar to Stranger Things, with an engaging narrative that balances humor and intrigue.\n5. Arcane (2021) - Arcane presents a visually stunning and emotionally rich story within a sci-fi/fantasy setting, offering the kind of character-driven drama and action that fans of The Umbrella Academy would appreciate.\n\nREASONING:\nI selected series that match the user's interest in sci-fi, fantasy, and mystery, as these are key elements in both Stranger Things and The Umbrella Academy. The chosen recommendations also focus on series with high ratings and strong narratives, ensuring a quality viewing experience. Additionally, I considered the mood and atmosphere, opting for shows that combine elements of curiosity and suspense, which are central to the user's preference.",
+    "method": "naive_rag",
+    "elapsed_time": 6.654034852981567,
+    "success": true,
+    "metrics": {
+      "csr": 0.5,
+      "precision_at_5": 0.4,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 17,
+    "query": "Need something light and funny to watch after a stressful day at work. Not looking for anything heavy or complicated, just want to zone out for an hour or two",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "mood": "happy",
+      "mood_secondary": "relaxed",
+      "context": "background_watch",
+      "max_hours": 2.0,
+      "complexity": "low"
+    },
+    "recommendations": [
+      {
+        "id": "126506",
+        "type": "series",
+        "title": "Smiling Friends",
+        "year": "2020",
+        "tmdb_rating": 8.435,
+        "genres": [
+          "Animation",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored"
+        ],
+        "vote_count": 298,
+        "runtime_minutes": 45,
+        "total_hours": 18.75,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 1.0,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Michael Cusack",
+          "Zach Hadel",
+          "Marc Moceri"
+        ],
+        "crew": [
+          "Michael Cusack",
+          "Zach Hadel"
+        ],
+        "seasons": 3,
+        "episodes": 25
+      },
+      {
+        "id": "31132",
+        "type": "series",
+        "title": "Regular Show",
+        "year": "2010",
+        "tmdb_rating": 8.626,
+        "genres": [
+          "Animation",
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "bored"
+        ],
+        "vote_count": 2147,
+        "runtime_minutes": 11,
+        "total_hours": 44.916666666666664,
+        "language": "en",
+        "content_rating": "TV-PG",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 1.0,
+          "binge_worthy": 0.8999999999999999
+        },
+        "cast": [
+          "J.G. Quintel",
+          "William Salyers",
+          "Mark Hamill",
+          "Sam Marin",
+          "Minty Lewis"
+        ],
+        "crew": [
+          "J.G. Quintel"
+        ],
+        "seasons": 8,
+        "episodes": 245
+      },
+      {
+        "id": "93014",
+        "type": "series",
+        "title": "Zhuki",
+        "year": "2019",
+        "tmdb_rating": 8.6,
+        "genres": [
+          "Comedy"
+        ],
+        "moods": [
+          "happy",
+          "bored"
+        ],
+        "vote_count": 49,
+        "runtime_minutes": 25,
+        "total_hours": 27.083333333333332,
+        "language": "ru",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8500000000000001,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.8999999999999999
+        },
+        "cast": [
+          "Vyacheslav Chepurchenko",
+          "Vadim Dubrovin",
+          "Pavel Komarov",
+          "Maksim Lagashkin",
+          "Ekaterina Stulova"
+        ],
+        "crew": [],
+        "seasons": 4,
+        "episodes": 65
+      },
+      {
+        "id": "194916",
+        "type": "series",
+        "title": "Chiikawa",
+        "year": "2022",
+        "tmdb_rating": 8.333,
+        "genres": [
+          "Animation",
+          "Comedy",
+          "Family",
+          "Kids",
+          "Sci-Fi & Fantasy"
+        ],
+        "moods": [
+          "happy",
+          "relaxed",
+          "nostalgic",
+          "bored"
+        ],
+        "vote_count": 12,
+        "runtime_minutes": 2,
+        "total_hours": 9.366666666666667,
+        "language": "ja",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 1.0,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.39999999999999997
+        },
+        "cast": [
+          "Haruka Aoki",
+          "Ari Ozawa",
+          "Makoto Tanaka",
+          "Yuka Iguchi",
+          "Tomokazu Sugita"
+        ],
+        "crew": [],
+        "seasons": 1,
+        "episodes": 281
+      },
+      {
+        "id": "1248226",
+        "type": "movie",
+        "title": "Playdate",
+        "year": "2025",
+        "tmdb_rating": 6.376,
+        "genres": [
+          "Action",
+          "Comedy",
+          "Family"
+        ],
+        "moods": [
+          "happy",
+          "bored",
+          "excited",
+          "relaxed",
+          "nostalgic"
+        ],
+        "vote_count": 194,
+        "runtime_minutes": 95,
+        "total_hours": 1.5833333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "stay-at-home dad",
+          "accountant",
+          "action comedy",
+          "clinical",
+          "cliché",
+          "disapproving"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8,
+          "date_night": 0.65,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Kevin James",
+          "Alan Ritchson",
+          "Sarah Chalke",
+          "Isla Fisher",
+          "Alan Tudyk"
+        ],
+        "crew": [
+          "Luke Greenfield"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Smiling Friends (2020) - This animated comedy series is highly rated and offers light-hearted, quirky humor, perfect for zoning out and relaxing after a long day.\n2. Regular Show (2010) - With its high rating and comedic animation, this show is known for its absurd humor and laid-back vibe, making it ideal for unwinding and having a laugh.\n3. Zhuki (2019) - A well-rated comedy series that promises to bring laughter and joy, allowing you to escape from stress with its amusing storylines and characters.\n4. Chiikawa (2022) - This animated series is not only funny but also has a relaxed and nostalgic mood, offering a gentle and enjoyable watch with short episodes.\n5. Playdate (2025) - A family-friendly comedy movie featuring Kevin James, providing a happy and light atmosphere with a mix of humor and heartwarming moments.\n\nREASONING:\nThe selected recommendations prioritize content that is light, funny, and easy to watch, aligning with the user's request to unwind after a stressful day. I chose highly-rated series and movies with a strong comedic aspect, ensuring they are engaging without being complicated or heavy. The recommendations feature various formats, including animated series and live-action movies, offering a range of options to suit different viewing preferences while maintaining a focus on humor and relaxation.",
+    "method": "naive_rag",
+    "elapsed_time": 5.560254096984863,
+    "success": true,
+    "metrics": {
+      "csr": 0.6,
+      "precision_at_5": 1.0,
+      "mood_match_accuracy": 1.0,
+      "runtime_fit_quality": 1.0
+    }
+  },
+  {
+    "query_id": 18,
+    "query": "My girlfriend and I just finished Breaking Bad and Better Call Saul. We want another high-quality drama series with great writing, doesn't matter how long it is",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "genre": "drama",
+      "type": "series",
+      "min_rating": 8.5,
+      "similar_to": [
+        "Breaking Bad",
+        "Better Call Saul"
+      ],
+      "quality_focus": "writing"
+    },
+    "recommendations": [
+      {
+        "id": "1396",
+        "type": "series",
+        "title": "Breaking Bad",
+        "year": "2008",
+        "tmdb_rating": 8.936,
+        "genres": [
+          "Drama",
+          "Crime"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 16532,
+        "runtime_minutes": 45,
+        "total_hours": 46.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Bryan Cranston",
+          "Aaron Paul",
+          "Anna Gunn",
+          "RJ Mitte",
+          "Dean Norris"
+        ],
+        "crew": [
+          "Vince Gilligan"
+        ],
+        "seasons": 5,
+        "episodes": 62
+      },
+      {
+        "id": "60622",
+        "type": "series",
+        "title": "Fargo",
+        "year": "2014",
+        "tmdb_rating": 8.294,
+        "genres": [
+          "Crime",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 3032,
+        "runtime_minutes": 45,
+        "total_hours": 38.25,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Juno Temple",
+          "Jennifer Jason Leigh",
+          "David Rysdahl",
+          "Joe Keery",
+          "Lamorne Morris"
+        ],
+        "crew": [
+          "Noah Hawley"
+        ],
+        "seasons": 5,
+        "episodes": 51
+      },
+      {
+        "id": "46648",
+        "type": "series",
+        "title": "True Detective",
+        "year": "2014",
+        "tmdb_rating": 8.282,
+        "genres": [
+          "Drama",
+          "Mystery"
+        ],
+        "moods": [
+          "sad",
+          "scared",
+          "curious",
+          "inspired",
+          "nostalgic"
+        ],
+        "vote_count": 3836,
+        "runtime_minutes": 45,
+        "total_hours": 22.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Jodie Foster",
+          "Kali Reis",
+          "Fiona Shaw",
+          "Finn Bennett",
+          "Isabella Star LaBlanc"
+        ],
+        "crew": [
+          "Nic Pizzolatto",
+          "Issa López"
+        ],
+        "seasons": 4,
+        "episodes": 30
+      },
+      {
+        "id": "63351",
+        "type": "series",
+        "title": "Narcos",
+        "year": "2015",
+        "tmdb_rating": 8.059,
+        "genres": [
+          "Crime",
+          "Drama"
+        ],
+        "moods": [
+          "sad",
+          "inspired",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 3085,
+        "runtime_minutes": 45,
+        "total_hours": 22.5,
+        "language": "en",
+        "content_rating": "TV-MA",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 1.0,
+          "background_watch": 0.7,
+          "binge_worthy": 1.0
+        },
+        "cast": [
+          "Pedro Pascal",
+          "Matias Varela",
+          "Damián Alcázar",
+          "Francisco Denis",
+          "Alberto Ammann"
+        ],
+        "crew": [
+          "Chris Brancato",
+          "Doug Miro",
+          "Carlo Bernard"
+        ],
+        "seasons": 3,
+        "episodes": 30
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. The Wire (2002) - Known for its exceptional writing and complex character development, \"The Wire\" is a critically acclaimed series that delves into the gritty realities of crime and the justice system, making it a perfect follow-up to \"Breaking Bad\" and \"Better Call Saul.\"\n\n2. Fargo (2014) - This anthology series offers compelling crime stories with a unique blend of drama and dark humor, accompanied by excellent writing and diverse characters, appealing to fans of high-quality dramas.\n\n3. True Detective (2014) - With its intense storytelling and intricate character arcs, \"True Detective\" offers a captivating drama series experience that is similar in depth and quality to the series you've enjoyed.\n\n4. Narcos (2015) - This series combines crime and drama with a riveting look into the world of drug cartels, offering suspenseful and well-crafted narratives that you and your girlfriend will likely find engaging.\n\n5. Homeland (2011) - While it adds a layer of political intrigue, \"Homeland\" provides a gripping drama with strong character dynamics and storytelling, akin to the tension and complexity found in \"Breaking Bad\" and \"Better Call Saul.\"\n\nREASONING:\nThe selection focused on high-quality drama series with strong writing and storytelling, which was the primary request. Each recommended series has been critically acclaimed and offers deep narratives and complex characters, similar to what the couple appreciated in \"Breaking Bad\" and \"Better Call Saul.\" The genres of crime and drama were prioritized to match the user's previous viewing experiences, ensuring a seamless transition to a new engaging series.",
+    "method": "naive_rag",
+    "elapsed_time": 5.955481052398682,
+    "success": true,
+    "metrics": {
+      "csr": 0.45,
+      "precision_at_5": 0.2,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 19,
+    "query": "Looking for a movie with a strong female lead, action or adventure genre, highly rated. We've already seen Wonder Woman, Mad Max Fury Road, and Atomic Blonde",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "genre": [
+        "action",
+        "adventure"
+      ],
+      "type": "movie",
+      "themes": [
+        "strong female lead"
+      ],
+      "min_rating": 7.5,
+      "viewing_history": [
+        "Wonder Woman",
+        "Mad Max: Fury Road",
+        "Atomic Blonde"
+      ]
+    },
+    "recommendations": [
+      {
+        "id": "786892",
+        "type": "movie",
+        "title": "Furiosa: A Mad Max Saga",
+        "year": "2024",
+        "tmdb_rating": 7.46,
+        "genres": [
+          "Action",
+          "Science Fiction",
+          "Adventure"
+        ],
+        "moods": [
+          "excited",
+          "bored",
+          "curious",
+          "stressed"
+        ],
+        "vote_count": 4492,
+        "runtime_minutes": 149,
+        "total_hours": 2.4833333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "chase",
+          "post-apocalyptic future",
+          "warlord",
+          "prequel",
+          "wasteland",
+          "spin off",
+          "struggle for survival",
+          "desert",
+          "tyrant",
+          "tyranny",
+          "masculinity",
+          "grim",
+          "revenge murderer",
+          "mother daughter relationship",
+          "anxious",
+          "child abduction",
+          "car",
+          "bold",
+          "brisk"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.8500000000000001,
+          "date_night": 0.7,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Anya Taylor-Joy",
+          "Chris Hemsworth",
+          "Tom Burke",
+          "Alyla Browne",
+          "George Shevtsov"
+        ],
+        "crew": [
+          "George Miller"
+        ]
+      },
+      {
+        "id": "831946",
+        "type": "movie",
+        "title": "Interceptor",
+        "year": "2022",
+        "tmdb_rating": 6.066,
+        "genres": [
+          "Action",
+          "Thriller",
+          "Adventure"
+        ],
+        "moods": [
+          "excited",
+          "bored",
+          "scared",
+          "curious",
+          "stressed"
+        ],
+        "vote_count": 787,
+        "runtime_minutes": 98,
+        "total_hours": 1.6333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "terrorism"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.65,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Elsa Pataky",
+          "Luke Bracey",
+          "Aaron Glenane",
+          "Belinda Jombwe",
+          "Mayen Mehta"
+        ],
+        "crew": [
+          "Matthew Reilly"
+        ]
+      },
+      {
+        "id": "324544",
+        "type": "movie",
+        "title": "In the Lost Lands",
+        "year": "2025",
+        "tmdb_rating": 6.401,
+        "genres": [
+          "Action",
+          "Fantasy",
+          "Western"
+        ],
+        "moods": [
+          "bored",
+          "excited",
+          "stressed"
+        ],
+        "vote_count": 640,
+        "runtime_minutes": 102,
+        "total_hours": 1.7,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "witch",
+          "dystopia",
+          "sorcery",
+          "betrayal",
+          "based on short story",
+          "sorceress",
+          "high fantasy",
+          "survival adventure"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.7,
+          "family_watch": 0.65,
+          "date_night": 0.5,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Milla Jovovich",
+          "Dave Bautista",
+          "Arly Jover",
+          "Amara Okereke",
+          "Fraser James"
+        ],
+        "crew": [
+          "Paul W. S. Anderson"
+        ]
+      },
+      {
+        "id": "1280450",
+        "type": "movie",
+        "title": "Stolen Girl",
+        "year": "2025",
+        "tmdb_rating": 6.569,
+        "genres": [
+          "Thriller",
+          "Action",
+          "Adventure"
+        ],
+        "moods": [
+          "excited",
+          "bored",
+          "scared",
+          "curious",
+          "stressed"
+        ],
+        "vote_count": 80,
+        "runtime_minutes": 110,
+        "total_hours": 1.8333333333333333,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.8500000000000001,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Kate Beckinsale",
+          "Scott Eastwood",
+          "Jordan Duvigneau",
+          "Matt Craven",
+          "Nowar Yusuf"
+        ],
+        "crew": [
+          "James Kent"
+        ]
+      },
+      {
+        "id": "704673",
+        "type": "movie",
+        "title": "Trigger Warning",
+        "year": "2024",
+        "tmdb_rating": 5.725,
+        "genres": [
+          "Action"
+        ],
+        "moods": [
+          "excited",
+          "bored",
+          "sad",
+          "curious"
+        ],
+        "vote_count": 550,
+        "runtime_minutes": 106,
+        "total_hours": 1.7666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "death of father",
+          "conspiracy",
+          "special forces",
+          "return to hometown"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.5,
+          "family_watch": 0.5,
+          "date_night": 0.5,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Jessica Alba",
+          "Anthony Michael Hall",
+          "Tone Bell",
+          "Mark Webber",
+          "Jake Weary"
+        ],
+        "crew": [
+          "Mouly Surya"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Furiosa: A Mad Max Saga (2024) - With a strong female lead portrayed by Anya Taylor-Joy and set in the action-packed Mad Max universe, this movie fits the action/adventure genre perfectly and has a high rating, making it an excellent choice.\n2. Interceptor (2022) - Featuring Elsa Pataky as the lead, this action-thriller provides a strong female character and a fast-paced adventure, aligning with the user's preference for a highly rated action movie.\n3. In the Lost Lands (2025) - Starring Milla Jovovich, known for her strong action roles, this movie combines action, fantasy, and a western setting, offering a unique adventure with a powerful female lead.\n4. Stolen Girl (2025) - Kate Beckinsale leads this thriller with action and adventure elements, providing a compelling and suspenseful narrative, making it a suitable choice for those seeking strong female-driven stories.\n5. Trigger Warning (2024) - Although rated slightly lower, Jessica Alba stars in this action movie, offering an exciting experience with a focus on a strong female protagonist.\n\nREASONING:\nThe selected recommendations prioritize movies with strong female leads in the action/adventure genre, as requested by the user. I avoided titles already viewed by the user and prioritized those with higher ratings and strong female casts. This approach ensures that the selections align with the user's interest in action-packed, female-led films that are highly rated.",
+    "method": "naive_rag",
+    "elapsed_time": 6.081394910812378,
+    "success": true,
+    "metrics": {
+      "csr": 0.4,
+      "precision_at_5": 0.0,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 0.0
+    }
+  },
+  {
+    "query_id": 20,
+    "query": "It's movie night and we can't decide. I want something with suspense and mystery, my partner wants romance, and we both want it to be well-made and not too long. Maybe 2 hours max?",
+    "difficulty": "complex",
+    "expected_constraints": {
+      "group_preferences": [
+        {
+          "genre": "mystery",
+          "mood": "curious"
+        },
+        {
+          "genre": "romance",
+          "mood": "happy"
+        }
+      ],
+      "min_rating": 7.0,
+      "max_hours": 2.0,
+      "type": "movie"
+    },
+    "recommendations": [
+      {
+        "id": "1242011",
+        "type": "movie",
+        "title": "Together",
+        "year": "2025",
+        "tmdb_rating": 7.1,
+        "genres": [
+          "Horror",
+          "Romance"
+        ],
+        "moods": [
+          "scared",
+          "happy",
+          "sad",
+          "stressed",
+          "nostalgic"
+        ],
+        "vote_count": 700,
+        "runtime_minutes": 102,
+        "total_hours": 1.7,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "countryside",
+          "musician",
+          "cave",
+          "cult",
+          "woods",
+          "romance",
+          "teacher",
+          "church",
+          "couple",
+          "psychotic",
+          "disturbed",
+          "supernatural horror",
+          "body horror",
+          "psychological horror",
+          "baffled",
+          "compassionate",
+          "doubtful",
+          "gloomy"
+        ],
+        "context_suitability": {
+          "solo_watch": 0.8500000000000001,
+          "family_watch": 0.7,
+          "date_night": 0.8500000000000001,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Dave Franco",
+          "Alison Brie",
+          "Damon Herriman",
+          "Mia Morrissey",
+          "Karl Richmond"
+        ],
+        "crew": [
+          "Michael Shanks"
+        ]
+      },
+      {
+        "id": "1330421",
+        "type": "movie",
+        "title": "Bone Lake",
+        "year": "2025",
+        "tmdb_rating": 6.1,
+        "genres": [
+          "Horror",
+          "Thriller",
+          "Mystery"
+        ],
+        "moods": [
+          "scared",
+          "curious",
+          "stressed",
+          "excited"
+        ],
+        "vote_count": 64,
+        "runtime_minutes": 94,
+        "total_hours": 1.5666666666666667,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "marriage proposal",
+          "cheating",
+          "sword",
+          "hidden camera",
+          "murder",
+          "serial killer",
+          "chainsaw",
+          "incest",
+          "erotic thriller",
+          "airbnb",
+          "stabbed",
+          "erotic",
+          "axe",
+          "female masturbation",
+          "sex toys",
+          "brother sister incest"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Alex Roe",
+          "Maddie Hasson",
+          "Marco Pigossi",
+          "Andra Nechita",
+          "Clayton Spencer"
+        ],
+        "crew": [
+          "Mercedes Bryce Morgan"
+        ]
+      },
+      {
+        "id": "1202863",
+        "type": "movie",
+        "title": "From Darkness",
+        "year": "2024",
+        "tmdb_rating": 6.393,
+        "genres": [
+          "Horror",
+          "Mystery",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "curious",
+          "excited"
+        ],
+        "vote_count": 14,
+        "runtime_minutes": 95,
+        "total_hours": 1.5833333333333333,
+        "language": "sv",
+        "content_rating": "",
+        "keywords": [
+          "rescue",
+          "post-traumatic stress disorder (ptsd)",
+          "sacrifice",
+          "darkness",
+          "survival horror",
+          "missing child",
+          "search party",
+          "folklore",
+          "abandoned mine",
+          "rescue dog",
+          "mysterious events",
+          "swedish folklore",
+          "depressed",
+          "mysterious caves"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.5,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Rakel Benér",
+          "Oscar Skagerberg",
+          "Peter Mörlin",
+          "Thomas Hedengran",
+          "Amanda Kilpeläinen Arvidsson"
+        ],
+        "crew": [
+          "Philip W. da Silva"
+        ]
+      },
+      {
+        "id": "760104",
+        "type": "movie",
+        "title": "X",
+        "year": "2022",
+        "tmdb_rating": 6.734,
+        "genres": [
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "excited",
+          "curious",
+          "sad",
+          "nostalgic"
+        ],
+        "vote_count": 3728,
+        "runtime_minutes": 106,
+        "total_hours": 1.7666666666666666,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "van",
+          "pornography",
+          "sheriff",
+          "war veteran",
+          "gas station",
+          "shotgun",
+          "1970s",
+          "texas",
+          "alligator",
+          "porn star",
+          "serial killer",
+          "slasher",
+          "violent death",
+          "porn actress",
+          "elderly couple",
+          "farm house",
+          "isolated farmhouse",
+          "existentialism",
+          "adult filmmaking",
+          "televangelist",
+          "intimate",
+          "pastiche",
+          "compassionate"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.7,
+          "date_night": 0.65,
+          "background_watch": 0.7,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Mia Goth",
+          "Jenna Ortega",
+          "Brittany Snow",
+          "Kid Cudi",
+          "Martin Henderson"
+        ],
+        "crew": [
+          "Ti West"
+        ]
+      },
+      {
+        "id": "593643",
+        "type": "movie",
+        "title": "The Menu",
+        "year": "2022",
+        "tmdb_rating": 7.172,
+        "genres": [
+          "Comedy",
+          "Horror",
+          "Thriller"
+        ],
+        "moods": [
+          "scared",
+          "stressed",
+          "happy",
+          "excited",
+          "curious",
+          "bored"
+        ],
+        "vote_count": 5709,
+        "runtime_minutes": 107,
+        "total_hours": 1.7833333333333334,
+        "language": "en",
+        "content_rating": "",
+        "keywords": [
+          "psychopath",
+          "obsession",
+          "mass murder",
+          "restaurant",
+          "dark comedy",
+          "revenge",
+          "food",
+          "dinner",
+          "chef",
+          "food critic",
+          "remote island",
+          "french cuisine",
+          "culinary arts",
+          "fine dining",
+          "haute cuisine",
+          "absurd",
+          "appreciative",
+          "foreboding",
+          "pessimistic"
+        ],
+        "context_suitability": {
+          "solo_watch": 1.0,
+          "family_watch": 0.8500000000000001,
+          "date_night": 1.0,
+          "background_watch": 0.8500000000000001,
+          "binge_worthy": 0.0
+        },
+        "cast": [
+          "Anya Taylor-Joy",
+          "Ralph Fiennes",
+          "Nicholas Hoult",
+          "Janet McTeer",
+          "Paul Adelstein"
+        ],
+        "crew": [
+          "Mark Mylod"
+        ]
+      }
+    ],
+    "explanation": "RECOMMENDATIONS:\n1. Together (2025) - This movie blends romance and horror, satisfying both your desire for suspense and your partner's for romance. With a runtime of 102 minutes, it fits your time constraint and has a respectable rating of 7.1/10.\n\n2. Bone Lake (2025) - Offering elements of mystery and thriller, this film is perfect for a suspenseful night. With a runtime of 94 minutes, it promises an exciting experience without exceeding your time limit.\n\n3. From Darkness (2024) - This film combines mystery and thriller, providing the suspense you're looking for. At 95 minutes, it is concise and engaging, ensuring a well-paced viewing experience.\n\n4. Cruel Fixation (2019) - A pure thriller with a runtime of 90 minutes, this movie offers a tight, suspense-filled storyline that keeps you curious and on edge, aligning well with your mood preference.\n\n5. The Menu (2022) - While primarily a horror-thriller, this film includes comedic elements that might appeal to both of you. It’s highly rated and just slightly over the 100-minute mark, offering a unique blend of genres.\n\nREASONING:\nThe recommendations focus on balancing your desire for suspense and mystery with your partner’s interest in romance, while ensuring the movies are well-made and under two hours. \"Together\" directly addresses both suspense and romance, making it a top choice. \"Bone Lake\" and \"From Darkness\" offer strong suspense elements within the time constraint. \"Cruel Fixation\" is a compact thriller that maintains a high level of tension. Lastly, \"The Menu,\" though slightly over two hours, offers a mix of comedy and horror, providing a highly rated and entertaining experience that could appeal to both of your tastes.",
+    "method": "naive_rag",
+    "elapsed_time": 6.561353921890259,
+    "success": true,
+    "metrics": {
+      "csr": 0.6,
+      "precision_at_5": 0.4,
+      "mood_match_accuracy": 0.0,
+      "runtime_fit_quality": 1.0
+    }
+  }
+]

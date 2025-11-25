@@ -1,0 +1,788 @@
+/Users/giorgiomazza27/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-11-19 20:37:38,384 - __main__ - INFO - Loaded 20 test queries
+2025-11-19 20:37:38,384 - __main__ - INFO - Initializing vector store...
+2025-11-19 20:37:38,428 - src.utils.vector_store - INFO - Loaded 2000 items from ./data/processed/content_dataset.json
+2025-11-19 20:37:38,508 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-11-19 20:37:38,516 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2025-11-19 20:37:38,516 - src.utils.vector_store - INFO - Collection ready: content_collection
+2025-11-19 20:37:38,527 - src.utils.vector_store - INFO - Collection already contains 1964 items. Skipping indexing.
+2025-11-19 20:37:38,528 - __main__ - INFO - Initializing RAG systems...
+2025-11-19 20:37:38,531 - src.rag_systems.naive_rag - INFO - Initialized NaiveRAG with model=gpt-4o, top_k=10
+2025-11-19 20:37:38,534 - src.rag_systems.advanced_rag - INFO - Initialized AdvancedRAG with model=gpt-4o, top_k=20
+2025-11-19 20:37:38,541 - src.rag_systems.agentic_rag - INFO - Initialized 7 tools: ['mood_content_finder', 'context_filter', 'runtime_matcher', 'viewing_history_checker', 'similar_content_finder', 'constraint_relaxer', 'group_preference_reconciler']
+2025-11-19 20:37:38,561 - src.rag_systems.agentic_rag - INFO - Initialized AgenticRAG with 7 tools, model=gpt-4o
+2025-11-19 20:37:38,578 - src.evaluation.metrics - INFO - Loaded 1964 items for evaluation
+2025-11-19 20:37:38,579 - __main__ - INFO - Evaluation runner initialized
+2025-11-19 20:37:38,579 - __main__ - INFO - 
+Starting evaluation...
+2025-11-19 20:37:38,579 - __main__ - INFO - This will take approximately 10-20 minutes depending on API latency.
+
+2025-11-19 20:37:38,579 - __main__ - INFO - 
+================================================================================
+2025-11-19 20:37:38,579 - __main__ - INFO - Evaluating NAIVE RAG
+2025-11-19 20:37:38,579 - __main__ - INFO - ================================================================================
+
+2025-11-19 20:37:38,579 - __main__ - INFO - [1/20] Query 1: I want a funny comedy movie...
+2025-11-19 20:37:38,579 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I want a funny comedy movie'
+2025-11-19 20:37:39,047 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:37:39,049 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2025-11-19 20:37:39,389 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:37:46,237 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:37:46,243 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=1.000, Time=7.66s
+2025-11-19 20:37:46,243 - __main__ - INFO - [2/20] Query 2: Looking for a scary horror movie for tonight...
+2025-11-19 20:37:46,243 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Looking for a scary horror movie for tonight'
+2025-11-19 20:37:46,717 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:37:46,730 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:37:52,429 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:37:52,430 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=1.000, Time=6.19s
+2025-11-19 20:37:52,430 - __main__ - INFO - [3/20] Query 3: Find me a family-friendly movie under 2 hours...
+2025-11-19 20:37:52,430 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Find me a family-friendly movie under 2 hours'
+2025-11-19 20:37:53,354 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:37:53,364 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:37:58,815 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:37:58,816 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=0.000, Time=6.39s
+2025-11-19 20:37:58,816 - __main__ - INFO - [4/20] Query 4: I want an inspiring biographical series I can binge watch th...
+2025-11-19 20:37:58,816 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I want an inspiring biographical series I can binge watch this weekend'
+2025-11-19 20:37:59,195 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:37:59,210 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:06,712 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:06,714 - __main__ - INFO -   Metrics: CSR=0.560, P@5=0.800, Mood=0.800, Time=7.90s
+2025-11-19 20:38:06,714 - __main__ - INFO - [5/20] Query 5: Suggest a highly rated drama for a date night, preferably un...
+2025-11-19 20:38:06,714 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Suggest a highly rated drama for a date night, preferably under 2.5 hours'
+2025-11-19 20:38:07,166 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:07,177 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:14,424 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:14,456 - __main__ - INFO -   Metrics: CSR=0.700, P@5=0.600, Mood=0.000, Time=7.74s
+2025-11-19 20:38:14,456 - __main__ - INFO - [6/20] Query 6: I want a happy family movie under 2 hours that we haven't wa...
+2025-11-19 20:38:14,456 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I want a happy family movie under 2 hours that we haven't watched before. We recently saw Toy Story, Frozen, and Moana.'
+2025-11-19 20:38:14,962 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:14,974 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:22,949 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:22,950 - __main__ - INFO -   Metrics: CSR=0.800, P@5=1.000, Mood=1.000, Time=8.49s
+2025-11-19 20:38:22,950 - __main__ - INFO - [7/20] Query 7: Find me something like Inception - mind-bending and thought-...
+2025-11-19 20:38:22,950 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Find me something like Inception - mind-bending and thought-provoking'
+2025-11-19 20:38:23,635 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:23,673 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:28,167 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:28,201 - __main__ - INFO -   Metrics: CSR=0.333, P@5=1.000, Mood=1.000, Time=5.25s
+2025-11-19 20:38:28,201 - __main__ - INFO - [8/20] Query 8: I need a relaxing series I can watch in the background while...
+2025-11-19 20:38:28,201 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I need a relaxing series I can watch in the background while working, nothing too intense, episodes around 30-45 minutes'
+2025-11-19 20:38:29,106 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:29,125 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:34,641 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:34,642 - __main__ - INFO -   Metrics: CSR=0.520, P@5=0.600, Mood=0.600, Time=6.44s
+2025-11-19 20:38:34,642 - __main__ - INFO - [9/20] Query 9: My wife wants a romantic comedy, I want an action movie, and...
+2025-11-19 20:38:34,642 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'My wife wants a romantic comedy, I want an action movie, and our kids want animation. What can we all watch together?'
+2025-11-19 20:38:35,128 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:35,153 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:44,154 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:44,160 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.800, Mood=0.000, Time=9.52s
+2025-11-19 20:38:44,160 - __main__ - INFO - [10/20] Query 10: I'm feeling nostalgic and want a coming-of-age drama from th...
+2025-11-19 20:38:44,160 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I'm feeling nostalgic and want a coming-of-age drama from the 80s or 90s, highly rated, that I can watch tonight in one sitting'
+2025-11-19 20:38:44,632 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:44,649 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:50,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:50,517 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.800, Mood=1.000, Time=6.36s
+2025-11-19 20:38:50,517 - __main__ - INFO - [11/20] Query 11: Something scary to watch with friends tonight...
+2025-11-19 20:38:50,517 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Something scary to watch with friends tonight'
+2025-11-19 20:38:51,140 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:51,154 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:38:57,685 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:38:57,685 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.000, Mood=1.000, Time=7.17s
+2025-11-19 20:38:57,685 - __main__ - INFO - [12/20] Query 12: I'm in the mood for a good cry, any recommendations?...
+2025-11-19 20:38:57,685 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I'm in the mood for a good cry, any recommendations?'
+2025-11-19 20:38:58,154 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:38:58,165 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:07,634 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:07,636 - __main__ - INFO -   Metrics: CSR=0.500, P@5=1.000, Mood=1.000, Time=9.95s
+2025-11-19 20:39:07,637 - __main__ - INFO - [13/20] Query 13: Can you recommend a feel-good movie that's not too long? I h...
+2025-11-19 20:39:07,637 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Can you recommend a feel-good movie that's not too long? I have about 90 minutes'
+2025-11-19 20:39:08,072 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:08,083 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:18,227 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:18,229 - __main__ - INFO -   Metrics: CSR=0.833, P@5=0.400, Mood=1.000, Time=10.59s
+2025-11-19 20:39:18,229 - __main__ - INFO - [14/20] Query 14: Looking for a well-made thriller series, something I can rea...
+2025-11-19 20:39:18,230 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Looking for a well-made thriller series, something I can really get into over the next few evenings'
+2025-11-19 20:39:18,667 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:18,903 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:26,071 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:26,072 - __main__ - INFO -   Metrics: CSR=0.700, P@5=0.800, Mood=0.000, Time=7.84s
+2025-11-19 20:39:26,072 - __main__ - INFO - [15/20] Query 15: What's a good action movie my teenage son and I can watch to...
+2025-11-19 20:39:26,072 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'What's a good action movie my teenage son and I can watch together? Nothing too violent or inappropriate'
+2025-11-19 20:39:26,781 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:26,792 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:32,830 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:32,835 - __main__ - INFO -   Metrics: CSR=0.650, P@5=0.600, Mood=0.000, Time=6.76s
+2025-11-19 20:39:32,835 - __main__ - INFO - [16/20] Query 16: I loved Stranger Things and The Umbrella Academy. What else ...
+2025-11-19 20:39:32,835 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'I loved Stranger Things and The Umbrella Academy. What else would I like that's similar?'
+2025-11-19 20:39:33,569 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:33,583 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:39,454 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:39,490 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.400, Mood=0.000, Time=6.65s
+2025-11-19 20:39:39,490 - __main__ - INFO - [17/20] Query 17: Need something light and funny to watch after a stressful da...
+2025-11-19 20:39:39,490 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Need something light and funny to watch after a stressful day at work. Not looking for anything heavy or complicated, just want to zone out for an hour or two'
+2025-11-19 20:39:40,017 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:40,027 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:45,019 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:45,050 - __main__ - INFO -   Metrics: CSR=0.600, P@5=1.000, Mood=1.000, Time=5.56s
+2025-11-19 20:39:45,050 - __main__ - INFO - [18/20] Query 18: My girlfriend and I just finished Breaking Bad and Better Ca...
+2025-11-19 20:39:45,050 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'My girlfriend and I just finished Breaking Bad and Better Call Saul. We want another high-quality drama series with great writing, doesn't matter how long it is'
+2025-11-19 20:39:45,522 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:45,531 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:51,003 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:51,006 - __main__ - INFO -   Metrics: CSR=0.450, P@5=0.200, Mood=0.000, Time=5.96s
+2025-11-19 20:39:51,006 - __main__ - INFO - [19/20] Query 19: Looking for a movie with a strong female lead, action or adv...
+2025-11-19 20:39:51,006 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'Looking for a movie with a strong female lead, action or adventure genre, highly rated. We've already seen Wonder Woman, Mad Max Fury Road, and Atomic Blonde'
+2025-11-19 20:39:51,566 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:51,605 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:39:57,087 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:39:57,087 - __main__ - INFO -   Metrics: CSR=0.400, P@5=0.000, Mood=0.000, Time=6.08s
+2025-11-19 20:39:57,087 - __main__ - INFO - [20/20] Query 20: It's movie night and we can't decide. I want something with ...
+2025-11-19 20:39:57,087 - src.rag_systems.naive_rag - INFO - NaiveRAG retrieving for query: 'It's movie night and we can't decide. I want something with suspense and mystery, my partner wants romance, and we both want it to be well-made and not too long. Maybe 2 hours max?'
+2025-11-19 20:39:57,505 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:39:57,515 - src.rag_systems.naive_rag - INFO - Retrieved 10 items
+2025-11-19 20:40:03,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:03,649 - __main__ - INFO -   Metrics: CSR=0.600, P@5=0.400, Mood=0.000, Time=6.56s
+2025-11-19 20:40:03,649 - __main__ - INFO - 
+================================================================================
+2025-11-19 20:40:03,649 - __main__ - INFO - Evaluating ADVANCED RAG
+2025-11-19 20:40:03,649 - __main__ - INFO - ================================================================================
+
+2025-11-19 20:40:03,649 - __main__ - INFO - [1/20] Query 1: I want a funny comedy movie...
+2025-11-19 20:40:04,640 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:04,643 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'happy', 'type': 'movie', 'genre': 'comedy'}
+2025-11-19 20:40:06,684 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:06,728 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Superbad" is a hilarious comedy movie that perfectly fits a happy mood with its laugh-out-loud humo...
+2025-11-19 20:40:06,728 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:40:07,190 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:40:07,230 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:40:07,230 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:40:15,350 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:15,353 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=1.000, Time=11.70s
+2025-11-19 20:40:15,353 - __main__ - INFO - [2/20] Query 2: Looking for a scary horror movie for tonight...
+2025-11-19 20:40:16,387 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:16,414 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'scared', 'type': 'movie', 'genre': 'horror', 'other': 'for tonight'}
+2025-11-19 20:40:17,795 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:17,796 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Hereditary" is a terrifying horror movie that delves deep into psychological and supernatural theme...
+2025-11-19 20:40:17,796 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:40:18,888 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:40:18,928 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:40:18,928 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:40:35,025 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:35,028 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=1.000, Time=19.67s
+2025-11-19 20:40:35,028 - __main__ - INFO - [3/20] Query 3: Find me a family-friendly movie under 2 hours...
+2025-11-19 20:40:36,241 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:36,267 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'type': 'movie', 'context': 'family_watch', 'max_hours': 2}
+2025-11-19 20:40:38,190 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:38,211 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: *"Paddington 2" is a delightful family-friendly comedy that runs for just under two hours. It featur...
+2025-11-19 20:40:38,211 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:40:38,659 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:40:38,701 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:40:38,701 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:40:45,372 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:45,373 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=0.000, Time=10.35s
+2025-11-19 20:40:45,373 - __main__ - INFO - [4/20] Query 4: I want an inspiring biographical series I can binge watch th...
+2025-11-19 20:40:47,134 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:47,134 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'inspired', 'type': 'series', 'context': 'binge_worthy', 'genre': 'biographical', 'other': 'this weekend'}
+2025-11-19 20:40:49,163 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:40:49,168 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Unstoppable Minds" is an inspiring biographical series that delves into the lives of history's most...
+2025-11-19 20:40:49,168 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'series'}
+2025-11-19 20:40:49,794 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:40:49,838 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:40:49,839 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:41:00,880 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:00,887 - __main__ - INFO -   Metrics: CSR=0.600, P@5=1.000, Mood=1.000, Time=15.51s
+2025-11-19 20:41:00,887 - __main__ - INFO - [5/20] Query 5: Suggest a highly rated drama for a date night, preferably un...
+2025-11-19 20:41:01,802 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:01,803 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'context': 'date_night', 'max_hours': 2.5, 'genre': 'drama', 'other': 'highly rated'}
+2025-11-19 20:41:04,596 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:04,596 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "For a captivating date night drama, 'Atonement' offers a poignant mix of romance and tension, perfe...
+2025-11-19 20:41:04,596 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:41:05,053 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:41:05,069 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:41:05,069 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:41:18,381 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:18,383 - __main__ - INFO -   Metrics: CSR=0.950, P@5=1.000, Mood=0.000, Time=17.50s
+2025-11-19 20:41:18,383 - __main__ - INFO - [6/20] Query 6: I want a happy family movie under 2 hours that we haven't wa...
+2025-11-19 20:41:20,144 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:20,154 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'happy', 'type': 'movie', 'context': 'family_watch', 'max_hours': 2, 'other': 'not previously watched; exclude Toy Story, Frozen, and Moana'}
+2025-11-19 20:41:22,699 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:22,700 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "The Mitchells vs. The Machines" is a vibrant animated comedy that delivers a heartwarming tale of f...
+2025-11-19 20:41:22,700 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:41:23,188 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:41:23,228 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:41:23,228 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:41:56,463 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:56,466 - __main__ - INFO -   Metrics: CSR=0.800, P@5=1.000, Mood=1.000, Time=38.08s
+2025-11-19 20:41:56,466 - __main__ - INFO - [7/20] Query 7: Find me something like Inception - mind-bending and thought-...
+2025-11-19 20:41:57,636 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:57,637 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'curious', 'other': 'mind-bending, thought-provoking'}
+2025-11-19 20:41:59,059 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:41:59,059 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Interstellar" is a sci-fi epic that delves into the complexities of time, space, and human emotion,...
+2025-11-19 20:41:59,059 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:41:59,607 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:41:59,628 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:41:59,628 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:42:15,046 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:15,051 - __main__ - INFO -   Metrics: CSR=0.333, P@5=1.000, Mood=1.000, Time=18.59s
+2025-11-19 20:42:15,051 - __main__ - INFO - [8/20] Query 8: I need a relaxing series I can watch in the background while...
+2025-11-19 20:42:17,029 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:17,033 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'relaxed', 'type': 'series', 'context': 'background_watch', 'other': 'episodes around 30-45 minutes'}
+2025-11-19 20:42:19,325 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:19,326 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "The Great British Bake Off" is a delightful reality competition series that offers a calming and up...
+2025-11-19 20:42:19,326 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'series'}
+2025-11-19 20:42:19,861 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:42:19,902 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:42:19,902 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:42:30,223 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:30,223 - __main__ - INFO -   Metrics: CSR=0.600, P@5=0.800, Mood=1.000, Time=15.17s
+2025-11-19 20:42:30,224 - __main__ - INFO - [9/20] Query 9: My wife wants a romantic comedy, I want an action movie, and...
+2025-11-19 20:42:31,145 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:31,148 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'happy', 'context': 'family_watch', 'genre': 'romantic comedy, action, animation'}
+2025-11-19 20:42:34,238 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:34,247 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Spy Kids" is the perfect family-friendly film blending action, comedy, and animation elements to sa...
+2025-11-19 20:42:34,247 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:42:34,668 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:42:34,685 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:42:34,685 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:42:46,102 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:46,104 - __main__ - INFO -   Metrics: CSR=0.500, P@5=1.000, Mood=0.000, Time=15.88s
+2025-11-19 20:42:46,104 - __main__ - INFO - [10/20] Query 10: I'm feeling nostalgic and want a coming-of-age drama from th...
+2025-11-19 20:42:47,221 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:47,247 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'nostalgic', 'context': 'solo_watch', 'max_hours': 3, 'genre': 'coming-of-age drama', 'other': 'from the 80s or 90s'}
+2025-11-19 20:42:53,025 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:53,031 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "The Breakfast Club" (1985) is an iconic coming-of-age drama that perfectly captures the essence of ...
+2025-11-19 20:42:53,031 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:42:53,607 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:42:53,621 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:42:53,621 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:42:59,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:42:59,913 - __main__ - INFO -   Metrics: CSR=0.531, P@5=0.800, Mood=1.000, Time=13.81s
+2025-11-19 20:42:59,913 - __main__ - INFO - [11/20] Query 11: Something scary to watch with friends tonight...
+2025-11-19 20:43:01,120 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:01,124 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'scared', 'other': 'to watch with friends tonight'}
+2025-11-19 20:43:02,543 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:02,548 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Host" (2020) is a chilling supernatural horror film that perfectly captures the essence of fear, ma...
+2025-11-19 20:43:02,548 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:43:03,003 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:43:03,020 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:43:03,020 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:43:12,786 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:12,789 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.000, Mood=1.000, Time=12.88s
+2025-11-19 20:43:12,789 - __main__ - INFO - [12/20] Query 12: I'm in the mood for a good cry, any recommendations?...
+2025-11-19 20:43:14,137 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:14,150 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'sad'}
+2025-11-19 20:43:16,559 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:16,568 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Manchester by the Sea" is an emotionally powerful drama that delves into themes of grief, familial ...
+2025-11-19 20:43:16,568 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:43:16,996 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:43:17,012 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:43:17,012 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:43:25,480 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:25,481 - __main__ - INFO -   Metrics: CSR=0.500, P@5=1.000, Mood=1.000, Time=12.69s
+2025-11-19 20:43:25,481 - __main__ - INFO - [13/20] Query 13: Can you recommend a feel-good movie that's not too long? I h...
+2025-11-19 20:43:26,602 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:26,603 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'happy', 'type': 'movie', 'max_hours': 1.5, 'other': 'feel-good'}
+2025-11-19 20:43:28,686 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:28,687 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: **Title: Paddington (2014)**
+
+This delightful family comedy brings joy and laughter in just 95 minut...
+2025-11-19 20:43:28,687 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:43:29,099 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:43:29,137 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:43:29,137 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:43:34,797 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:34,803 - __main__ - INFO -   Metrics: CSR=1.000, P@5=1.000, Mood=1.000, Time=9.32s
+2025-11-19 20:43:34,803 - __main__ - INFO - [14/20] Query 14: Looking for a well-made thriller series, something I can rea...
+2025-11-19 20:43:36,019 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:36,023 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'excited', 'type': 'series', 'context': 'binge_worthy', 'genre': 'thriller', 'other': 'well-made'}
+2025-11-19 20:43:38,182 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:38,182 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Mindhunter" is a gripping thriller series that dives deep into the psychological world of FBI agent...
+2025-11-19 20:43:38,182 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'series'}
+2025-11-19 20:43:38,619 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:43:38,658 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:43:38,658 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:43:46,412 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:46,413 - __main__ - INFO -   Metrics: CSR=0.750, P@5=1.000, Mood=0.000, Time=11.61s
+2025-11-19 20:43:46,413 - __main__ - INFO - [15/20] Query 15: What's a good action movie my teenage son and I can watch to...
+2025-11-19 20:43:47,070 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:47,077 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'type': 'movie', 'context': 'family_watch', 'genre': 'action', 'other': 'nothing too violent or inappropriate'}
+2025-11-19 20:43:49,380 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:49,386 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Spy Kids" is an action-packed family movie that perfectly balances excitement and fun, making it id...
+2025-11-19 20:43:49,386 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:43:50,190 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:43:50,318 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:43:50,318 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:43:57,699 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:57,712 - __main__ - INFO -   Metrics: CSR=0.750, P@5=1.000, Mood=0.000, Time=11.30s
+2025-11-19 20:43:57,712 - __main__ - INFO - [16/20] Query 16: I loved Stranger Things and The Umbrella Academy. What else ...
+2025-11-19 20:43:59,027 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:43:59,027 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'type': 'series', 'context': 'binge_worthy', 'genre': 'sci-fi', 'other': 'similar to Stranger Things and The Umbrella Academy'}
+2025-11-19 20:44:00,684 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:00,685 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Dark" is a mind-bending sci-fi thriller series that delves into the mysteries of time travel and it...
+2025-11-19 20:44:00,685 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'series'}
+2025-11-19 20:44:01,053 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:44:01,096 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:44:01,096 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:44:06,687 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:06,694 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.400, Mood=0.000, Time=8.98s
+2025-11-19 20:44:06,694 - __main__ - INFO - [17/20] Query 17: Need something light and funny to watch after a stressful da...
+2025-11-19 20:44:07,804 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:07,811 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'relaxed', 'context': 'solo_watch', 'max_hours': 2, 'genre': 'comedy', 'other': 'light and funny'}
+2025-11-19 20:44:09,615 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:09,615 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Brooklyn Nine-Nine" is a perfect choice for a solo, relaxed evening after a stressful workday. This...
+2025-11-19 20:44:09,615 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: None
+2025-11-19 20:44:10,106 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:44:10,119 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:44:10,120 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:44:28,940 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:28,944 - __main__ - INFO -   Metrics: CSR=0.600, P@5=1.000, Mood=1.000, Time=22.25s
+2025-11-19 20:44:28,944 - __main__ - INFO - [18/20] Query 18: My girlfriend and I just finished Breaking Bad and Better Ca...
+2025-11-19 20:44:30,055 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:30,064 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'type': 'series', 'context': 'date_night', 'genre': 'drama', 'other': 'high-quality, great writing'}
+2025-11-19 20:44:32,062 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:32,075 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Succession" is a captivating drama series that delves into the power struggles and intricate dynami...
+2025-11-19 20:44:32,075 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'series'}
+2025-11-19 20:44:32,473 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:44:32,519 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:44:32,519 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:44:48,824 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:48,828 - __main__ - INFO -   Metrics: CSR=0.480, P@5=0.400, Mood=0.000, Time=19.88s
+2025-11-19 20:44:48,828 - __main__ - INFO - [19/20] Query 19: Looking for a movie with a strong female lead, action or adv...
+2025-11-19 20:44:50,144 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:50,145 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'type': 'movie', 'genre': 'action or adventure', 'other': 'strong female lead, highly rated, exclude Wonder Woman, Mad Max Fury Road, and Atomic Blonde'}
+2025-11-19 20:44:52,804 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:44:52,836 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Salt" is an exhilarating action thriller featuring a strong female lead, played by Angelina Jolie. ...
+2025-11-19 20:44:52,837 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 20:44:56,801 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 20:44:56,840 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 20:44:56,840 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 20:45:07,159 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 20:45:07,176 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.400, Mood=0.000, Time=18.35s
+2025-11-19 20:45:07,176 - __main__ - INFO - [20/20] Query 20: It's movie night and we can't decide. I want something with ...
+2025-11-19 21:57:14,696 - openai._base_client - INFO - Retrying request to /chat/completions in 0.391604 seconds
+2025-11-19 21:57:16,686 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:16,698 - src.rag_systems.advanced_rag - INFO - Extracted constraints: {'mood': 'curious', 'type': 'movie', 'context': 'date_night', 'max_hours': 2, 'genre': 'suspense, mystery, romance', 'other': 'well-made'}
+2025-11-19 21:57:19,423 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:19,426 - src.rag_systems.advanced_rag - INFO - Generated HyDE document: "Charade" is a classic romantic suspense film that masterfully blends mystery and romance, making it...
+2025-11-19 21:57:19,426 - src.rag_systems.advanced_rag - INFO - Retrieving with filter: {'type': 'movie'}
+2025-11-19 21:57:20,158 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:57:20,253 - src.rag_systems.advanced_rag - INFO - Retrieved 20 items
+2025-11-19 21:57:20,253 - src.rag_systems.advanced_rag - INFO - Reranked 20 items
+2025-11-19 21:57:29,544 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:29,551 - __main__ - INFO -   Metrics: CSR=0.500, P@5=0.000, Mood=0.000, Time=4342.37s
+2025-11-19 21:57:29,551 - __main__ - INFO - 
+================================================================================
+2025-11-19 21:57:29,552 - __main__ - INFO - Evaluating AGENTIC RAG
+2025-11-19 21:57:29,552 - __main__ - INFO - ================================================================================
+
+2025-11-19 21:57:29,552 - __main__ - INFO - [1/20] Query 1: I want a funny comedy movie...
+2025-11-19 21:57:29,552 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I want a funny comedy movie'
+2025-11-19 21:57:30,236 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:30,493 - src.tools.mood_content_finder - INFO - Finding movie with mood=happy, min_rating=7.0
+2025-11-19 21:57:31,226 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:57:31,291 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=happy
+2025-11-19 21:57:32,840 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:37,616 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:57:37,616 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=8.06s
+2025-11-19 21:57:37,616 - __main__ - INFO - [2/20] Query 2: Looking for a scary horror movie for tonight...
+2025-11-19 21:57:37,616 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Looking for a scary horror movie for tonight'
+2025-11-19 21:57:38,428 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:38,709 - src.tools.mood_content_finder - INFO - Finding movie with mood=scared, min_rating=6.0
+2025-11-19 21:57:39,076 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:57:39,123 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=scared
+2025-11-19 21:57:40,148 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:44,348 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:57:44,348 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=6.73s
+2025-11-19 21:57:44,348 - __main__ - INFO - [3/20] Query 3: Find me a family-friendly movie under 2 hours...
+2025-11-19 21:57:44,348 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Find me a family-friendly movie under 2 hours'
+2025-11-19 21:57:44,849 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:45,132 - src.tools.mood_content_finder - INFO - Finding movie with mood=happy, min_rating=6.0
+2025-11-19 21:57:45,439 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:57:45,461 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=happy
+2025-11-19 21:57:45,937 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:46,788 - src.tools.context_filter - INFO - Filtering 5 items for context=family_watch, strict=True
+2025-11-19 21:57:46,788 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.7)
+2025-11-19 21:57:47,683 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:47,993 - src.tools.constraint_relaxer - INFO - Generating relaxation suggestions for 2 constraints (0 results)
+2025-11-19 21:57:49,102 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:57:49,543 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.5h (single session)
+2025-11-19 21:57:49,543 - src.tools.runtime_matcher - INFO - Matched 5 items to available time
+2025-11-19 21:57:51,660 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:03,641 - __main__ - INFO -   Metrics: CSR=0.667, P@5=0.000, Mood=0.000, Time=19.29s
+2025-11-19 21:58:03,641 - __main__ - INFO - [4/20] Query 4: I want an inspiring biographical series I can binge watch th...
+2025-11-19 21:58:03,641 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I want an inspiring biographical series I can binge watch this weekend'
+2025-11-19 21:58:04,124 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:04,588 - src.tools.mood_content_finder - INFO - Finding series with mood=inspired, min_rating=7.0
+2025-11-19 21:58:04,866 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:04,921 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=inspired
+2025-11-19 21:58:05,407 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:05,743 - src.tools.runtime_matcher - INFO - Matching 5 items to 48.0h (multiple session)
+2025-11-19 21:58:05,743 - src.tools.runtime_matcher - ERROR - Runtime matcher error: 'int' object has no attribute 'get'
+2025-11-19 21:58:06,217 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:07,058 - src.tools.runtime_matcher - INFO - Matching 5 items to 48.0h (multiple session)
+2025-11-19 21:58:07,058 - src.tools.runtime_matcher - INFO - Matched 5 items to available time
+2025-11-19 21:58:09,221 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:19,073 - __main__ - INFO -   Metrics: CSR=0.200, P@5=0.000, Mood=0.000, Time=15.43s
+2025-11-19 21:58:19,073 - __main__ - INFO - [5/20] Query 5: Suggest a highly rated drama for a date night, preferably un...
+2025-11-19 21:58:19,073 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Suggest a highly rated drama for a date night, preferably under 2.5 hours'
+2025-11-19 21:58:19,438 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:19,697 - src.tools.mood_content_finder - INFO - Finding movie with mood=inspired, min_rating=8.0
+2025-11-19 21:58:20,055 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:20,132 - src.tools.mood_content_finder - INFO - Found 8 items matching mood=inspired
+2025-11-19 21:58:20,692 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:21,088 - src.tools.context_filter - INFO - Filtering 5 items for context=date_night, strict=False
+2025-11-19 21:58:21,089 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+2025-11-19 21:58:21,092 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.5)
+2025-11-19 21:58:21,611 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:22,796 - src.tools.constraint_relaxer - INFO - Generating relaxation suggestions for 4 constraints (0 results)
+2025-11-19 21:58:23,255 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:23,398 - src.tools.mood_content_finder - INFO - Finding movie with mood=inspired, min_rating=7.0
+2025-11-19 21:58:23,730 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:23,759 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=inspired
+2025-11-19 21:58:24,318 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:24,594 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.5h (single session)
+2025-11-19 21:58:24,594 - src.tools.runtime_matcher - ERROR - Runtime matcher error: 'str' object has no attribute 'get'
+2025-11-19 21:58:25,060 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:25,939 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.5h (single session)
+2025-11-19 21:58:25,939 - src.tools.runtime_matcher - INFO - Matched 5 items to available time
+2025-11-19 21:58:26,347 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:32,708 - __main__ - INFO -   Metrics: CSR=0.250, P@5=0.000, Mood=0.000, Time=13.63s
+2025-11-19 21:58:32,708 - __main__ - INFO - [6/20] Query 6: I want a happy family movie under 2 hours that we haven't wa...
+2025-11-19 21:58:32,708 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I want a happy family movie under 2 hours that we haven't watched before. We recently saw Toy Story, Frozen, and Moana.'
+2025-11-19 21:58:33,221 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:33,484 - src.tools.mood_content_finder - INFO - Finding movie with mood=happy, min_rating=6.0
+2025-11-19 21:58:34,014 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:34,057 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=happy
+2025-11-19 21:58:34,600 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:34,943 - src.tools.context_filter - INFO - Filtering 5 items for context=family_watch, strict=True
+2025-11-19 21:58:34,946 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.7)
+2025-11-19 21:58:35,439 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:35,732 - src.tools.constraint_relaxer - INFO - Generating relaxation suggestions for 2 constraints (0 results)
+2025-11-19 21:58:38,172 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:38,439 - src.tools.mood_content_finder - INFO - Finding movie with mood=excited, min_rating=6.0
+2025-11-19 21:58:38,720 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:38,741 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=excited
+2025-11-19 21:58:39,583 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:39,910 - src.tools.context_filter - INFO - Filtering 5 items for context=family_watch, strict=False
+2025-11-19 21:58:39,928 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.5)
+2025-11-19 21:58:40,461 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:40,616 - src.tools.mood_content_finder - INFO - Finding movie with mood=relaxed, min_rating=6.0
+2025-11-19 21:58:40,998 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:41,044 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=relaxed
+2025-11-19 21:58:41,477 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:41,809 - src.tools.context_filter - INFO - Filtering 5 items for context=family_watch, strict=False
+2025-11-19 21:58:41,812 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.5)
+2025-11-19 21:58:42,241 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:42,563 - src.tools.runtime_matcher - INFO - Matching 3 items to 2.0h (single session)
+2025-11-19 21:58:42,563 - src.tools.runtime_matcher - ERROR - Runtime matcher error: 'str' object has no attribute 'get'
+2025-11-19 21:58:42,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:43,346 - src.tools.viewing_history_checker - INFO - Checking 3 items against history of 3 items
+2025-11-19 21:58:43,607 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:43,853 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:44,071 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:44,077 - src.tools.viewing_history_checker - ERROR - History checker error: 'str' object has no attribute 'get'
+2025-11-19 21:58:44,612 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:48,032 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:58:48,033 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=15.32s
+2025-11-19 21:58:48,033 - __main__ - INFO - [7/20] Query 7: Find me something like Inception - mind-bending and thought-...
+2025-11-19 21:58:48,033 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Find me something like Inception - mind-bending and thought-provoking'
+2025-11-19 21:58:48,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:48,769 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Too many arguments to single-input tool similar_content_finder.
+                Consider using StructuredTool instead. Args: ['Inception', 5, 'hybrid']
+2025-11-19 21:58:48,769 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:58:48,769 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=0.74s
+2025-11-19 21:58:48,769 - __main__ - INFO - [8/20] Query 8: I need a relaxing series I can watch in the background while...
+2025-11-19 21:58:48,769 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I need a relaxing series I can watch in the background while working, nothing too intense, episodes around 30-45 minutes'
+2025-11-19 21:58:49,179 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:49,283 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Too many arguments to single-input tool mood_content_finder.
+                Consider using StructuredTool instead. Args: ['relaxed', 'series']
+2025-11-19 21:58:49,283 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:58:49,283 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=0.51s
+2025-11-19 21:58:49,283 - __main__ - INFO - [9/20] Query 9: My wife wants a romantic comedy, I want an action movie, and...
+2025-11-19 21:58:49,283 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'My wife wants a romantic comedy, I want an action movie, and our kids want animation. What can we all watch together?'
+2025-11-19 21:58:49,668 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:50,302 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:51,055 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:51,766 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:52,390 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:55,657 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Too many arguments to single-input tool mood_content_finder.
+                Consider using StructuredTool instead. Args: ['happy', 'movie', 7.0]
+2025-11-19 21:58:55,657 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:58:55,657 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=6.37s
+2025-11-19 21:58:55,657 - __main__ - INFO - [10/20] Query 10: I'm feeling nostalgic and want a coming-of-age drama from th...
+2025-11-19 21:58:55,657 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I'm feeling nostalgic and want a coming-of-age drama from the 80s or 90s, highly rated, that I can watch tonight in one sitting'
+2025-11-19 21:58:56,202 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:56,519 - src.tools.mood_content_finder - INFO - Finding movie with mood=nostalgic, min_rating=7.5
+2025-11-19 21:58:57,002 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:58:57,154 - src.tools.mood_content_finder - INFO - Found 8 items matching mood=nostalgic
+2025-11-19 21:58:57,749 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:58,403 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.0h (single session)
+2025-11-19 21:58:58,403 - src.tools.runtime_matcher - ERROR - Runtime matcher error: 'int' object has no attribute 'get'
+2025-11-19 21:58:58,819 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:58:59,558 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.0h (single session)
+2025-11-19 21:58:59,558 - src.tools.runtime_matcher - INFO - Matched 5 items to available time
+2025-11-19 21:58:59,898 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:07,422 - __main__ - INFO -   Metrics: CSR=0.125, P@5=0.000, Mood=0.000, Time=11.76s
+2025-11-19 21:59:07,422 - __main__ - INFO - [11/20] Query 11: Something scary to watch with friends tonight...
+2025-11-19 21:59:07,422 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Something scary to watch with friends tonight'
+2025-11-19 21:59:07,883 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:08,312 - src.tools.mood_content_finder - INFO - Finding movie with mood=scared, min_rating=6.0
+2025-11-19 21:59:08,607 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:59:08,651 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=scared
+2025-11-19 21:59:10,168 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:10,613 - src.tools.context_filter - INFO - Filtering 5 items for context=family_watch, strict=False
+2025-11-19 21:59:10,617 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.5)
+2025-11-19 21:59:11,044 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:11,319 - src.tools.constraint_relaxer - INFO - Generating relaxation suggestions for 2 constraints (0 results)
+2025-11-19 21:59:11,959 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:12,233 - src.tools.context_filter - INFO - Filtering 5 items for context=solo_watch, strict=False
+2025-11-19 21:59:12,237 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.5)
+2025-11-19 21:59:12,706 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:13,048 - src.tools.group_preference_reconciler - INFO - Reconciling preferences from 2 users
+2025-11-19 21:59:13,212 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:13,213 - openai._base_client - INFO - Retrying request to /chat/completions in 1.548000 seconds
+2025-11-19 21:59:15,034 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:15,034 - openai._base_client - INFO - Retrying request to /chat/completions in 1.548000 seconds
+2025-11-19 21:59:17,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:17,494 - src.tools.context_filter - INFO - Filtering 5 items for context=date_night, strict=False
+2025-11-19 21:59:17,499 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.5)
+2025-11-19 21:59:17,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:17,694 - openai._base_client - INFO - Retrying request to /chat/completions in 1.614000 seconds
+2025-11-19 21:59:19,537 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:19,537 - openai._base_client - INFO - Retrying request to /chat/completions in 1.614000 seconds
+2025-11-19 21:59:21,431 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:21,436 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-z6qMYpOqCew8C4i1GsuuUvYe on tokens per min (TPM): Limit 30000, Used 30000, Requested 807. Please try again in 1.614s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-19 21:59:21,437 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:59:21,437 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=14.01s
+2025-11-19 21:59:21,437 - __main__ - INFO - [12/20] Query 12: I'm in the mood for a good cry, any recommendations?...
+2025-11-19 21:59:21,437 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I'm in the mood for a good cry, any recommendations?'
+2025-11-19 21:59:21,614 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:21,614 - openai._base_client - INFO - Retrying request to /chat/completions in 0.898000 seconds
+2025-11-19 21:59:22,749 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:22,750 - openai._base_client - INFO - Retrying request to /chat/completions in 0.898000 seconds
+2025-11-19 21:59:24,201 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:24,608 - src.tools.mood_content_finder - INFO - Finding content with mood=sad, min_rating=7.0
+2025-11-19 21:59:25,393 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:59:25,418 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=sad
+2025-11-19 21:59:25,833 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:25,833 - openai._base_client - INFO - Retrying request to /chat/completions in 0.740000 seconds
+2025-11-19 21:59:27,024 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:30,072 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:59:30,072 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=8.64s
+2025-11-19 21:59:30,072 - __main__ - INFO - [13/20] Query 13: Can you recommend a feel-good movie that's not too long? I h...
+2025-11-19 21:59:30,072 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Can you recommend a feel-good movie that's not too long? I have about 90 minutes'
+2025-11-19 21:59:30,612 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:30,791 - src.tools.mood_content_finder - INFO - Finding movie with mood=happy, min_rating=6.0
+2025-11-19 21:59:31,224 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:59:31,259 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=happy
+2025-11-19 21:59:31,754 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:31,971 - src.tools.runtime_matcher - INFO - Matching 5 items to 1.5h (single session)
+2025-11-19 21:59:31,972 - src.tools.runtime_matcher - ERROR - Runtime matcher error: 'int' object has no attribute 'get'
+2025-11-19 21:59:32,160 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:32,160 - openai._base_client - INFO - Retrying request to /chat/completions in 0.546000 seconds
+2025-11-19 21:59:32,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:32,987 - openai._base_client - INFO - Retrying request to /chat/completions in 1.170000 seconds
+2025-11-19 21:59:34,417 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:34,418 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-z6qMYpOqCew8C4i1GsuuUvYe on tokens per min (TPM): Limit 30000, Used 30000, Requested 585. Please try again in 1.17s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-19 21:59:34,418 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:59:34,418 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=4.35s
+2025-11-19 21:59:34,418 - __main__ - INFO - [14/20] Query 14: Looking for a well-made thriller series, something I can rea...
+2025-11-19 21:59:34,418 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Looking for a well-made thriller series, something I can really get into over the next few evenings'
+2025-11-19 21:59:34,568 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:34,569 - openai._base_client - INFO - Retrying request to /chat/completions in 0.922000 seconds
+2025-11-19 21:59:36,053 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:36,415 - src.tools.mood_content_finder - INFO - Finding series with mood=excited, min_rating=7.5
+2025-11-19 21:59:36,918 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:59:36,960 - src.tools.mood_content_finder - INFO - Found 0 items matching mood=excited
+2025-11-19 21:59:37,437 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:37,798 - src.tools.constraint_relaxer - INFO - Generating relaxation suggestions for 3 constraints (0 results)
+2025-11-19 21:59:38,016 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:38,017 - openai._base_client - INFO - Retrying request to /chat/completions in 1.074000 seconds
+2025-11-19 21:59:39,366 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:39,366 - openai._base_client - INFO - Retrying request to /chat/completions in 1.074000 seconds
+2025-11-19 21:59:40,712 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:40,713 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-z6qMYpOqCew8C4i1GsuuUvYe on tokens per min (TPM): Limit 30000, Used 29577, Requested 537. Please try again in 228ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-19 21:59:40,713 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:59:40,713 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=6.29s
+2025-11-19 21:59:40,713 - __main__ - INFO - [15/20] Query 15: What's a good action movie my teenage son and I can watch to...
+2025-11-19 21:59:40,713 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'What's a good action movie my teenage son and I can watch together? Nothing too violent or inappropriate'
+2025-11-19 21:59:41,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:41,560 - src.tools.mood_content_finder - INFO - Finding movie with mood=excited, min_rating=6.5
+2025-11-19 21:59:41,827 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:59:41,867 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=excited
+2025-11-19 21:59:42,241 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:42,580 - src.tools.context_filter - INFO - Filtering 5 items for context=family_watch, strict=True
+2025-11-19 21:59:42,583 - src.tools.context_filter - INFO - Filtered to 0 items (threshold=0.7)
+2025-11-19 21:59:42,980 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:42,981 - openai._base_client - INFO - Retrying request to /chat/completions in 0.446000 seconds
+2025-11-19 21:59:44,206 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:44,206 - openai._base_client - INFO - Retrying request to /chat/completions in 1.248000 seconds
+2025-11-19 21:59:45,713 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:45,714 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-z6qMYpOqCew8C4i1GsuuUvYe on tokens per min (TPM): Limit 30000, Used 29868, Requested 624. Please try again in 984ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-19 21:59:45,714 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:59:45,714 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=5.00s
+2025-11-19 21:59:45,714 - __main__ - INFO - [16/20] Query 16: I loved Stranger Things and The Umbrella Academy. What else ...
+2025-11-19 21:59:45,714 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'I loved Stranger Things and The Umbrella Academy. What else would I like that's similar?'
+2025-11-19 21:59:45,864 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:45,864 - openai._base_client - INFO - Retrying request to /chat/completions in 0.636000 seconds
+2025-11-19 21:59:47,006 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:47,219 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Too many arguments to single-input tool similar_content_finder.
+                Consider using StructuredTool instead. Args: ['Stranger Things', 5, 'hybrid']
+2025-11-19 21:59:47,219 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 21:59:47,219 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=1.51s
+2025-11-19 21:59:47,219 - __main__ - INFO - [17/20] Query 17: Need something light and funny to watch after a stressful da...
+2025-11-19 21:59:47,219 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Need something light and funny to watch after a stressful day at work. Not looking for anything heavy or complicated, just want to zone out for an hour or two'
+2025-11-19 21:59:51,467 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:52,204 - src.tools.mood_content_finder - INFO - Finding movie with mood=happy, min_rating=6.0
+2025-11-19 21:59:52,626 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 21:59:52,667 - src.tools.mood_content_finder - INFO - Found 10 items matching mood=happy
+2025-11-19 21:59:55,466 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:55,804 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.0h (single session)
+2025-11-19 21:59:55,804 - src.tools.runtime_matcher - ERROR - Runtime matcher error: 'str' object has no attribute 'get'
+2025-11-19 21:59:56,222 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 21:59:57,204 - src.tools.runtime_matcher - INFO - Matching 5 items to 2.0h (single session)
+2025-11-19 21:59:57,204 - src.tools.runtime_matcher - INFO - Matched 5 items to available time
+2025-11-19 21:59:57,363 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 21:59:57,363 - openai._base_client - INFO - Retrying request to /chat/completions in 1.356000 seconds
+2025-11-19 21:59:59,290 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:01,912 - __main__ - INFO -   Metrics: CSR=0.200, P@5=0.000, Mood=0.000, Time=14.69s
+2025-11-19 22:00:01,912 - __main__ - INFO - [18/20] Query 18: My girlfriend and I just finished Breaking Bad and Better Ca...
+2025-11-19 22:00:01,912 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'My girlfriend and I just finished Breaking Bad and Better Call Saul. We want another high-quality drama series with great writing, doesn't matter how long it is'
+2025-11-19 22:00:02,996 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:04,202 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Too many arguments to single-input tool similar_content_finder.
+                Consider using StructuredTool instead. Args: ['Breaking Bad', 10, 'hybrid']
+2025-11-19 22:00:04,202 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 22:00:04,202 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=2.29s
+2025-11-19 22:00:04,202 - __main__ - INFO - [19/20] Query 19: Looking for a movie with a strong female lead, action or adv...
+2025-11-19 22:00:04,202 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'Looking for a movie with a strong female lead, action or adventure genre, highly rated. We've already seen Wonder Woman, Mad Max Fury Road, and Atomic Blonde'
+2025-11-19 22:00:04,802 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:05,215 - src.tools.mood_content_finder - INFO - Finding movie with mood=excited, min_rating=7.5
+2025-11-19 22:00:05,529 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 22:00:05,569 - src.tools.mood_content_finder - INFO - Found 9 items matching mood=excited
+2025-11-19 22:00:05,771 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 22:00:05,772 - openai._base_client - INFO - Retrying request to /chat/completions in 1.206000 seconds
+2025-11-19 22:00:07,274 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 22:00:07,274 - openai._base_client - INFO - Retrying request to /chat/completions in 0.948000 seconds
+2025-11-19 22:00:08,753 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:09,111 - src.tools.viewing_history_checker - INFO - Checking 5 items against history of 3 items
+2025-11-19 22:00:09,406 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 22:00:09,686 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 22:00:10,004 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-19 22:00:10,013 - src.tools.viewing_history_checker - ERROR - History checker error: 'str' object has no attribute 'get'
+2025-11-19 22:00:10,218 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-19 22:00:10,218 - openai._base_client - INFO - Retrying request to /chat/completions in 0.996000 seconds
+2025-11-19 22:00:15,508 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:20,295 - src.tools.similar_content_finder - INFO - Finding 5 similar items to Wonder Woman (type: hybrid)
+2025-11-19 22:00:20,710 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:20,951 - src.tools.similar_content_finder - INFO - Finding 5 similar items to Mad Max Fury Road (type: hybrid)
+2025-11-19 22:00:21,668 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:28,645 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 22:00:28,645 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=24.44s
+2025-11-19 22:00:28,645 - __main__ - INFO - [20/20] Query 20: It's movie night and we can't decide. I want something with ...
+2025-11-19 22:00:28,645 - src.rag_systems.agentic_rag - INFO - AgenticRAG processing query: 'It's movie night and we can't decide. I want something with suspense and mystery, my partner wants romance, and we both want it to be well-made and not too long. Maybe 2 hours max?'
+2025-11-19 22:00:29,097 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:29,999 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:30,755 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:31,594 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-19 22:00:31,930 - src.rag_systems.agentic_rag - ERROR - Agentic RAG error: Too many arguments to single-input tool mood_content_finder.
+                Consider using StructuredTool instead. Args: ['suspenseful', 'movie', 7.0]
+2025-11-19 22:00:31,930 - src.evaluation.metrics - WARNING - No recommendations to evaluate
+2025-11-19 22:00:31,930 - __main__ - INFO -   Metrics: CSR=0.000, P@5=0.000, Mood=0.000, Time=3.28s
+2025-11-19 22:00:31,940 - __main__ - INFO - Saved naive results to /Users/giorgiomazza27/Desktop/movie_recommender/data/evaluation/results_naive.json
+2025-11-19 22:00:31,945 - __main__ - INFO - Saved advanced results to /Users/giorgiomazza27/Desktop/movie_recommender/data/evaluation/results_advanced.json
+2025-11-19 22:00:31,947 - __main__ - INFO - Saved agentic results to /Users/giorgiomazza27/Desktop/movie_recommender/data/evaluation/results_agentic.json
+2025-11-19 22:00:31,950 - __main__ - INFO - 
+Saved summary to /Users/giorgiomazza27/Desktop/movie_recommender/data/evaluation/metrics_summary.json
+
+================================================================================
+EVALUATION SUMMARY
+================================================================================
+
+Total Queries: 20
+Timestamp: 2025-11-19T22:00:31.947270
+
+
+NAIVE RAG:
+----------------------------------------
+Success Rate: 100.0%
+Average Time: 7.25s
+
+Metrics:
+  csr:
+    Mean: 0.632
+    Std:  0.196
+    Min:  0.333
+    Max:  1.000
+  precision_at_5:
+    Mean: 0.670
+    Std:  0.330
+    Min:  0.000
+    Max:  1.000
+  mood_match_accuracy:
+    Mean: 0.520
+    Std:  0.479
+    Min:  0.000
+    Max:  1.000
+  runtime_fit_quality:
+    Mean: 0.375
+    Std:  0.463
+    Min:  0.000
+    Max:  1.000
+
+ADVANCED RAG:
+----------------------------------------
+Success Rate: 100.0%
+Average Time: 232.29s
+
+Metrics:
+  csr:
+    Mean: 0.670
+    Std:  0.212
+    Min:  0.333
+    Max:  1.000
+  precision_at_5:
+    Mean: 0.790
+    Std:  0.337
+    Min:  0.000
+    Max:  1.000
+  mood_match_accuracy:
+    Mean: 0.550
+    Std:  0.497
+    Min:  0.000
+    Max:  1.000
+  runtime_fit_quality:
+    Mean: 0.374
+    Std:  0.465
+    Min:  0.000
+    Max:  1.000
+
+AGENTIC RAG:
+----------------------------------------
+Success Rate: 100.0%
+Average Time: 9.12s
+
+Metrics:
+  csr:
+    Mean: 0.072
+    Std:  0.158
+    Min:  0.000
+    Max:  0.667
+  precision_at_5:
+    Mean: 0.000
+    Std:  0.000
+    Min:  0.000
+    Max:  0.000
+  mood_match_accuracy:
+    Mean: 0.000
+    Std:  0.000
+    Min:  0.000
+    Max:  0.000
+  runtime_fit_quality:
+    Mean: 0.180
+    Std:  0.360
+    Min:  0.000
+    Max:  0.900
+
+================================================================================
