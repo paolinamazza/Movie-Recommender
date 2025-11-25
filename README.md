@@ -45,7 +45,7 @@ The system demonstrates how architectural complexity impacts recommendation qual
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/paolinamazza/Movie-Recommender.git
 cd movie_recommender_final
 ```
 
