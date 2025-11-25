@@ -204,18 +204,30 @@ class VectorStoreManager:
 
         logger.info(f"Indexing {len(content_data)} items...")
 
+        # Keeps track of how many times each base ID has been seen to ensure Chroma IDs stay unique
+        id_counts: Dict[str, int] = {}
+
+
         # Process in batches
         for i in range(0, len(content_data), batch_size):
             batch = content_data[i:i + batch_size]
 
-            ids = [str(item['id']) for item in batch]
+            ids = []
+            for item in batch:
+                base_id = str(item['id'])
+                count = id_counts.get(base_id, 0)
+                if count == 0:
+                    unique_id = base_id
+                else:
+                    unique_id = f"{base_id}-{count}"
+                    logger.warning(
+                        f"Duplicate content id detected ({base_id}). Using unique id {unique_id} for indexing."
+                    )
+                id_counts[base_id] = count + 1
+                ids.append(unique_id)
+
             documents = [self.create_document_text(item) for item in batch]
             metadatas = [self.create_metadata(item) for item in batch]
-
-            self.collection.add(
-                ids=ids,
-                documents=documents,
-                metadatas=metadatas
             )
 
             logger.info(f"Indexed batch {i // batch_size + 1}/{(len(content_data) - 1) // batch_size + 1}")
