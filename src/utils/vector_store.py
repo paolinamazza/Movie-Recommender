@@ -228,7 +228,7 @@ class VectorStoreManager:
 
             documents = [self.create_document_text(item) for item in batch]
             metadatas = [self.create_metadata(item) for item in batch]
-            )
+            
 
             logger.info(f"Indexed batch {i // batch_size + 1}/{(len(content_data) - 1) // batch_size + 1}")
 
